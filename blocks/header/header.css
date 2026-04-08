@@ -4,7 +4,7 @@
  * AbbVie Header — pixel-matched to live site
  * Desktop: 88px, SVG logo 110x20, 5 plain-text nav, 3 utility btns
  * Mega-menu: 3-col grid links + lavender dashboard (3-col: info | featured | stat)
- * Mobile: 72px, hamburger + logo + search
+ * Mobile: 72px, hamburger + logo + search, full-screen overlay menu
  */
 
 /* ── Fixed wrapper ── */
@@ -49,6 +49,49 @@ header .nav-brand p {
   margin: 0;
 }
 
+/* ── Mobile Back Button (in header bar) ── */
+header .nav-mobile-back {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  background: none;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: var(--weight-bold);
+  color: var(--color-blue);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0;
+  white-space: nowrap;
+}
+
+header .nav-mobile-back svg {
+  width: 16px;
+  height: 16px;
+  color: var(--color-blue);
+}
+
+/* ── Mobile Close Button (X) ── */
+header .nav-mobile-close {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--color-navy);
+  cursor: pointer;
+}
+
+header .nav-mobile-close svg {
+  width: 24px;
+  height: 24px;
+}
+
 /* ── Primary nav (desktop) ── */
 header .nav-sections {
   display: none;
@@ -63,7 +106,7 @@ header .nav-item {
   margin-left: 0;
 }
 
-/* Nav buttons — plain text, no arrows */
+/* Nav buttons — plain text, no arrows on desktop */
 header .nav-item-btn {
   display: flex;
   align-items: center;
@@ -100,7 +143,7 @@ header .nav-item[aria-expanded="true"] .nav-item-btn::after {
   background: var(--color-navy);
 }
 
-/* ── Utility buttons ── */
+/* ── Utility buttons (desktop) ── */
 header .nav-utils {
   display: none;
   align-items: center;
@@ -151,7 +194,7 @@ header .nav-hamburger {
   width: 44px;
   height: 44px;
   padding: 0;
-  margin-left: auto;
+  margin-left: 0;
   border: none;
   background: none;
   color: var(--color-navy);
@@ -161,6 +204,11 @@ header .nav-hamburger {
 header .nav-hamburger svg {
   width: 24px;
   height: 24px;
+}
+
+/* ── Mobile utility nav items (Quick Links, GLOBAL) ── */
+header .nav-mobile-utils {
+  display: none;
 }
 
 /* ── Mega-menu flyout ── */
@@ -181,7 +229,7 @@ header .nav-item[aria-expanded="true"] .nav-panel {
   display: block;
 }
 
-/* Close button — top right, blue */
+/* Close button — top right, blue (desktop only) */
 header .nav-panel-close {
   position: absolute;
   top: 24px;
@@ -211,29 +259,12 @@ header .nav-panel-close svg {
   height: 14px;
 }
 
-/* Mobile back button */
-header .nav-panel-back {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  width: 100%;
-  padding: 16px 20px;
-  border: none;
-  border-bottom: 1px solid var(--color-border-divider);
-  background: none;
-  font-family: var(--font-body);
-  font-size: 16px;
-  font-weight: var(--weight-bold);
-  color: var(--color-navy);
-  cursor: pointer;
+/* Mobile panel content container — hidden on desktop */
+header .mobile-panel-content {
+  display: none;
 }
 
-header .nav-panel-back svg {
-  width: 20px;
-  height: 20px;
-}
-
-/* 3-column grid for nav links */
+/* 3-column grid for nav links (desktop) */
 header .nav-panel-links {
   list-style: none;
   display: grid;
@@ -266,7 +297,7 @@ header .nav-panel-links a:hover {
   text-decoration: none;
 }
 
-/* "+" prefix for items with sub-pages */
+/* "+" prefix for items with sub-pages (desktop) */
 header .nav-panel-links li.has-children a::before {
   content: "+";
   display: inline-flex;
@@ -281,7 +312,7 @@ header .nav-panel-links li.has-children a::before {
   flex-shrink: 0;
 }
 
-/* ── Dashboard area — lavender bg ── */
+/* ── Dashboard area — lavender bg (desktop) ── */
 header .nav-panel-dashboard {
   background: var(--color-bg-lavender);
   border-radius: 40px 0 0;
@@ -313,7 +344,7 @@ header .nav-panel-dash-desc {
   margin: 0 0 20px;
 }
 
-/* GO TO PAGE outlined button */
+/* GO TO PAGE outlined button (desktop dashboard) */
 header .nav-panel-go {
   display: inline-flex;
   align-items: center;
@@ -337,7 +368,7 @@ header .nav-panel-go:hover {
   text-decoration: none;
 }
 
-/* Quick links with arrows and dividers */
+/* Quick links with arrows and dividers (desktop dashboard) */
 header .nav-panel-quicklinks {
   list-style: none;
   padding: 20px 0 0;
@@ -500,12 +531,34 @@ header .header[data-block-status="loaded"] {
     display: none;
   }
 
+  header .nav-mobile-close {
+    display: none !important;
+  }
+
+  header .nav-mobile-back {
+    display: none !important;
+  }
+
+  header .nav-mobile-utils {
+    display: none !important;
+  }
+
   header .nav-panel-close {
     display: flex;
   }
 
-  header .nav-panel-back {
-    display: none;
+  /* Hide mobile panel content on desktop */
+  header .mobile-panel-content {
+    display: none !important;
+  }
+
+  /* Show desktop panel links on desktop */
+  header .nav-panel-links {
+    display: grid;
+  }
+
+  header .nav-panel-dashboard {
+    display: block;
   }
 }
 
@@ -517,8 +570,10 @@ header .header[data-block-status="loaded"] {
 
   header .nav-logo {
     height: 16px;
+    width: 88px;
   }
 
+  /* Desktop utils hidden, only search shows */
   header .nav-utils {
     display: flex;
     margin-left: auto;
@@ -533,12 +588,31 @@ header .header[data-block-status="loaded"] {
     padding: 0 8px;
   }
 
+  /* Hamburger on far right */
   header .nav-hamburger {
     margin-left: 0;
-    order: -1;
   }
 
-  /* Mobile nav panel */
+  /* Mobile close button — only visible when menu is open */
+  header .nav-mobile-close {
+    display: none;
+  }
+
+  header nav[aria-expanded="true"] .nav-mobile-close {
+    display: flex;
+  }
+
+  /* Hide hamburger when menu open, show X close instead */
+  header nav[aria-expanded="true"] .nav-hamburger {
+    display: none;
+  }
+
+  /* Mobile back button hidden by default, shown via JS */
+  header .nav-mobile-back {
+    /* display controlled by JS */
+  }
+
+  /* Mobile nav sections — full screen overlay */
   header .nav-sections {
     position: fixed;
     top: var(--nav-height);
@@ -557,8 +631,40 @@ header .header[data-block-status="loaded"] {
     display: flex;
   }
 
+  /* Mobile utility items (Quick Links, GLOBAL) — inside nav-sections */
+  header .nav-mobile-utils {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+  }
+
+  header .nav-mobile-util-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 18px 20px;
+    border: none;
+    border-bottom: 1px solid #b9b4b4;
+    background: none;
+    font-family: var(--font-body);
+    font-size: 26px;
+    font-weight: var(--weight-regular);
+    color: var(--color-navy);
+    cursor: pointer;
+    text-align: left;
+  }
+
+  header .nav-mobile-util-btn svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    color: var(--color-navy);
+  }
+
+  /* Nav items as full-width buttons */
   header .nav-item {
-    border-bottom: 1px solid var(--color-border-divider);
+    border-bottom: 1px solid #b9b4b4;
     margin-right: 0;
   }
 
@@ -566,70 +672,230 @@ header .header[data-block-status="loaded"] {
     width: 100%;
     height: auto;
     padding: 18px 20px;
-    font-size: 20px;
+    font-size: 26px;
     text-align: left;
     justify-content: space-between;
   }
 
+  /* Right arrow → on main menu items */
   header .nav-item-btn::after {
-    content: "\203A";
-    font-size: 24px;
+    content: "\2192";
+    font-size: 20px;
     color: var(--color-navy);
     font-weight: 300;
+    flex-shrink: 0;
+    margin-left: 12px;
   }
 
+  /* No underline on active nav item in mobile */
   header .nav-item[aria-expanded="true"] .nav-item-btn::after {
     display: none;
   }
 
-  /* Mobile panel */
+  header .nav-item[aria-expanded="true"] .nav-item-btn {
+    font-weight: var(--weight-regular);
+  }
+
+  /* Mobile panel — full screen overlay below header */
   header .nav-panel {
     position: fixed;
     top: var(--nav-height);
     left: 0;
     width: 100%;
     height: calc(100vh - var(--nav-height));
+    border-top: none;
   }
 
+  /* Hide desktop-only elements in mobile panel */
   header .nav-panel-close {
-    display: none;
+    display: none !important;
   }
 
   header .nav-panel-links {
-    grid-template-columns: 1fr;
-    padding: 20px;
-  }
-
-  header .nav-panel-links a {
-    font-size: 20px;
-    padding: 14px 0;
-    border-bottom: 1px solid var(--color-border-divider);
+    display: none !important;
   }
 
   header .nav-panel-dashboard {
-    border-radius: 0;
-    padding: var(--spacing-l) 20px;
+    display: none !important;
   }
 
-  header .nav-panel-dashboard-inner {
-    grid-template-columns: 1fr;
+  /* Show mobile panel content */
+  header .nav-item[aria-expanded="true"] .mobile-panel-content {
+    display: block;
   }
 
-  header .nav-panel-dash-info h4 {
+  /* ── Mobile Dashboard (lavender, on top) ── */
+  header .mobile-panel-dashboard {
+    background: var(--color-bg-lavender);
+    padding: 24px 20px 28px;
+  }
+
+  header .mobile-panel-dashboard h4 {
+    font-family: var(--font-display);
     font-size: 28px;
     line-height: 32px;
+    font-weight: var(--weight-display);
+    color: var(--color-navy);
+    margin: 0 0 8px;
   }
 
-  header .nav-panel-dash-featured h4 {
-    font-size: 20px;
-    line-height: 24px;
+  header .mobile-panel-dash-desc {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--color-navy);
+    margin: 0 0 16px;
   }
 
-  header .nav-panel-stat-number .stat-value {
-    font-size: 40px;
+  header .mobile-panel-go {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 32px;
+    box-sizing: border-box;
+    border: 1px solid var(--color-blue);
+    font-family: var(--font-body);
+    font-size: var(--font-size-cta);
+    font-weight: var(--weight-bold);
+    color: var(--color-blue);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-cta);
+    text-decoration: none;
+    background: transparent;
+    margin-bottom: 16px;
   }
 
-  header .nav-panel-stat-number .stat-suffix {
+  header .mobile-panel-go:hover {
+    background: var(--color-blue);
+    color: var(--color-white);
+    text-decoration: none;
+  }
+
+  header .mobile-panel-quicklinks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  header .mobile-panel-quicklinks li {
+    border-bottom: 1px solid #b9b4b4;
+  }
+
+  header .mobile-panel-quicklinks li:last-child {
+    border-bottom: none;
+  }
+
+  header .mobile-panel-quicklinks a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--color-navy);
+    text-decoration: none;
+  }
+
+  header .mobile-panel-quicklinks a::after {
+    content: "\2192";
+    color: var(--color-navy);
+    flex-shrink: 0;
+    margin-left: 8px;
+  }
+
+  header .mobile-panel-quicklinks a:hover {
+    color: var(--color-blue);
+  }
+
+  /* ── Mobile Accordion ── */
+  header .mobile-accordion {
+    padding: 0;
+  }
+
+  header .mobile-accordion-item {
+    border-bottom: 1px solid #b9b4b4;
+  }
+
+  /* Accordion button (items with children) */
+  header .mobile-accordion-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 18px 20px;
+    border: none;
+    background: none;
+    font-family: var(--font-body);
+    font-size: 26px;
+    font-weight: var(--weight-regular);
+    color: var(--color-navy);
+    cursor: pointer;
+    text-align: left;
+  }
+
+  header .mobile-accordion-icon {
     font-size: 28px;
+    font-weight: 300;
+    color: var(--color-navy);
+    flex-shrink: 0;
+    line-height: 1;
+    width: 24px;
+    text-align: center;
+  }
+
+  /* Accordion button for link-only items (no children) */
+  header .mobile-accordion-btn-link {
+    display: block;
+    width: 100%;
+    padding: 18px 20px;
+    font-family: var(--font-body);
+    font-size: 26px;
+    font-weight: var(--weight-regular);
+    color: var(--color-navy);
+    text-decoration: none;
+    text-align: left;
+  }
+
+  header .mobile-accordion-btn-link:hover {
+    color: var(--color-blue);
+  }
+
+  /* Accordion expanded content — hidden by default */
+  header .mobile-accordion-content {
+    display: none;
+    padding: 0 20px 18px;
+  }
+
+  header .mobile-accordion-item[aria-expanded="true"] .mobile-accordion-content {
+    display: block;
+  }
+
+  header .mobile-accordion-goto {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: var(--weight-bold);
+    color: var(--color-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.84px;
+    text-decoration: none;
+    padding: 4px 0 12px;
+  }
+
+  header .mobile-accordion-goto:hover {
+    color: var(--color-blue-hover);
+  }
+
+  header .mobile-accordion-child-link {
+    display: block;
+    padding: 10px 0;
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: var(--weight-regular);
+    color: var(--color-navy);
+    text-decoration: none;
+  }
+
+  header .mobile-accordion-child-link:hover {
+    color: var(--color-blue);
   }
 }
