@@ -211,6 +211,21 @@ header .nav-panel-links a:hover {
   text-decoration: none;
 }
 
+/* "+" prefix for items with sub-pages — matches live site */
+header .nav-panel-links li.has-children a::before {
+  content: '+';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--color-navy, #071d49);
+  flex-shrink: 0;
+}
+
 /* "CLOSE ✕" button — top right, blue text */
 header .nav-panel-close {
   position: absolute;

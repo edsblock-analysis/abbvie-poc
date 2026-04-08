@@ -88,13 +88,18 @@ export default async function decorate(block) {
           const panel = document.createElement('div');
           panel.className = 'nav-panel';
 
-          /* 3-column nav links grid */
+          /* 3-column nav links grid — only top-level section items */
           const panelLinks = document.createElement('ul');
           panelLinks.className = 'nav-panel-links';
           [...subUl.children].forEach((subLi) => {
             const subLink = subLi.querySelector(':scope > a');
+            const hasChildren = subLi.querySelector(':scope > ul');
             if (subLink) {
               const pli = document.createElement('li');
+              if (hasChildren) {
+                /* Items with sub-pages get "+" prefix like live site */
+                pli.classList.add('has-children');
+              }
               pli.append(subLink);
               panelLinks.append(pli);
             }
