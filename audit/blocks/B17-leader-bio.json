@@ -1,0 +1,98 @@
+{
+  "blockId": "B17",
+  "blockName": "Leader Bio Block",
+  "edsBlockName": "leader-bio",
+  "description": "A two-column biography block featuring a headshot photograph on the left and biographical text with a LinkedIn CTA on the right. Used on leadership profile pages.",
+  "category": "Profile/Bio",
+  "priority": "P2 - Medium",
+  "usedOnTemplates": ["T06-Leader Bio", "T07-R&D Leader Bio"],
+  "usedOnPages": [
+    "https://www.abbvie.com/who-we-are/our-leaders/robert-michael.html",
+    "https://www.abbvie.com/science/our-people/our-rd-leaders/andrew-campbell.html"
+  ],
+  "position": "Mid",
+  "screenshots": ["leader-bio.png"],
+  "layout": {
+    "structure": "2-column asymmetrical (~30% image, ~70% text)",
+    "alignment": "Left-aligned",
+    "containerWidth": "Within 1330px container"
+  },
+  "functionalRequirements": {
+    "FR-01": {
+      "title": "Headshot Image",
+      "description": "The block MUST display a professional headshot photograph on the left.",
+      "acceptance": [
+        "Portrait-oriented image",
+        "Object-fit: cover",
+        "Alt text: '{Name} headshot'",
+        "Occupies ~30% of block width on desktop",
+        "Image sourced from DAM (Scene7)",
+        "Image alignment: left (cmp-image--left class)"
+      ]
+    },
+    "FR-02": {
+      "title": "Person Name",
+      "description": "The block MUST display the person's name as the page H1 heading (positioned above the bio block, typically in the hero section).",
+      "acceptance": [
+        "H1 heading, F37 Lineca Medium, 64px desktop",
+        "Color: #FFFFFF (on dark hero background)",
+        "Full name displayed"
+      ]
+    },
+    "FR-03": {
+      "title": "Title/Role",
+      "description": "The block MUST display the person's title and role as a subtitle.",
+      "acceptance": [
+        "Paragraph element (not a heading)",
+        "Roboto Regular, 16-18px",
+        "Color: #071D49",
+        "E.g., 'Chairman of the Board and Chief Executive Officer'"
+      ]
+    },
+    "FR-04": {
+      "title": "Biography Text",
+      "description": "The block MUST display multiple paragraphs of biographical text.",
+      "acceptance": [
+        "3-5 paragraphs typical",
+        "Roboto Regular, 16px",
+        "Color: #071D49",
+        "Line-height: 22-24px"
+      ]
+    },
+    "FR-05": {
+      "title": "LinkedIn CTA",
+      "description": "The block SHOULD include a LinkedIn profile link.",
+      "acceptance": [
+        "Button/link labeled 'LinkedIn Profile' or similar",
+        "Opens in a new window",
+        "Links to the person's LinkedIn profile URL"
+      ]
+    },
+    "FR-06": {
+      "title": "Responsive Behavior",
+      "description": "The block MUST stack vertically on mobile.",
+      "acceptance": [
+        "Desktop: Image left, text right (side-by-side)",
+        "Mobile: Image on top (full-width), text below",
+        "Image resizes to full width on mobile"
+      ]
+    }
+  },
+  "variants": {},
+  "accessibility": {
+    "AC-01": "Headshot image MUST have descriptive alt text including the person's name",
+    "AC-02": "LinkedIn link MUST indicate it opens in a new window",
+    "AC-03": "Text MUST be readable and properly structured"
+  },
+  "designTokens": {
+    "fontFamily_name": "\"F37 Lineca Medium\", Helvetica, Arial, sans-serif",
+    "fontFamily_body": "\"Roboto Regular\", Helvetica, Arial, sans-serif",
+    "fontSize_name": "64px",
+    "fontSize_title": "16-18px",
+    "fontSize_body": "16px",
+    "lineHeight_body": "22px",
+    "color_text": "#071D49",
+    "color_nameOnHero": "#FFFFFF",
+    "imageSplit": "30%/70%"
+  }
+}

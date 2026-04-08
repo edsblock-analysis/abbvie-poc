@@ -1,0 +1,70 @@
+{
+  "blockId": "B24",
+  "blockName": "Separator",
+  "edsBlockName": "separator",
+  "description": "A horizontal rule used as a visual divider between content sections. Available in multiple height variants to control vertical spacing.",
+  "category": "Layout/Utility",
+  "priority": "P3 - Low",
+  "usedOnTemplates": ["ALL"],
+  "usedOnPages": ["All pages"],
+  "position": "Between sections",
+  "screenshots": ["All page screenshots"],
+  "layout": {
+    "structure": "Full-width horizontal rule",
+    "alignment": "Center",
+    "containerWidth": "Full content width"
+  },
+  "functionalRequirements": {
+    "FR-01": {
+      "title": "Horizontal Rule",
+      "description": "The block MUST render a visible horizontal line as a section divider.",
+      "acceptance": [
+        "Rendered as <hr> element",
+        "Subtle color (light gray or muted)",
+        "Full width of parent container"
+      ]
+    },
+    "FR-02": {
+      "title": "Height/Spacing Variants",
+      "description": "The separator MUST support multiple height variants for vertical spacing control.",
+      "acceptance": [
+        "Default: standard spacing",
+        "separator-height-80: 80px total height",
+        "separator-height-96: 96px total height",
+        "separator-height-112: 112px total height",
+        "Height includes both the line and surrounding whitespace"
+      ]
+    }
+  },
+  "variants": {
+    "default": {
+      "variantName": "Standard Separator",
+      "description": "Default height separator with minimal spacing.",
+      "styling": { "height": "auto", "margin": "16px 0" }
+    },
+    "height-80": {
+      "variantName": "80px Height Separator",
+      "description": "Medium spacing separator.",
+      "styling": { "height": "80px" }
+    },
+    "height-96": {
+      "variantName": "96px Height Separator",
+      "description": "Large spacing separator.",
+      "styling": { "height": "96px" }
+    },
+    "height-112": {
+      "variantName": "112px Height Separator",
+      "description": "Extra-large spacing separator.",
+      "styling": { "height": "112px" }
+    }
+  },
+  "accessibility": {
+    "AC-01": "Separator MUST be decorative (role='separator' or aria-hidden if purely visual)",
+    "AC-02": "MUST NOT break content reading flow for screen readers"
+  },
+  "designTokens": {
+    "color_line": "#EFEFEF or #E0E0E0",
+    "lineHeight": "1px",
+    "spacingVariants": ["80px", "96px", "112px"]
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "blockId": "B05",
+  "blockName": "Video Feature Block",
+  "edsBlockName": "video",
+  "description": "A video component featuring a poster image overlay with a play button. On click, reveals a Brightcove/YouTube video player. Can appear as a full-width feature or inline within an article body.",
+  "category": "Media",
+  "priority": "P1 - High",
+  "usedOnTemplates": ["T01-Homepage", "T02-Hub Landing", "T04-Story Detail"],
+  "usedOnPages": [
+    "https://www.abbvie.com/",
+    "https://www.abbvie.com/science.html",
+    "https://www.abbvie.com/patients.html",
+    "https://www.abbvie.com/sustainability.html",
+    "https://www.abbvie.com/who-we-are/our-stories/two-lives-converging-in-the-fight-against-parkinsons.html"
+  ],
+  "position": "Mid",
+  "screenshots": ["homepage-full.png", "story-detail.png", "science-hub.png", "sustainability-hub.png"],
+  "layout": {
+    "structure": "Poster image with overlay controls, replaced by video player on interaction",
+    "alignment": "Center"
+  },
+  "functionalRequirements": {
+    "FR-01": {
+      "title": "Poster Image Display",
+      "description": "The block MUST display a poster image as the initial state before video playback.",
+      "acceptance": [
+        "High-quality poster image fills the video container",
+        "Image rendered with object-fit: cover",
+        "Image alt text describes the video content"
+      ]
+    },
+    "FR-02": {
+      "title": "Play Button Overlay",
+      "description": "A play button MUST be overlaid on the poster image.",
+      "acceptance": [
+        "Play icon visually centered on the poster",
+        "Button labeled 'Play Video' or 'Watch X:XX' with duration",
+        "Keyboard accessible (Enter/Space triggers play)",
+        "Cursor: pointer on hover"
+      ]
+    },
+    "FR-03": {
+      "title": "Video Title and Subtitle",
+      "description": "The block SHOULD display an H2 title and optional subtitle overlaid on or near the poster.",
+      "acceptance": [
+        "H2 heading displayed on the poster overlay",
+        "Subtitle paragraph below the heading",
+        "Text readable against the poster image (contrast ensured)"
+      ]
+    },
+    "FR-04": {
+      "title": "Video Player Activation",
+      "description": "Clicking the play button MUST activate the embedded video player (Brightcove or YouTube).",
+      "acceptance": [
+        "Poster image transitions to active video player",
+        "Video plays immediately after activation",
+        "Standard video controls available (play/pause, volume, fullscreen, progress bar)",
+        "Video player has accessible name via ARIA region"
+      ]
+    },
+    "FR-05": {
+      "title": "Responsive Behavior",
+      "description": "The video block MUST maintain aspect ratio and function at all viewports.",
+      "acceptance": [
+        "Video container maintains 16:9 aspect ratio",
+        "Controls scale appropriately at mobile sizes",
+        "Poster image responsive to container width"
+      ]
+    }
+  },
+  "variants": {
+    "A": {
+      "variantName": "Full-Width Poster with Centered Text Overlay",
+      "description": "Large full-width video feature with a cinematic poster image, title overlay, and prominent watch button. Used as a standalone section on hub pages.",
+      "usedOn": ["Homepage", "Science Hub", "Patients Hub", "Sustainability Hub"],
+      "elements": ["Full-width poster image", "H2 title overlay", "Subtitle overlay", "Watch button with duration"],
+      "additionalRequirements": {
+        "FR-A01": "Poster MUST span the full content width (up to 1330px within container).",
+        "FR-A02": "Title and play button centered on the poster.",
+        "FR-A03": "Duration shown in button label (e.g., 'Watch 3:49')."
+      },
+      "styling": {
+        "containerWidth": "Full-width or xx-large",
+        "minHeight": "400px desktop",
+        "textColor": "#FFFFFF",
+        "overlayStyle": "Semi-transparent dark gradient over poster for text readability"
+      }
+    },
+    "B": {
+      "variantName": "Contained Inline Video Embed",
+      "description": "A smaller, contained video embed used within article body content. Does not span full width.",
+      "usedOn": ["Story Detail pages"],
+      "elements": ["Contained poster image", "Play button", "Video player"],
+      "additionalRequirements": {
+        "FR-B01": "Video container constrained to article body width (~640px).",
+        "FR-B02": "No overlaid title or subtitle on the poster.",
+        "FR-B03": "Integrates inline within article text flow."
+      },
+      "styling": {
+        "containerWidth": "~640px (article body width)",
+        "aspectRatio": "16:9",
+        "margin": "Auto-centered within article column"
+      }
+    }
+  },
+  "accessibility": {
+    "AC-01": "Video player region MUST have an accessible name (ARIA label with video title)",
+    "AC-02": "Play button MUST be keyboard accessible",
+    "AC-03": "Video MUST have captions/subtitles available",
+    "AC-04": "Auto-play MUST NOT be enabled for inline video embeds",
+    "AC-05": "Focus MUST move to video controls after activation"
+  },
+  "designTokens": {
+    "fontFamily_title": "\"F37 Lineca Medium\", Helvetica, Arial, sans-serif",
+    "fontSize_title": "28px",
+    "fontWeight_title": "800",
+    "color_text": "#FFFFFF",
+    "color_playButton": "#FFFFFF",
+    "aspectRatio": "16:9",
+    "overlayGradient": "linear-gradient(transparent, rgba(0,0,0,0.5))"
+  }
+}

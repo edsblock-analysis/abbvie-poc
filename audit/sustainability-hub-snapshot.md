@@ -1,0 +1,423 @@
+### Open tabs
+- 0: (current) [Who We Are | AbbVie] (https://www.abbvie.com/who-we-are.html)
+- 1: [] (about:blank)
+
+### Page state
+- Page URL: https://www.abbvie.com/who-we-are.html
+- Page Title: Who We Are | AbbVie
+- Page Snapshot:
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e5]:
+    - generic [ref=e12]:
+      - link "Skip to main content" [ref=e13] [cursor=pointer]:
+        - /url: "#maincontent"
+      - banner [ref=e14]:
+        - generic [ref=e15]:
+          - link "Logo AbbVie" [ref=e18] [cursor=pointer]:
+            - /url: /
+            - img "Logo AbbVie" [ref=e19]
+          - navigation "Primary" [ref=e20]:
+            - list [ref=e21]:
+              - listitem [ref=e22]:
+                - 'button "Current selection: Who We Are" [ref=e23] [cursor=pointer]': Who We Are
+                - text:                 
+              - listitem [ref=e24]:
+                - button "Science" [ref=e25] [cursor=pointer]
+                - text:                      
+              - listitem [ref=e26]:
+                - button "Patients" [ref=e27] [cursor=pointer]
+                - text:        
+              - listitem [ref=e28]:
+                - button "Join Us" [ref=e29] [cursor=pointer]
+                - text:             
+              - listitem [ref=e30]:
+                - button "Sustainability" [ref=e31] [cursor=pointer]
+                - text:           
+              - text:                                                                             
+        - list [ref=e32]:
+          - listitem [ref=e33]:
+            - button "More - Overflow Links" [ref=e34] [cursor=pointer]:
+              - img [ref=e35]
+              - generic [ref=e36]: MORE
+            - text:                     
+          - listitem [ref=e37]:
+            - button "GLOBAL" [ref=e38] [cursor=pointer]:
+              - img [ref=e39]
+              - generic [ref=e40]: GLOBAL
+            - text:                                                        
+          - listitem [ref=e41]:
+            - button "Search AbbVie.com" [ref=e42] [cursor=pointer]:
+              - img [ref=e43]
+            - text: 
+    - generic [ref=e45]:
+      - generic [ref=e47]:
+        - img "evan scientist hero"
+      - generic [ref=e51]:
+        - heading "We are AbbVie" [level=1] [ref=e54]
+        - paragraph [ref=e57]:
+          - generic [ref=e58]: "A team of people creating medicines and solutions that put impact first: for patients, communities and our world."
+        - paragraph [ref=e61]: At AbbVie, our people are dedicated to putting patients at the center of everything we do. Every breakthrough, every innovation, and every step forward is inspired by the real lives we touch—working together to improve health and bring hope to individuals and families around the world. Get to know the passionate people who make up AbbVie and the difference we strive to make, one patient at a time.
+      - generic [ref=e66]:
+        - generic [ref=e70]:
+          - generic [ref=e71]:
+            - img "innovation poster image video kim" [ref=e74]
+            - button "Watch 0:32" [ref=e76] [cursor=pointer]:
+              - text: 
+              - generic [ref=e77]: Watch 0:32
+          - generic:
+            - generic:
+              - generic:
+                - iframe
+        - generic [ref=e79]:
+          - heading "Driven by science, united by purpose" [level=2] [ref=e82]
+          - paragraph [ref=e85]: Our scientists, researchers and doctors? Inspired by real stories.
+          - link "Meet our inspiration Opens in same window" [ref=e87] [cursor=pointer]:
+            - /url: /patients.html
+            - generic [ref=e88]: Meet our inspiration
+            - text: 
+      - generic [ref=e91]:
+        - heading "who we are" [level=2] [ref=e92]
+        - heading "Meeting the needs of our times" [level=3] [ref=e93]:
+          - paragraph [ref=e94]: Meeting the needs of our times
+        - paragraph [ref=e96]: AbbVie’s mission is to discover and deliver innovative medicines and solutions that address complex health issues and enhance people's lives.
+      - generic [ref=e99]:
+        - generic [ref=e103]:
+          - generic [ref=e104]:
+            - img "we are abbvie" [ref=e107]
+            - generic [ref=e108]:
+              - heading "We are AbbVie" [level=2] [ref=e109]
+              - button "Watch 1:36" [ref=e110] [cursor=pointer]:
+                - text: 
+                - generic [ref=e111]: Watch 1:36
+          - generic:
+            - generic:
+              - generic:
+                - iframe
+        - generic [ref=e116]:
+          - paragraph [ref=e117]:  Never underestimate the power and dedication of ~57,000 employees around the world united in the same mission — to make a remarkable impact for our patients, improve our society and support our communities.
+          - generic [ref=e119]:
+            - generic [ref=e120]: Robert A. Michael
+            - generic [ref=e121]: Chairman of the Board and Chief Executive Officer
+      - generic [ref=e124]:
+        - generic [ref=e125]:
+          - generic:
+            - generic:
+              - img "suzanne in dr office"
+          - paragraph [ref=e128]: Every solution starts with the patient’s perspective, because transformative medicines only matter when they are safe, effective and accessible to everyone who needs them.
+          - link "patients Opens in same window" [ref=e130] [cursor=pointer]:
+            - /url: /patients.html
+            - generic [ref=e131]: Patients
+            - text: 
+        - generic [ref=e132]:
+          - generic:
+            - generic:
+              - img "close up of pipette"
+          - paragraph [ref=e135]: We are making significant advancements with a robust pipeline of potential new medicines as we look to find the treatments of tomorrow.
+          - link "Pipeline Opens in same window" [ref=e137] [cursor=pointer]:
+            - /url: /science/pipeline.html
+            - generic [ref=e138]: Pipeline
+            - text: 
+        - generic [ref=e139]:
+          - generic:
+            - generic:
+              - img "children doing science"
+          - paragraph [ref=e142]: We are driven by our compassion for people, commitment to innovation and inclusion, service to the community and uncompromising integrity.
+          - link "Our principles Opens in same window" [ref=e144] [cursor=pointer]:
+            - /url: /who-we-are/our-principles.html
+            - generic [ref=e145]: Our principles
+            - text: 
+      - generic [ref=e147]:
+        - generic [ref=e149]:
+          - separator
+        - generic [ref=e152]:
+          - heading "our leaders" [level=2] [ref=e153]
+          - heading "Our mission to improve lives starts at the top" [level=3] [ref=e154]:
+            - paragraph [ref=e155]: Our mission to improve lives starts at the top
+          - paragraph [ref=e157]: Our leaders’ vision and expertise guide our teams, while their commitment to patients fuels our culture.
+          - link "Meet our leaders Opens in same window" [ref=e159] [cursor=pointer]:
+            - /url: /who-we-are/our-leaders.html
+            - text: Meet our leaders 
+      - region [ref=e163]:
+        - generic [ref=e447]:
+          - button "Go to last slide" [ref=e448] [cursor=pointer]: 
+          - button "Next slide" [ref=e449] [cursor=pointer]: 
+        - group [ref=e167]:
+          - group [ref=e168]:
+            - link [ref=e170] [cursor=pointer]:
+              - /url: /who-we-are/our-stories/abbvies-2024-working-parents-finding-purpose-in-adversity.html
+              - img [ref=e173]
+              - generic [ref=e174]:
+                - generic [ref=e175]:
+                  - generic [ref=e176]:
+                    - generic [ref=e177]: October 24, 2024
+                    - heading [level=2] [ref=e178]: Profile
+                  - generic [ref=e179]:
+                    - heading [level=4] [ref=e180]: "AbbVie’s 2024 Working Parents: Finding Purpose in Adversity"
+                    - paragraph [ref=e181]: AbbVie’s 2024 Working Parents honorees not only overcame major obstacles—they channeled their experience into helping others.
+                - generic [ref=e182]:
+                  - generic [ref=e183]: Read Article
+                  - generic [ref=e184]:  8 Minute Read
+          - group "Slide 1 of 3" [ref=e185]:
+            - link "cures for all hero May 20, 2024 Science Elevating health care for all See how AbbVie goes beyond the numbers to increase representation in clinical trials. Read Article  10 Minute Read" [ref=e187] [cursor=pointer]:
+              - /url: /who-we-are/our-stories/elevating-health-care-for-all.html
+              - img "cures for all hero" [ref=e190]
+              - generic [ref=e191]:
+                - generic [ref=e192]:
+                  - generic [ref=e193]:
+                    - generic [ref=e194]: May 20, 2024
+                    - heading "Science" [level=2] [ref=e195]
+                  - generic [ref=e196]:
+                    - heading "Elevating health care for all" [level=4] [ref=e197]
+                    - paragraph [ref=e198]: See how AbbVie goes beyond the numbers to increase representation in clinical trials.
+                - generic [ref=e199]:
+                  - generic [ref=e200]: Read Article
+                  - generic [ref=e201]:  10 Minute Read
+          - group [ref=e202]:
+            - link [ref=e204] [cursor=pointer]:
+              - /url: /who-we-are/our-stories/one-veterans-journey-and-abbvies-commitment-to-mental-health-research.html
+              - img [ref=e207]
+              - generic [ref=e208]:
+                - generic [ref=e209]:
+                  - generic [ref=e210]:
+                    - generic [ref=e211]: November 22, 2024
+                    - heading [level=2] [ref=e212]: Neuroscience
+                  - generic [ref=e213]:
+                    - heading [level=4] [ref=e214]: One Veteran's Journey and AbbVie's Commitment to Mental Health Research
+                    - paragraph [ref=e215]: Stories like Josh Barker's drive us to innovate in mental health research
+                - generic [ref=e216]:
+                  - generic [ref=e217]: Read Article
+                  - generic [ref=e218]:  6 Minute Read
+      - generic [ref=e220]:
+        - separator
+      - generic [ref=e223]:
+        - generic [ref=e225]:
+          - heading "key facts" [level=2] [ref=e228]
+          - heading "Our impact by the numbers" [level=2] [ref=e231]
+          - generic [ref=e233]:
+            - separator
+          - link "more key facts Opens in same window" [ref=e235] [cursor=pointer]:
+            - /url: /who-we-are/key-facts.html
+            - generic [ref=e236]: more key facts
+            - text: 
+        - generic [ref=e238]:
+          - generic:
+            - generic:
+              - img "dark green product"
+          - heading "75+" [level=3] [ref=e241]
+          - paragraph [ref=e244]: conditions treated
+          - generic [ref=e246]:
+            - separator
+          - generic [ref=e248]:
+            - separator
+          - generic:
+            - generic:
+              - img "person icon"
+          - heading "~60M" [level=3] [ref=e251]
+          - paragraph [ref=e254]: people treated by AbbVie’s products every year
+          - generic [ref=e256]:
+            - separator
+        - generic [ref=e257]:
+          - generic:
+            - generic:
+              - img "pill icon"
+          - heading "175+" [level=3] [ref=e260]
+          - paragraph [ref=e263]: countries where products help people and patients
+          - generic [ref=e265]:
+            - separator
+          - generic [ref=e267]:
+            - separator
+          - generic:
+            - generic:
+              - img "globe icon"
+          - heading "~57K" [level=3] [ref=e270]
+          - paragraph [ref=e273]: employees working in 70+ countries
+          - generic [ref=e275]:
+            - separator
+      - generic [ref=e277]:
+        - separator
+      - generic [ref=e280]:
+        - generic [ref=e281]:
+          - generic:
+            - generic:
+              - img "test tubes in lab"
+        - generic [ref=e283]:
+          - heading "Our history" [level=2] [ref=e286]
+          - paragraph [ref=e289]:
+            - text: AbbVie was founded in 2013 when we became a separate company from Abbott. Our name represents a proud connection to that legacy.
+            - text: Since the beginning, our mission hasn't wavered. Our combination of focused innovation and commercial scale brings differentiated products to market that benefit patients, customers and health care providers.
+          - link "explore our history Opens in same window" [ref=e291] [cursor=pointer]:
+            - /url: https://www.abbvie.com/landing/a-history-of-impact.html
+            - generic [ref=e292]: explore our history
+      - generic [ref=e294]:
+        - img "man and woman walking along a lake"
+        - generic [ref=e297]:
+          - generic [ref=e301]:
+            - generic [ref=e302]: ABBV Apr 02, 16:02 PM EDT
+            - generic [ref=e303]: $208.84
+            - generic [ref=e304]: "-6.14 (2.86%)"
+            - generic [ref=e306]: "Source: NYSE"
+          - generic [ref=e310]:
+            - generic [ref=e311]: investor resources
+            - generic [ref=e312]:
+              - heading "Get the latest information about AbbVie" [level=5] [ref=e313]
+              - generic [ref=e314]:
+                - link "Events and presentations Opens in a new window" [ref=e315] [cursor=pointer]:
+                  - /url: https://investors.abbvie.com/events-and-presentations/upcoming-events
+                  - generic [ref=e316]: Events and presentations
+                  - generic [ref=e317]: 
+                - link "Stakeholders contacts Opens in a new window" [ref=e318] [cursor=pointer]:
+                  - /url: https://investors.abbvie.com/shareholder-information
+                  - generic [ref=e319]: Stakeholders contacts
+                  - generic [ref=e320]: 
+                - link "Annual report Opens in a new window" [ref=e321] [cursor=pointer]:
+                  - /url: https://investors.abbvie.com/annual-report-proxy
+                  - generic [ref=e322]: Annual report
+                  - generic [ref=e323]: 
+        - generic [ref=e326]:
+          - separator
+    - generic [ref=e334]:
+      - button "Scroll to top of page" [ref=e336] [cursor=pointer]: 
+      - generic [ref=e339]:
+        - generic [ref=e340]:
+          - generic:
+            - generic:
+              - img "AbbVie logo"
+        - generic [ref=e341]:
+          - list [ref=e343]:
+            - listitem [ref=e344]:
+              - link "Who We Are Opens in same window" [ref=e345] [cursor=pointer]:
+                - /url: https://www.abbvie.com/who-we-are.html
+                - generic [ref=e346]: Who We Are
+            - listitem [ref=e347]:
+              - link "Science Opens in same window" [ref=e348] [cursor=pointer]:
+                - /url: https://www.abbvie.com/science.html
+                - generic [ref=e349]: Science
+            - listitem [ref=e350]:
+              - link "Patients Opens in same window" [ref=e351] [cursor=pointer]:
+                - /url: https://www.abbvie.com/patients.html
+                - generic [ref=e352]: Patients
+            - listitem [ref=e353]:
+              - link "Join Us Opens in same window" [ref=e354] [cursor=pointer]:
+                - /url: https://www.abbvie.com/join-us.html
+                - generic [ref=e355]: Join Us
+            - listitem [ref=e356]:
+              - link "Sustainability Opens in same window" [ref=e357] [cursor=pointer]:
+                - /url: https://www.abbvie.com/sustainability.html
+                - generic [ref=e358]: Sustainability
+          - generic:
+            - list:
+              - listitem:
+                - link "Facebook Logo Opens in a new window":
+                  - /url: https://www.facebook.com/AbbVieGlobal
+                  - img "Facebook Logo"
+              - listitem:
+                - link "Twitter Logo Opens in a new window":
+                  - /url: https://twitter.com/abbvie
+                  - img "Twitter Logo"
+              - listitem:
+                - link "Instagram Logo Opens in a new window":
+                  - /url: https://www.instagram.com/abbvie/?hl=en
+                  - img "Instagram Logo"
+              - listitem:
+                - link "LinkedIn Logo Opens in a new window":
+                  - /url: https://www.linkedin.com/company/abbvie
+                  - img "LinkedIn Logo"
+              - listitem:
+                - link "YouTube Logo Opens in a new window":
+                  - /url: https://www.youtube.com/user/AbbVie
+                  - img "YouTube Logo"
+              - listitem:
+                - link "TikTok Logo Opens in a new window":
+                  - /url: https://www.tiktok.com/@abbvie
+                  - img "TikTok Logo"
+        - generic [ref=e359]:
+          - heading "Popular pages" [level=2] [ref=e362]
+          - list [ref=e364]:
+            - listitem [ref=e365]:
+              - link "Pipeline Opens in same window" [ref=e366] [cursor=pointer]:
+                - /url: https://www.abbvie.com/science/pipeline.html
+                - generic [ref=e367]: Pipeline
+            - listitem [ref=e368]:
+              - link "Products Opens in same window" [ref=e369] [cursor=pointer]:
+                - /url: https://www.abbvie.com/patients/products.html
+                - generic [ref=e370]: Products
+            - listitem [ref=e371]:
+              - link "Partner with Us Opens in same window" [ref=e372] [cursor=pointer]:
+                - /url: https://www.abbvie.com/science/partner-with-us.html
+                - generic [ref=e373]: Partner with Us
+            - listitem [ref=e374]:
+              - link "Patient Support Opens in same window" [ref=e375] [cursor=pointer]:
+                - /url: https://www.abbvie.com/patients/patient-support.html
+                - generic [ref=e376]: Patient Support
+        - generic [ref=e377]:
+          - heading "External links" [level=2] [ref=e380]
+          - list [ref=e382]:
+            - listitem [ref=e383]:
+              - link "News Center Opens in a new window" [ref=e384] [cursor=pointer]:
+                - /url: https://news.abbvie.com/
+                - generic [ref=e385]: News Center
+                - text: 
+            - listitem [ref=e386]:
+              - link "Investors Opens in a new window" [ref=e387] [cursor=pointer]:
+                - /url: https://investors.abbvie.com/
+                - generic [ref=e388]: Investors
+                - text: 
+            - listitem [ref=e389]:
+              - link "Contract Manufacturing Opens in a new window" [ref=e390] [cursor=pointer]:
+                - /url: https://www.abbviecontractmfg.com/
+                - generic [ref=e391]: Contract Manufacturing
+                - text: 
+            - listitem [ref=e392]:
+              - link "Medical Information Opens in a new window" [ref=e393] [cursor=pointer]:
+                - /url: https://www.abbviemedinfo.com/
+                - generic [ref=e394]: Medical Information
+                - text: 
+          - generic [ref=e396]:
+            - separator
+          - generic [ref=e398]:
+            - paragraph [ref=e399]:
+              - generic [ref=e400]: Unless otherwise specified, all product names appearing in this internet site are trademarks owned by or licensed to AbbVie Inc., its subsidiaries or affiliates. No use of any AbbVie trademark, trade name, or trade dress in this site may be made without the prior written authorization of AbbVie Inc., except to identify the product or services of the company.
+            - paragraph [ref=e401]:
+              - generic [ref=e402]: Copyright © 2026 AbbVie Inc. North Chicago, Illinois, U.S.A.
+      - generic [ref=e404]:
+        - separator
+      - generic [ref=e406]:
+        - separator
+      - list [ref=e408]:
+        - listitem [ref=e409]:
+          - link "Contact Us Opens in same window" [ref=e410] [cursor=pointer]:
+            - /url: https://www.abbvie.com/contact-center.html
+            - generic [ref=e411]: Contact Us
+        - listitem [ref=e412]:
+          - link "Accessibility Statement Opens in same window" [ref=e413] [cursor=pointer]:
+            - /url: https://www.abbvie.com/accessibility-statement.html
+            - generic [ref=e414]: Accessibility Statement
+        - listitem [ref=e415]:
+          - link "Site Map Opens in same window" [ref=e416] [cursor=pointer]:
+            - /url: https://www.abbvie.com/site-map.html
+            - generic [ref=e417]: Site Map
+        - listitem [ref=e418]:
+          - link "Terms of Use Opens in same window" [ref=e419] [cursor=pointer]:
+            - /url: https://www.abbvie.com/terms-of-use.html
+            - generic [ref=e420]: Terms of Use
+        - listitem [ref=e421]:
+          - link "Privacy Notice Opens in same window" [ref=e422] [cursor=pointer]:
+            - /url: https://privacy.abbvie/privacy-policies/us-privacy-policy.html
+            - generic [ref=e423]: Privacy Notice
+        - listitem [ref=e424]:
+          - link "Consumer Health Data Privacy Notice Opens in same window" [ref=e425] [cursor=pointer]:
+            - /url: https://abbv.ie/PrivacyConsumerHealth
+            - generic [ref=e426]: Consumer Health Data Privacy Notice
+        - listitem [ref=e427]:
+          - link "Cookie Settings Opens in same window" [ref=e428] [cursor=pointer]:
+            - /url: "#"
+            - text: Cookies Settings
+        - listitem [ref=e429]:
+          - link "Your Privacy Choices Opens in a new window" [ref=e430] [cursor=pointer]:
+            - /url: https://abbviemetadata.my.site.com/AbbvieDSRM
+            - generic [ref=e431]: Your Privacy Choices
+          - generic "Your Privacy Choices":
+            - img "Your Privacy Choices"
+  - generic: 
+```

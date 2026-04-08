@@ -1,0 +1,74 @@
+{
+  "blockId": "B23",
+  "blockName": "Location/Address Block",
+  "edsBlockName": "locations",
+  "description": "A content block displaying grouped physical addresses organized by state/region. Each group has a heading and one or more office addresses with optional phone numbers.",
+  "category": "Contact/Information",
+  "priority": "P3 - Low",
+  "usedOnTemplates": ["T09-Contact Location Detail"],
+  "usedOnPages": [
+    "https://www.abbvie.com/contact-center/locations/united-states.html",
+    "https://www.abbvie.com/contact-center/locations/algeria.html",
+    "https://www.abbvie.com/contact-center/locations/saudi-arabia.html"
+  ],
+  "position": "Mid",
+  "screenshots": ["contact-location.png"],
+  "layout": {
+    "structure": "Single column, grouped address entries",
+    "alignment": "Left-aligned",
+    "containerWidth": "Within content container"
+  },
+  "functionalRequirements": {
+    "FR-01": {
+      "title": "Region/State Grouping",
+      "description": "Addresses MUST be grouped under regional headings.",
+      "acceptance": [
+        "H5 heading for each region/state (e.g., 'Illinois', 'California')",
+        "F37 Lineca Medium, 28px",
+        "Groups separated by horizontal rules (separators)"
+      ]
+    },
+    "FR-02": {
+      "title": "Address Display",
+      "description": "Each office MUST display a complete mailing address.",
+      "acceptance": [
+        "Office/building name",
+        "Street address",
+        "City, State, ZIP",
+        "Roboto Regular, 16px"
+      ]
+    },
+    "FR-03": {
+      "title": "Phone Number Links",
+      "description": "Phone numbers SHOULD be displayed as clickable tel: links.",
+      "acceptance": [
+        "Phone numbers wrapped in <a href='tel:'>",
+        "Descriptive label (e.g., 'Customer Service:')",
+        "Clickable on mobile for direct dialing"
+      ]
+    },
+    "FR-04": {
+      "title": "Group Separators",
+      "description": "Horizontal rules MUST separate address groups.",
+      "acceptance": [
+        "cmp-separator between each state/region group",
+        "Visual divider to distinguish groups"
+      ]
+    }
+  },
+  "variants": {},
+  "accessibility": {
+    "AC-01": "Heading hierarchy MUST be logical (H1 country > H5 states is noted as a gap - should be H2 or H3)",
+    "AC-02": "Phone numbers MUST use tel: protocol for accessibility",
+    "AC-03": "Address blocks SHOULD use <address> element or structured data"
+  },
+  "designTokens": {
+    "fontFamily_heading": "\"F37 Lineca Medium\", Helvetica, Arial, sans-serif",
+    "fontFamily_body": "\"Roboto Regular\", Helvetica, Arial, sans-serif",
+    "fontSize_heading": "28px",
+    "fontSize_body": "16px",
+    "color_heading": "#071D49",
+    "color_body": "#071D49",
+    "color_phone": "#0066F5"
+  }
+}

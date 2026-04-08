@@ -1,0 +1,106 @@
+{
+  "blockId": "B03",
+  "blockName": "Featured Story Card (Large)",
+  "edsBlockName": "featured-card",
+  "description": "A large horizontal card highlighting a featured story with image, metadata (date, category, reading time), headline, description, and a read-more CTA.",
+  "category": "Card",
+  "priority": "P1 - High",
+  "usedOnTemplates": ["T01-Homepage", "T02-Hub Landing", "T05-Stories Hub"],
+  "usedOnPages": [
+    "https://www.abbvie.com/",
+    "https://www.abbvie.com/who-we-are.html",
+    "https://www.abbvie.com/who-we-are/our-stories.html"
+  ],
+  "position": "Top/Mid",
+  "screenshots": ["homepage-full.png"],
+  "layout": {
+    "structure": "2-column asymmetrical (image ~50%, content ~50%)",
+    "alignment": "Left-aligned content",
+    "containerWidth": "Within 1330px container"
+  },
+  "functionalRequirements": {
+    "FR-01": {
+      "title": "Card Image",
+      "description": "The card MUST display a featured image on the left side occupying approximately 50% of the card width.",
+      "acceptance": [
+        "Image rendered with object-fit: cover",
+        "Image alt text required",
+        "Image sourced from DAM (Scene7)",
+        "Image maintains aspect ratio"
+      ]
+    },
+    "FR-02": {
+      "title": "Article Metadata",
+      "description": "The card MUST display date, category, and optionally reading time.",
+      "acceptance": [
+        "Date in format: 'Month DD, YYYY' (e.g., 'December 15, 2025')",
+        "Category as H2 eyebrow label (e.g., 'Neuroscience')",
+        "Reading time displayed as 'X Minute Read'"
+      ]
+    },
+    "FR-03": {
+      "title": "Story Title",
+      "description": "The card MUST display the story title as a prominent heading.",
+      "acceptance": [
+        "H4 heading, F37 Lineca Medium, 30px desktop",
+        "Color: #071D49 (navy)"
+      ]
+    },
+    "FR-04": {
+      "title": "Description Text",
+      "description": "The card MUST display a brief description/summary of the story.",
+      "acceptance": [
+        "Paragraph element, Roboto Regular, 16px",
+        "Maximum 2-3 lines of text",
+        "Color: #071D49"
+      ]
+    },
+    "FR-05": {
+      "title": "CTA Link",
+      "description": "The card MUST include a 'Read story' CTA link.",
+      "acceptance": [
+        "Text: 'Read story' followed by arrow icon",
+        "Color: #0066F5 (blue)",
+        "Font: Roboto Bold, 14px, uppercase"
+      ]
+    },
+    "FR-06": {
+      "title": "Entire Card Clickable",
+      "description": "The entire card area MUST be wrapped in a single link element.",
+      "acceptance": [
+        "Clicking anywhere on the card navigates to the story detail page",
+        "Link wraps both image and content areas",
+        "Hover state applies to entire card"
+      ]
+    },
+    "FR-07": {
+      "title": "Responsive Behavior",
+      "description": "The card MUST stack vertically on tablet and mobile viewports.",
+      "acceptance": [
+        "Desktop: Horizontal layout (image left, content right)",
+        "Tablet (<768px): Image stacks on top, content below",
+        "Mobile: Full-width stacked layout"
+      ]
+    }
+  },
+  "variants": {},
+  "accessibility": {
+    "AC-01": "Card link MUST have descriptive accessible name including the story title",
+    "AC-02": "Image MUST have meaningful alt text",
+    "AC-03": "Reading time and date should be visually distinguishable but also programmatically available"
+  },
+  "designTokens": {
+    "fontFamily_title": "\"F37 Lineca Medium\", Helvetica, Arial, sans-serif",
+    "fontFamily_body": "\"Roboto Regular\", Helvetica, Arial, sans-serif",
+    "fontFamily_cta": "\"Roboto Bold\", Helvetica, Arial, sans-serif",
+    "fontSize_title": "30px",
+    "fontSize_body": "16px",
+    "fontSize_meta": "14px",
+    "fontSize_cta": "14px",
+    "color_title": "#071D49",
+    "color_body": "#071D49",
+    "color_cta": "#0066F5",
+    "color_meta": "#666B7A",
+    "cardPadding": "32px"
+  }
+}

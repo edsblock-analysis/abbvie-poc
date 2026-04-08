@@ -1,0 +1,78 @@
+{
+  "blockId": "B06",
+  "blockName": "Section Heading Block",
+  "edsBlockName": "section-heading",
+  "description": "A content section introducer featuring an H2 eyebrow/label, a large H3 statement heading, and a description paragraph. Used to introduce major content sections on hub and landing pages.",
+  "category": "Text/Content",
+  "priority": "P1 - High",
+  "usedOnTemplates": ["T01-Homepage", "T02-Hub Landing", "T03-Sub-Section Landing"],
+  "usedOnPages": [
+    "https://www.abbvie.com/",
+    "https://www.abbvie.com/science.html",
+    "https://www.abbvie.com/patients.html",
+    "https://www.abbvie.com/sustainability.html"
+  ],
+  "position": "Mid",
+  "screenshots": ["homepage-full.png"],
+  "layout": {
+    "structure": "Single column, left-aligned",
+    "alignment": "Left",
+    "containerWidth": "Within 1330px container"
+  },
+  "functionalRequirements": {
+    "FR-01": {
+      "title": "Eyebrow Label",
+      "description": "The block MUST display an H2 eyebrow label in uppercase that identifies the content category.",
+      "acceptance": [
+        "H2 rendered in Roboto Regular, 700 weight",
+        "Text often uppercase (e.g., 'SCIENCE & INNOVATION', 'INVESTOR RESOURCES')",
+        "Desktop: 40px / 44px line-height",
+        "Color: #071D49"
+      ]
+    },
+    "FR-02": {
+      "title": "Statement Heading",
+      "description": "The block MUST display an H3 large statement heading below the eyebrow.",
+      "acceptance": [
+        "H3 heading, Roboto Regular, 700 weight",
+        "Desktop: 56px / 68px line-height",
+        "Contains the key message/statement (e.g., 'We solve the tough challenges.')",
+        "May include a highlighted keyword with accent styling"
+      ]
+    },
+    "FR-03": {
+      "title": "Description Paragraph",
+      "description": "The block MUST display a supporting description paragraph.",
+      "acceptance": [
+        "Roboto Regular, 18px desktop, 16px mobile",
+        "Color: #071D49",
+        "Provides context for the section content that follows"
+      ]
+    },
+    "FR-04": {
+      "title": "Responsive Typography",
+      "description": "Typography MUST scale across breakpoints.",
+      "acceptance": [
+        "H2: 40px (desktop) → 30px (tablet) → 24px (mobile)",
+        "H3: 56px (desktop) → 36px (tablet) → 28px (mobile)",
+        "Paragraph: 18px (desktop) → 16px (tablet/mobile)"
+      ]
+    }
+  },
+  "variants": {},
+  "accessibility": {
+    "AC-01": "Heading hierarchy MUST be logical (H2 before H3)",
+    "AC-02": "Eyebrow text should not rely solely on text-transform: uppercase for meaning"
+  },
+  "designTokens": {
+    "fontFamily_eyebrow": "\"Roboto Regular\", Helvetica, Arial, sans-serif",
+    "fontFamily_statement": "\"Roboto Regular\", Helvetica, Arial, sans-serif",
+    "fontFamily_body": "\"Roboto Regular\", Helvetica, Arial, sans-serif",
+    "fontSize_eyebrow_desktop": "40px",
+    "fontSize_statement_desktop": "56px",
+    "fontSize_body_desktop": "18px",
+    "fontWeight_eyebrow": "700",
+    "fontWeight_statement": "700",
+    "color_text": "#071D49"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "blockId": "B19",
+  "blockName": "Pull Quote",
+  "edsBlockName": "quote",
+  "description": "A styled blockquote component displaying a quoted text with author attribution. Can appear as a simple inline quote within article content or as a full-width testimonial with a background image.",
+  "category": "Content/Quote",
+  "priority": "P2 - Medium",
+  "usedOnTemplates": ["T01-Homepage", "T02-Hub Landing", "T04-Story Detail", "T08-ERG Detail"],
+  "usedOnPages": [
+    "https://www.abbvie.com/who-we-are/our-stories/two-lives-converging-in-the-fight-against-parkinsons.html",
+    "https://www.abbvie.com/join-us.html",
+    "https://www.abbvie.com/join-us/life-at-abbvie/employee-resource-groups/abbvie-pride.html"
+  ],
+  "position": "Mid",
+  "screenshots": ["story-detail.png", "erg-detail.png", "join-us-hub.png"],
+  "layout": {
+    "structure": "Centered blockquote with attribution",
+    "alignment": "Center",
+    "containerWidth": "~640px (within article) or full-width (standalone)"
+  },
+  "functionalRequirements": {
+    "FR-01": {
+      "title": "Quote Text",
+      "description": "The block MUST display the quoted text prominently.",
+      "acceptance": [
+        "Blockquote element with styled quote text",
+        "F37 Lineca Medium or Roboto Regular depending on variant",
+        "Larger font size than body text (24-32px)",
+        "May include opening/closing quotation marks as decorative elements"
+      ]
+    },
+    "FR-02": {
+      "title": "Author Attribution",
+      "description": "The block MUST display the author name and optionally their title/role.",
+      "acceptance": [
+        "Author name displayed below quote text",
+        "Optional: title, role, or company",
+        "Smaller font than quote text (14-16px)",
+        "Color: #071D49 or #666B7A"
+      ]
+    },
+    "FR-03": {
+      "title": "Visual Distinction",
+      "description": "The quote MUST be visually distinguished from surrounding body content.",
+      "acceptance": [
+        "Different font, size, or styling from body paragraphs",
+        "May use left border, background, or decorative quotation marks",
+        "Clear visual separation from adjacent content"
+      ]
+    }
+  },
+  "variants": {
+    "A": {
+      "variantName": "Simple Inline Quote",
+      "description": "A contained pull quote used within article body content. No background image, just styled text with attribution.",
+      "usedOn": ["Story Detail pages"],
+      "elements": ["Quote text", "Author name", "Author title (optional)"],
+      "additionalRequirements": {
+        "FR-A01": "Quote contained within article body width (~640px).",
+        "FR-A02": "No background image or overlay.",
+        "FR-A03": "Uses cmp-quote component with xx-large variant."
+      },
+      "styling": {
+        "maxWidth": "640px",
+        "backgroundColor": "transparent",
+        "fontFamily": "\"F37 Lineca Medium\", Helvetica, Arial, sans-serif",
+        "fontSize": "24-28px",
+        "color": "#071D49",
+        "borderLeft": "4px solid #0066F5 (optional)"
+      }
+    },
+    "B": {
+      "variantName": "Full-Width Testimonial with Background Image",
+      "description": "A large testimonial block spanning full width with a background image and semi-transparent dark overlay. Quote text and author displayed over the image.",
+      "usedOn": ["ERG Detail pages", "Join Us Hub"],
+      "elements": ["Full-width background image", "Semi-transparent overlay", "Quote text (white)", "Author name (white)", "Author photo (optional)"],
+      "additionalRequirements": {
+        "FR-B01": "Background image spans full container width.",
+        "FR-B02": "Semi-transparent dark overlay ensures text readability.",
+        "FR-B03": "Quote text and attribution displayed in white (#FFFFFF).",
+        "FR-B04": "Container uses semi-transparent-layer and large-radius classes.",
+        "FR-B05": "Uses height-tall variant for more vertical space."
+      },
+      "styling": {
+        "containerWidth": "Full-width",
+        "backgroundColor": "rgba(0,0,0,0.5) overlay on image",
+        "textColor": "#FFFFFF",
+        "fontSize": "28-32px",
+        "borderRadius": "64px 0 0 0",
+        "minHeight": "400px"
+      }
+    }
+  },
+  "accessibility": {
+    "AC-01": "Quote MUST use <blockquote> element or ARIA role",
+    "AC-02": "Attribution MUST be programmatically associated with the quote",
+    "AC-03": "White text on image overlay MUST meet WCAG AA contrast"
+  },
+  "designTokens": {
+    "fontFamily_quote": "\"F37 Lineca Medium\", Helvetica, Arial, sans-serif",
+    "fontFamily_attribution": "\"Roboto Regular\", Helvetica, Arial, sans-serif",
+    "fontSize_quote_inline": "24-28px",
+    "fontSize_quote_fullwidth": "28-32px",
+    "fontSize_attribution": "14-16px",
+    "color_inline": "#071D49",
+    "color_fullwidth": "#FFFFFF",
+    "overlayOpacity": "0.5"
+  }
+}

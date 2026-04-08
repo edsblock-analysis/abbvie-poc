@@ -1,0 +1,301 @@
+### Page state
+- Page URL: https://www.abbvie.com/who-we-are/our-stories/two-lives-converging-in-the-fight-against-parkinsons.html
+- Page Title: Two Lives Converge in the Fight Against Parkinson’s | AbbVie
+- Page Snapshot:
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e5]:
+    - generic [ref=e12]:
+      - link "Skip to main content" [ref=e13] [cursor=pointer]:
+        - /url: "#maincontent"
+      - banner [ref=e14]:
+        - generic [ref=e15]:
+          - link "Logo AbbVie" [ref=e18] [cursor=pointer]:
+            - /url: /
+            - img "Logo AbbVie" [ref=e19]
+          - navigation "Primary" [ref=e20]:
+            - list [ref=e21]:
+              - listitem [ref=e22]:
+                - 'button "Current selection: Who We Are" [ref=e23] [cursor=pointer]': Who We Are
+                - text:                 
+              - listitem [ref=e24]:
+                - button "Science" [ref=e25] [cursor=pointer]
+                - text:                      
+              - listitem [ref=e26]:
+                - button "Patients" [ref=e27] [cursor=pointer]
+                - text:        
+              - listitem [ref=e28]:
+                - button "Join Us" [ref=e29] [cursor=pointer]
+                - text:             
+              - listitem [ref=e30]:
+                - button "Sustainability" [ref=e31] [cursor=pointer]
+                - text:           
+              - text:                                                                             
+        - list [ref=e32]:
+          - listitem [ref=e33]:
+            - button "More - Overflow Links" [ref=e34] [cursor=pointer]:
+              - img [ref=e35]
+              - generic [ref=e36]: MORE
+            - text:                     
+          - listitem [ref=e37]:
+            - button "GLOBAL" [ref=e38] [cursor=pointer]:
+              - img [ref=e39]
+              - generic [ref=e40]: GLOBAL
+            - text:                                                        
+          - listitem [ref=e41]:
+            - button "Search AbbVie.com" [ref=e42] [cursor=pointer]:
+              - img [ref=e43]
+            - text: 
+    - generic [ref=e45]:
+      - generic [ref=e47]:
+        - 'img "Portrait of two women: one a Parkinson’s patient and the other an AbbVie scientist"'
+      - generic [ref=e49]:
+        - generic [ref=e51]:
+          - link "View All Stories Opens in same window" [ref=e53] [cursor=pointer]:
+            - /url: /who-we-are/our-stories.html
+            - text: 
+            - generic [ref=e54]: All Stories
+          - generic [ref=e56]:
+            - paragraph [ref=e57]:
+              - text: December 15, 2025
+              - link "Neuroscience" [ref=e58] [cursor=pointer]:
+                - /url: /who-we-are/our-stories/neuroscience-stories.html
+            - paragraph [ref=e59]:  3 Minute Read
+          - heading "Two Lives Converge in the Fight Against Parkinson’s" [level=1] [ref=e62]
+          - paragraph [ref=e65]:
+            - generic [ref=e66]: Meet a patient learning to navigate life with Parkinson’s — and a scientist dedicated to advancing research in the field.
+        - generic [ref=e69]:
+          - generic [ref=e70]:
+            - img "video poster image" [ref=e73]
+            - generic [ref=e74]:
+              - heading "Advancing Parkinson’s Research" [level=2] [ref=e75]
+              - paragraph [ref=e76]: One Patient’s Journey, One Scientist’s Mission
+              - button "Watch 3:49" [ref=e77] [cursor=pointer]:
+                - text: 
+                - generic [ref=e78]: Watch 3:49
+          - region "Video Player ABBVIExWPCG-HERO-VIDEO-FINAL CUT-110625" [ref=e80]:
+            - application "ABBVIExWPCG-HERO-VIDEO-FINAL CUT-110625" [ref=e81]
+            - generic:
+              - generic: ABBVIExWPCG-HERO-VIDEO-FINAL CUT-110625
+            - button "Play Video" [ref=e82] [cursor=pointer]:
+              - text: 
+              - generic [ref=e83]: Play Video
+            - text:           
+      - generic [ref=e86]:
+        - generic [ref=e88]:
+          - generic [ref=e90]:
+            - 'heading "From Shock to Strength: Rhonda''s Story" [level=5] [ref=e93]'
+            - generic [ref=e95]:
+              - paragraph [ref=e96]: For Rhonda Leaverton, her diagnosis of Parkinson’s disease arrived like a thunderclap. “My doctor said, ‘I think you have Parkinson’s. It’s treatable, but it’s not curable. Bam!’” she recalled. “It was just such a shock.”
+              - paragraph [ref=e97]: A nurse since the age of 21, Rhonda was long accustomed to being the one caring for others, but suddenly found herself the one in need of support — a shift in roles that was hard to accept.
+              - paragraph [ref=e98]: “It’s really hard for me to let people do things for me. I didn’t want to be dependent on anybody. That was the hardest part,” she said.
+              - paragraph [ref=e99]:
+                - text: According to research,
+                - superscript [ref=e100]: "1"
+                - text: Parkinson’s is one of the world’s fastest-growing neurological conditions, affecting nearly 12 million people in 2021 — a number expected to rise by roughly 50% by 2035. While current treatments can help manage symptoms, there is no cure for the disease. That urgent reality underscores the stakes for people like Rhonda, and is why scientists and clinicians are pushing to better understand the condition.
+          - 'img "Portrait of two women: one a Parkinson’s patient and the other an AbbVie scientist" [ref=e103]'
+          - paragraph [ref=e106]: Watch how Rhonda (left) and Kim’s (right) paths converge — and how perseverance, science and innovation are working to uncover what’s next for Parkinson’s.
+          - generic [ref=e108]:
+            - generic [ref=e110]:
+              - separator
+            - 'heading "The Scientist’s Drive: Kim’s Story" [level=5] [ref=e113]'
+            - generic [ref=e115]:
+              - paragraph [ref=e116]: Kim Pfleeger, Ph.D., senior scientific director, neuroscience development, is one of the many researchers at AbbVie advancing research in Parkinson’s. Driving her work are the stories of patients like Rhonda, as well as Kim’s own deep, personal connection to the disease.
+              - paragraph [ref=e117]: “My father was diagnosed with Parkinson’s at about 42, so I was in high school,” she said. That experience, paired with a lifelong fascination with science, shaped her career path. “He motivates me, and his Parkinson’s diagnosis sparked my interest in neuroscience.”
+              - paragraph [ref=e118]: As a chronic and progressive disorder, Parkinson’s, by its nature, is highly complex. Most people may think of motor symptoms such as tremors, but other, less visible symptoms such as cognitive issues can also persist.
+              - paragraph [ref=e119]: “Every single patient is different, their symptoms are different, the speed at which they progress is different,” said Pfleeger.
+              - paragraph [ref=e120]:
+                - text: Studies have shown
+                - superscript [ref=e121]: "2"
+                - text: that alongside visible and invisible challenges, Parkinson’s can also bring depression, anxiety, sleep disturbances, psychotic symptoms and cognitive decline — symptoms that profoundly shape quality of life and often become more pronounced as the disease progresses. These layers of complexity, and their deeply personal impact on patients like Rhonda, are exactly what drive AbbVie scientists like Kim to keep pushing forward.
+          - generic [ref=e124]:
+            - paragraph [ref=e125]:  Finding a cure or treatments for Parkinson’s disease is not going to be a sprint. It’s going to be a marathon. And we’re here for that marathon.
+            - generic [ref=e127]:
+              - generic [ref=e128]: Kim Pfleeger, Ph.D.
+              - generic [ref=e129]: Senior Scientific Director, Neuroscience Development, AbbVie
+          - generic [ref=e131]:
+            - heading "Advancing Parkinson’s Research" [level=5] [ref=e134]
+            - generic [ref=e136]:
+              - paragraph [ref=e137]:
+                - text: To
+                - link "advance research and development for Parkinson’s" [ref=e138] [cursor=pointer]:
+                  - /url: /who-we-are/our-stories/how-the-parkinsons-disease-community-is-shaping-the-future.html
+                - text: ", researchers across AbbVie are focused on:"
+              - list [ref=e139]:
+                - listitem [ref=e140]: Discovering better biomarkers
+                - listitem [ref=e141]: Building more accurate models of the disease
+                - listitem [ref=e142]: Integrating genomics and real-world clinical data to discover and validate new potential drug targets
+                - listitem [ref=e143]: Leveraging feedback from patients and caregivers to improve clinical trial design and future research
+              - paragraph [ref=e144]: “People are the heart of everything we do. They’re the reason we keep persevering in these spaces that are very challenging,” Pfleeger said.
+              - paragraph [ref=e145]: For Rhonda, perseverance has meant redefining her life on her own terms. “There’s more answers out there. I’ve been able to live a life that I’ve wanted to live, full of happiness, family, traveling, dancing,” she said. Rhonda says she feels hope, in part, because she knows there are people like Kim working to find answers.
+              - paragraph [ref=e146]: And in turn, it is patients like Rhonda who inspire Kim and AbbVie’s broader aim. “A lot of the conditions take a piece of that person away from them, whether it be movement, activity or cognition,” Kim said. “That’s what we strive to do, is try to preserve it as much as possible.”
+              - paragraph [ref=e147]: That mission — restoring and preserving what disease can take away — keeps scientists like Kim focused on the long game.
+              - paragraph [ref=e148]: “Finding a cure or treatments for Parkinson's is not going to be a sprint,” Kim said. “It’s going to be a marathon. And we’re here for that marathon.”
+          - generic [ref=e152]:
+            - paragraph [ref=e153]: References
+            - list [ref=e154]:
+              - listitem [ref=e155]:
+                - link "Global Burden of Disease Study 2021 opens in a new window." [ref=e156] [cursor=pointer]:
+                  - /url: https://pubmed.ncbi.nlm.nih.gov/39868382/
+                  - text: Global Burden of Disease Study 2021 
+              - listitem [ref=e157]:
+                - link "American Journal of Managed Care opens in a new window." [ref=e158] [cursor=pointer]:
+                  - /url: https://pubmed.ncbi.nlm.nih.gov/18402509/
+                  - text: American Journal of Managed Care 
+        - generic [ref=e163]:
+          - heading "Related content" [level=2] [ref=e166]
+          - link "03-480_0430 April 01, 2025 Neuroscience How the Parkinson’s Disease Community and AbbVie are Shaping the Future of Care Read article  6 Minute Read" [ref=e168] [cursor=pointer]:
+            - /url: /who-we-are/our-stories/how-the-parkinsons-disease-community-is-shaping-the-future.html
+            - img "03-480_0430" [ref=e171]
+            - generic [ref=e172]:
+              - generic [ref=e173]:
+                - generic [ref=e174]:
+                  - generic [ref=e175]: April 01, 2025
+                  - heading "Neuroscience" [level=2] [ref=e176]
+                - heading "How the Parkinson’s Disease Community and AbbVie are Shaping the Future of Care" [level=4] [ref=e178]
+              - generic [ref=e179]:
+                - generic [ref=e180]: Read article
+                - generic [ref=e181]:  6 Minute Read
+          - generic [ref=e183]:
+            - separator
+    - generic [ref=e191]:
+      - button "Scroll to top of page" [ref=e193] [cursor=pointer]: 
+      - generic [ref=e196]:
+        - img "AbbVie logo" [ref=e200]
+        - generic [ref=e201]:
+          - list [ref=e203]:
+            - listitem [ref=e204]:
+              - link "Who We Are Opens in same window" [ref=e205] [cursor=pointer]:
+                - /url: https://www.abbvie.com/who-we-are.html
+                - generic [ref=e206]: Who We Are
+            - listitem [ref=e207]:
+              - link "Science Opens in same window" [ref=e208] [cursor=pointer]:
+                - /url: https://www.abbvie.com/science.html
+                - generic [ref=e209]: Science
+            - listitem [ref=e210]:
+              - link "Patients Opens in same window" [ref=e211] [cursor=pointer]:
+                - /url: https://www.abbvie.com/patients.html
+                - generic [ref=e212]: Patients
+            - listitem [ref=e213]:
+              - link "Join Us Opens in same window" [ref=e214] [cursor=pointer]:
+                - /url: https://www.abbvie.com/join-us.html
+                - generic [ref=e215]: Join Us
+            - listitem [ref=e216]:
+              - link "Sustainability Opens in same window" [ref=e217] [cursor=pointer]:
+                - /url: https://www.abbvie.com/sustainability.html
+                - generic [ref=e218]: Sustainability
+          - list [ref=e220]:
+            - listitem [ref=e221]:
+              - link "Facebook Logo Opens in a new window" [ref=e222] [cursor=pointer]:
+                - /url: https://www.facebook.com/AbbVieGlobal
+                - img "Facebook Logo" [ref=e223]
+            - listitem [ref=e224]:
+              - link "Twitter Logo Opens in a new window" [ref=e225] [cursor=pointer]:
+                - /url: https://twitter.com/abbvie
+                - img "Twitter Logo" [ref=e226]
+            - listitem [ref=e227]:
+              - link "Instagram Logo Opens in a new window" [ref=e228] [cursor=pointer]:
+                - /url: https://www.instagram.com/abbvie/?hl=en
+                - img "Instagram Logo" [ref=e229]
+            - listitem [ref=e230]:
+              - link "LinkedIn Logo Opens in a new window" [ref=e231] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/abbvie
+                - img "LinkedIn Logo" [ref=e232]
+            - listitem [ref=e233]:
+              - link "YouTube Logo Opens in a new window" [ref=e234] [cursor=pointer]:
+                - /url: https://www.youtube.com/user/AbbVie
+                - img "YouTube Logo" [ref=e235]
+            - listitem [ref=e236]:
+              - link "TikTok Logo Opens in a new window" [ref=e237] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@abbvie
+                - img "TikTok Logo" [ref=e238]
+        - generic [ref=e239]:
+          - heading "Popular pages" [level=2] [ref=e242]
+          - list [ref=e244]:
+            - listitem [ref=e245]:
+              - link "Pipeline Opens in same window" [ref=e246] [cursor=pointer]:
+                - /url: https://www.abbvie.com/science/pipeline.html
+                - generic [ref=e247]: Pipeline
+            - listitem [ref=e248]:
+              - link "Products Opens in same window" [ref=e249] [cursor=pointer]:
+                - /url: https://www.abbvie.com/patients/products.html
+                - generic [ref=e250]: Products
+            - listitem [ref=e251]:
+              - link "Partner with Us Opens in same window" [ref=e252] [cursor=pointer]:
+                - /url: https://www.abbvie.com/science/partner-with-us.html
+                - generic [ref=e253]: Partner with Us
+            - listitem [ref=e254]:
+              - link "Patient Support Opens in same window" [ref=e255] [cursor=pointer]:
+                - /url: https://www.abbvie.com/patients/patient-support.html
+                - generic [ref=e256]: Patient Support
+        - generic [ref=e257]:
+          - heading "External links" [level=2] [ref=e260]
+          - list [ref=e262]:
+            - listitem [ref=e263]:
+              - link "News Center Opens in a new window" [ref=e264] [cursor=pointer]:
+                - /url: https://news.abbvie.com/
+                - generic [ref=e265]: News Center
+                - text: 
+            - listitem [ref=e266]:
+              - link "Investors Opens in a new window" [ref=e267] [cursor=pointer]:
+                - /url: https://investors.abbvie.com/
+                - generic [ref=e268]: Investors
+                - text: 
+            - listitem [ref=e269]:
+              - link "Contract Manufacturing Opens in a new window" [ref=e270] [cursor=pointer]:
+                - /url: https://www.abbviecontractmfg.com/
+                - generic [ref=e271]: Contract Manufacturing
+                - text: 
+            - listitem [ref=e272]:
+              - link "Medical Information Opens in a new window" [ref=e273] [cursor=pointer]:
+                - /url: https://www.abbviemedinfo.com/
+                - generic [ref=e274]: Medical Information
+                - text: 
+          - generic [ref=e276]:
+            - separator
+          - generic [ref=e278]:
+            - paragraph [ref=e279]:
+              - generic [ref=e280]: Unless otherwise specified, all product names appearing in this internet site are trademarks owned by or licensed to AbbVie Inc., its subsidiaries or affiliates. No use of any AbbVie trademark, trade name, or trade dress in this site may be made without the prior written authorization of AbbVie Inc., except to identify the product or services of the company.
+            - paragraph [ref=e281]:
+              - generic [ref=e282]: Copyright © 2026 AbbVie Inc. North Chicago, Illinois, U.S.A.
+      - generic [ref=e284]:
+        - separator
+      - generic [ref=e286]:
+        - separator
+      - list [ref=e288]:
+        - listitem [ref=e289]:
+          - link "Contact Us Opens in same window" [ref=e290] [cursor=pointer]:
+            - /url: https://www.abbvie.com/contact-center.html
+            - generic [ref=e291]: Contact Us
+        - listitem [ref=e292]:
+          - link "Accessibility Statement Opens in same window" [ref=e293] [cursor=pointer]:
+            - /url: https://www.abbvie.com/accessibility-statement.html
+            - generic [ref=e294]: Accessibility Statement
+        - listitem [ref=e295]:
+          - link "Site Map Opens in same window" [ref=e296] [cursor=pointer]:
+            - /url: https://www.abbvie.com/site-map.html
+            - generic [ref=e297]: Site Map
+        - listitem [ref=e298]:
+          - link "Terms of Use Opens in same window" [ref=e299] [cursor=pointer]:
+            - /url: https://www.abbvie.com/terms-of-use.html
+            - generic [ref=e300]: Terms of Use
+        - listitem [ref=e301]:
+          - link "Privacy Notice Opens in same window" [ref=e302] [cursor=pointer]:
+            - /url: https://privacy.abbvie/privacy-policies/us-privacy-policy.html
+            - generic [ref=e303]: Privacy Notice
+        - listitem [ref=e304]:
+          - link "Consumer Health Data Privacy Notice Opens in same window" [ref=e305] [cursor=pointer]:
+            - /url: https://abbv.ie/PrivacyConsumerHealth
+            - generic [ref=e306]: Consumer Health Data Privacy Notice
+        - listitem [ref=e307]:
+          - link "Cookie Settings Opens in same window" [ref=e308] [cursor=pointer]:
+            - /url: "#"
+            - text: Cookies Settings
+        - listitem [ref=e309]:
+          - link "Your Privacy Choices Opens in a new window" [ref=e310] [cursor=pointer]:
+            - /url: https://abbviemetadata.my.site.com/AbbvieDSRM
+            - generic [ref=e311]: Your Privacy Choices
+          - generic "Your Privacy Choices":
+            - img "Your Privacy Choices"
+  - generic: 
+```

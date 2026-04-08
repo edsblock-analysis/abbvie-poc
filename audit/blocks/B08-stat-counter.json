@@ -1,0 +1,109 @@
+{
+  "blockId": "B08",
+  "blockName": "Stat Counter Card",
+  "edsBlockName": "stats",
+  "description": "A compact display component showing a large animated number (counter) with a category label and description text. Used to highlight key statistics and impact metrics.",
+  "category": "Data Display",
+  "priority": "P2 - Medium",
+  "usedOnTemplates": ["T01-Homepage", "T02-Hub Landing"],
+  "usedOnPages": [
+    "https://www.abbvie.com/",
+    "https://www.abbvie.com/science.html",
+    "https://www.abbvie.com/sustainability.html"
+  ],
+  "position": "Mid",
+  "screenshots": ["homepage-full.png", "sustainability-hub.png", "science-hub.png"],
+  "layout": {
+    "structure": "Centered stat display with number, suffix, and description",
+    "alignment": "Center"
+  },
+  "functionalRequirements": {
+    "FR-01": {
+      "title": "Category Label",
+      "description": "The block MUST display an H2 category label above the stat value.",
+      "acceptance": [
+        "H2 heading identifying the metric category (e.g., 'impact', 'Company')",
+        "Roboto Regular, 16px, bold",
+        "Color: #071D49"
+      ]
+    },
+    "FR-02": {
+      "title": "Animated Counter Number",
+      "description": "The block MUST display a large numeric value that animates (counts up) when scrolled into view.",
+      "acceptance": [
+        "Large font size (48-64px)",
+        "Number animates from 0 to target value on scroll-into-view",
+        "Animation duration: 1-2 seconds",
+        "Supports numeric formats: integers (75), decimals (32.4), currency ($725M)",
+        "Prefix/suffix support (e.g., '~', '+', '%', 'k', 'M')"
+      ]
+    },
+    "FR-03": {
+      "title": "Description Text",
+      "description": "The block MUST display a description text below the counter number.",
+      "acceptance": [
+        "Short descriptive text explaining the metric",
+        "Roboto Regular, 14-16px",
+        "Color: #071D49"
+      ]
+    },
+    "FR-04": {
+      "title": "Scroll-Trigger Animation",
+      "description": "The counter animation MUST be triggered by scroll intersection.",
+      "acceptance": [
+        "Animation starts when element enters the viewport (IntersectionObserver)",
+        "Animation plays once (not repeated on re-scroll)",
+        "If prefers-reduced-motion is enabled, show final value immediately without animation"
+      ]
+    }
+  },
+  "variants": {
+    "A": {
+      "variantName": "Single Stat Counter",
+      "description": "A standalone single stat counter displayed inline within a section. Used alongside other content blocks.",
+      "usedOn": ["Homepage (75+ conditions, ~57k employees)"],
+      "elements": ["H2 category label", "Large number + suffix", "Description text"],
+      "additionalRequirements": {
+        "FR-A01": "Single stat displayed in a compact card format.",
+        "FR-A02": "May appear side-by-side with another single stat counter."
+      },
+      "styling": {
+        "maxWidth": "300px per card",
+        "textAlign": "center"
+      }
+    },
+    "B": {
+      "variantName": "Row of Multiple Stats",
+      "description": "A row of 4 stat counters displayed horizontally, used to present multiple impact metrics at once.",
+      "usedOn": ["Sustainability Hub (~$725M, $2.6M, 20K+, 32.4%)", "Science Hub (90+ programs, ~50 NMEs, etc.)"],
+      "elements": ["H3 section heading ('Our impact by the numbers')", "4 stat items in a row, each with number + description"],
+      "additionalRequirements": {
+        "FR-B01": "4 stat items displayed in a single horizontal row on desktop.",
+        "FR-B02": "Responsive: 2x2 grid on tablet, stacked on mobile.",
+        "FR-B03": "Each stat item evenly distributed within the container."
+      },
+      "styling": {
+        "gridColumns": "4 (desktop), 2 (tablet), 1 (mobile)",
+        "gap": "24-32px between items",
+        "backgroundColor": "#F1F3FF (light lavender) or transparent"
+      }
+    }
+  },
+  "accessibility": {
+    "AC-01": "Counter final value MUST be available in the DOM immediately (not only via animation)",
+    "AC-02": "If prefers-reduced-motion is set, animation MUST be disabled",
+    "AC-03": "Stat value and description MUST be readable by screen readers as a complete phrase"
+  },
+  "designTokens": {
+    "fontFamily_number": "\"F37 Lineca Medium\", Helvetica, Arial, sans-serif",
+    "fontFamily_label": "\"Roboto Regular\", Helvetica, Arial, sans-serif",
+    "fontSize_number": "48-64px",
+    "fontSize_label": "16px",
+    "fontSize_description": "14px",
+    "fontWeight_number": "800",
+    "color_number": "#071D49",
+    "color_label": "#071D49",
+    "animationDuration": "1.5s",
+    "animationEasing": "ease-out"
+  }
+}

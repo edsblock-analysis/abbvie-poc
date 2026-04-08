@@ -1,0 +1,135 @@
+{
+  "blockId": "B22",
+  "blockName": "Dashboard Card Grid",
+  "edsBlockName": "cards",
+  "description": "A responsive grid of linked content cards (2x2 or 3-column). Each card displays an image, eyebrow label, title, and CTA. Used on hub pages to link to sub-sections or related content.",
+  "category": "Card Grid",
+  "priority": "P1 - High",
+  "usedOnTemplates": ["T01-Homepage", "T02-Hub Landing", "T03-Sub-Section Landing", "T05-Stories Hub"],
+  "usedOnPages": [
+    "https://www.abbvie.com/",
+    "https://www.abbvie.com/science.html",
+    "https://www.abbvie.com/patients.html",
+    "https://www.abbvie.com/join-us.html"
+  ],
+  "position": "Mid",
+  "screenshots": ["homepage-full.png", "patients-hub.png", "join-us-hub.png", "science-hub.png"],
+  "layout": {
+    "structure": "2x2 or 3-column grid, responsive to 1-column",
+    "alignment": "Left-aligned content within cards",
+    "containerWidth": "Within 1330px container",
+    "gap": "24-32px between cards"
+  },
+  "functionalRequirements": {
+    "FR-01": {
+      "title": "Grid Layout",
+      "description": "The block MUST render cards in a responsive grid layout.",
+      "acceptance": [
+        "Desktop: 2x2, 3-column, or 4-column grid depending on content",
+        "Tablet: 2-column grid",
+        "Mobile: 1-column stacked",
+        "Equal-height cards within each row"
+      ]
+    },
+    "FR-02": {
+      "title": "Card Image",
+      "description": "Each card MUST display an image.",
+      "acceptance": [
+        "Image at top of card",
+        "Object-fit: cover",
+        "Consistent aspect ratio across cards in the grid",
+        "Alt text required"
+      ]
+    },
+    "FR-03": {
+      "title": "Card Eyebrow",
+      "description": "Each card SHOULD display an eyebrow category label.",
+      "acceptance": [
+        "H2 label in small/uppercase styling",
+        "Color: #071D49",
+        "Identifies content category (e.g., 'Neuroscience', 'Science')"
+      ]
+    },
+    "FR-04": {
+      "title": "Card Title",
+      "description": "Each card MUST display a title.",
+      "acceptance": [
+        "H4 heading, F37 Lineca Medium",
+        "Color: #071D49",
+        "Truncated to 2-3 lines if needed"
+      ]
+    },
+    "FR-05": {
+      "title": "Card Link",
+      "description": "Each card MUST be a fully clickable link.",
+      "acceptance": [
+        "Entire card area is a single anchor element",
+        "Links to detail page or sub-section",
+        "Hover state applied to entire card"
+      ]
+    },
+    "FR-06": {
+      "title": "Optional Metadata",
+      "description": "Cards MAY display additional metadata such as date or reading time.",
+      "acceptance": [
+        "Date: 'Month DD, YYYY'",
+        "Reading time: 'X Minute Read'",
+        "Displayed in smaller, muted text"
+      ]
+    }
+  },
+  "variants": {
+    "A": {
+      "variantName": "Full Teaser Card (Story Card)",
+      "description": "Rich card with image, date, eyebrow, title, description, and CTA. Used for story/article cards on hub pages.",
+      "usedOn": ["Homepage", "Science Hub", "Stories Hub"],
+      "elements": ["Image", "Date label", "H2 eyebrow", "H4 title", "Description paragraph", "CTA text ('Read story')", "Reading time"],
+      "additionalRequirements": {
+        "FR-A01": "Card includes a short description paragraph.",
+        "FR-A02": "CTA text displayed at bottom: 'Read story' or 'Learn more' with arrow.",
+        "FR-A03": "Reading time badge displayed."
+      },
+      "styling": {
+        "cardBackground": "white",
+        "cardBorderRadius": "16px or 0",
+        "cardShadow": "subtle on hover",
+        "imageAspectRatio": "16:9 or 3:2"
+      }
+    },
+    "B": {
+      "variantName": "Compact Linked Card",
+      "description": "Simpler card with image and title only, used for navigating to sub-sections. Less content than Variant A.",
+      "usedOn": ["Patients Hub (Patient Support Programs, Educational Programs, Partnerships, Grants)"],
+      "elements": ["Image", "H2 title", "Optional short description"],
+      "additionalRequirements": {
+        "FR-B01": "No date, reading time, or CTA text displayed.",
+        "FR-B02": "Title serves as the primary content.",
+        "FR-B03": "Used in 2x2 grid layout typically."
+      },
+      "styling": {
+        "cardBackground": "white or light background",
+        "cardBorderRadius": "16px or 0",
+        "imageAspectRatio": "3:2"
+      }
+    }
+  },
+  "accessibility": {
+    "AC-01": "Card links MUST have descriptive accessible names",
+    "AC-02": "Images MUST have meaningful alt text",
+    "AC-03": "Grid MUST maintain logical reading order when stacked",
+    "AC-04": "Card hover/focus state MUST be clearly visible"
+  },
+  "designTokens": {
+    "fontFamily_title": "\"F37 Lineca Medium\", Helvetica, Arial, sans-serif",
+    "fontFamily_body": "\"Roboto Regular\", Helvetica, Arial, sans-serif",
+    "fontSize_title": "28-30px",
+    "fontSize_eyebrow": "14-16px",
+    "fontSize_body": "16px",
+    "fontSize_meta": "14px",
+    "color_title": "#071D49",
+    "color_cta": "#0066F5",
+    "color_meta": "#666B7A",
+    "gridGap": "24-32px",
+    "cardPadding": "32px"
+  }
+}

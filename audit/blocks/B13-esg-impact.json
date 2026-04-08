@@ -1,0 +1,81 @@
+{
+  "blockId": "B13",
+  "blockName": "ESG Impact Block",
+  "edsBlockName": "esg-impact",
+  "description": "A complex full-width block with a background image overlaid with multiple content cards: a stat counter card, a feature/navigation card, and a quick links card. Used to showcase ESG (Environmental, Social, Governance) metrics.",
+  "category": "Data Display / Composite",
+  "priority": "P3 - Low",
+  "usedOnTemplates": ["T01-Homepage"],
+  "usedOnPages": ["https://www.abbvie.com/"],
+  "position": "Bottom",
+  "screenshots": ["homepage-full.png"],
+  "layout": {
+    "structure": "Full-width background image + 3 overlaid content cards",
+    "alignment": "Mixed (cards positioned within the background)",
+    "containerWidth": "Full viewport width with 1330px content constraint"
+  },
+  "functionalRequirements": {
+    "FR-01": {
+      "title": "Background Image",
+      "description": "The block MUST display a full-width background image that provides visual context.",
+      "acceptance": [
+        "Full-width background image (e.g., kids playing soccer)",
+        "Object-fit: cover",
+        "Image serves as visual context for ESG/sustainability theme"
+      ]
+    },
+    "FR-02": {
+      "title": "Stat Counter Card",
+      "description": "The block MUST include an animated stat counter showing a key ESG metric.",
+      "acceptance": [
+        "H2 category label (e.g., 'Environmental Stewardship')",
+        "Large animated counter number (e.g., '32%')",
+        "Description text explaining the metric",
+        "Counter animates on scroll-into-view"
+      ]
+    },
+    "FR-03": {
+      "title": "Feature Navigation Card",
+      "description": "The block MUST include a linked card navigating to the ESG detail page.",
+      "acceptance": [
+        "H2 eyebrow: 'SUSTAINABILITY'",
+        "H4 title: 'Environmental, Social & Governance'",
+        "CTA: 'Learn More' with arrow icon",
+        "Entire card is a link"
+      ]
+    },
+    "FR-04": {
+      "title": "Quick Links Card",
+      "description": "The block MUST include a quick links section with downloadable resources.",
+      "acceptance": [
+        "Label: 'Quick Links'",
+        "H5 heading: 'AbbVie's Positions & Views'",
+        "List of links to PDF documents (open in new window)",
+        "Each link has external icon indicator"
+      ]
+    },
+    "FR-05": {
+      "title": "Responsive Behavior",
+      "description": "Cards MUST stack vertically on mobile, background image remains.",
+      "acceptance": [
+        "Desktop: Cards positioned over background image in a structured layout",
+        "Mobile: Cards stack vertically, background may be less prominent or hidden"
+      ]
+    }
+  },
+  "variants": {},
+  "accessibility": {
+    "AC-01": "Background image MUST have alt text or be marked decorative if purely visual",
+    "AC-02": "PDF download links MUST indicate file type and that they open in new window",
+    "AC-03": "Stat counter final value MUST be in DOM for screen readers"
+  },
+  "designTokens": {
+    "fontFamily_heading": "\"F37 Lineca Medium\", Helvetica, Arial, sans-serif",
+    "fontFamily_body": "\"Roboto Regular\", Helvetica, Arial, sans-serif",
+    "fontSize_stat": "48-64px",
+    "fontSize_title": "30px",
+    "color_text": "#071D49",
+    "color_cta": "#0066F5",
+    "color_cardBg": "#FFFFFF or semi-transparent"
+  }
+}

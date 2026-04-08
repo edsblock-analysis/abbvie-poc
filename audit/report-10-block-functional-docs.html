@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Report 10: Block Functional Requirements - AbbVie Migration</title>
+<link rel="stylesheet" href="report-styles.css">
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="top-nav-inner">
+    <a href="index.html">&#8962; Dashboard</a>
+    <span class="sep">&middot;</span>
+    <span class="project">AbbVie AEM &rarr; EDS Migration</span>
+    <span class="sep">&middot;</span>
+    <span class="project">Report 10: Block Functional Docs</span>
+  </div>
+</nav>
+
+<div class="report-header">
+  <div class="report-header-inner">
+    <h1>Block Functional Requirements</h1>
+    <p class="subtitle">Complete functional documentation for all 25 blocks including acceptance criteria, variants, responsive behavior, accessibility, and authoring guidelines.</p>
+    <p class="meta">Report 5 of 5 &middot; Generated 2026-04-08</p>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- TOC -->
+<div class="toc">
+  <h2>Table of Contents</h2>
+  <ul>
+    <li><a href="#b01">B01: Hero Banner</a> <span class="vc">5 variants</span></li>
+    <li><a href="#b02">B02: Press Release Carousel</a></li>
+    <li><a href="#b03">B03: Featured Story Card (Large)</a></li>
+    <li><a href="#b04">B04: Text Statement Block</a></li>
+    <li><a href="#b05">B05: Video Feature Block</a> <span class="vc">2 variants</span></li>
+    <li><a href="#b06">B06: Section Heading Block</a></li>
+    <li><a href="#b07">B07: Science/Feature Card (Linked)</a></li>
+    <li><a href="#b08">B08: Stat Counter Card</a> <span class="vc">2 variants</span></li>
+    <li><a href="#b09">B09: Podcast/Media Promo Block</a></li>
+    <li><a href="#b10">B10: Three-Column Card Grid</a> <span class="vc">2 variants</span></li>
+    <li><a href="#b11">B11: CTA Banner</a> <span class="vc">2 variants</span></li>
+    <li><a href="#b12">B12: Investor Resources Block</a></li>
+    <li><a href="#b13">B13: ESG Impact Block</a></li>
+    <li><a href="#b14">B14: Footer</a></li>
+    <li><a href="#b15">B15: Header/Navigation</a></li>
+    <li><a href="#b16">B16: Breadcrumb</a></li>
+    <li><a href="#b17">B17: Leader Bio Block</a></li>
+    <li><a href="#b18">B18: Article Body Block</a></li>
+    <li><a href="#b19">B19: Pull Quote</a> <span class="vc">2 variants</span></li>
+    <li><a href="#b20">B20: Related Content Card</a></li>
+    <li><a href="#b21">B21: Accordion/FAQ Block</a></li>
+    <li><a href="#b22">B22: Dashboard Card Grid</a> <span class="vc">2 variants</span></li>
+    <li><a href="#b23">B23: Location/Address Block</a></li>
+    <li><a href="#b24">B24: Separator</a> <span class="vc">4 variants</span></li>
+    <li><a href="#b25">B25: Two-Column Grid (Generic)</a></li>
+  </ul>
+</div>
+
+<!-- ============================================================ -->
+<!-- B01: Hero Banner -->
+<!-- ============================================================ -->
+<div class="bs" id="b01">
+  <div class="bh">
+    <h2>B01: Hero Banner</h2>
+    <div class="bm">
+      <span class="badge badge-p0">P0 - Critical</span>
+      <span>EDS: <code>hero</code></span>
+      <span>5 Variants</span>
+      <span>8 Templates</span>
+    </div>
+  </div>
+  <div class="bb">
+    <div class="bo">Full-width hero section at the top of pages featuring a large background image or video with overlaid text content, heading, and call-to-action.</div>
+
+    <!-- Variant A -->
+    <div class="vc2">
+      <div class="vh">
+        <h3>Variant A: Image Background + White Text Overlay</h3>
+        <div class="vb2"><span class="badge badge-hero">Hero</span><span class="badge badge-p0">P0</span></div>
+      </div>
+      <div class="vbd">
+        <p class="desc">Standard hero with a full-width background image and white text overlaid directly on the image with a dark overlay or positioned on a darker region.</p>
+
+        <div class="ds">
+          <h4>Structure / Fields</h4>
+          <table class="st">
+            <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td>Background Image</td><td>Image</td><td class="req">Required</td><td>Full-width background image from DAM</td></tr>
+              <tr><td>H1 Heading</td><td>Text</td><td class="req">Required</td><td>Primary heading, F37 Lineca Medium, 64px desktop</td></tr>
+              <tr><td>Description</td><td>Rich Text</td><td class="opt">Optional</td><td>Subtitle paragraph, Roboto Regular 18px</td></tr>
+              <tr><td>CTA Link</td><td>Link</td><td class="opt">Optional</td><td>Call-to-action link/button</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="ds">
+          <h4>Acceptance Criteria</h4>
+          <ul class="cl">
+            <li>Background image fills 100% viewport width</li>
+            <li>Image scales proportionally (object-fit: cover)</li>
+            <li>Image maintains minimum height of 416px on desktop</li>
+            <li>Text color: white (#FFFFFF) on dark backgrounds</li>
+            <li>Sufficient contrast with white text ensured</li>
+          </ul>
+        </div>
+
+        <div class="ds">
+          <h4>Interactions</h4>
+          <div class="ig">
+            <div class="ii"><div class="tp">Hover</div><div class="dt">CTA link underlines or shows arrow animation</div></div>
+            <div class="ii"><div class="tp">Focus</div><div class="dt">Visible focus ring on CTA link</div></div>
+          </div>
+        </div>
+
+        <div class="ds">
+          <h4>Responsive Behavior</h4>
+          <div class="rg">
+            <div class="rc">
+              <h5>Desktop</h5>
+              <p class="bp">1440px+</p>
+              <ul>
+                <li>Full-width image with text overlay</li>
+                <li>H1: 64px / 68px line-height</li>
+                <li>Min-height: 416px</li>
+              </ul>
+            </div>
+            <div class="rc">
+              <h5>Tablet</h5>
+              <p class="bp">768px - 1199px</p>
+              <ul>
+                <li>Image displayed, text may move below</li>
+                <li>H1: 40px / 44px line-height</li>
+              </ul>
+            </div>
+            <div class="rc">
+              <h5>Mobile</h5>
+              <p class="bp">&lt; 768px</p>
+              <ul>
+                <li>Image stacked above text</li>
+                <li>H1: 30px / 34px line-height</li>
+                <li>Reduced spacing</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Variant B -->
+    <div class="vc2">
+      <div class="vh">
+        <h3>Variant B: Overlapping Card</h3>
+        <div class="vb2"><span class="badge badge-hero">Hero</span><span class="badge badge-p0">P0</span></div>
+      </div>
+      <div class="vbd">
+        <p class="desc">Hero with a full-width background image and a white card that overlaps the bottom of the hero, creating a layered visual effect using the overlap-predecessor pattern.</p>
+        <div class="ds">
+          <h4>Structure / Fields</h4>
+          <table class="st">
+            <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td>Background Image</td><td>Image</td><td class="req">Required</td><td>Full-width background image</td></tr>
+              <tr><td>H1 Heading</td><td>Text</td><td class="req">Required</td><td>Navy (#071D49) text on white card</td></tr>
+              <tr><td>Description</td><td>Rich Text</td><td class="opt">Optional</td><td>Navy text on white card</td></tr>
+              <tr><td>Breadcrumb</td><td>Navigation</td><td class="opt">Optional</td><td>Path hierarchy above card</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="ds">
+          <h4>Acceptance Criteria</h4>
+          <ul class="cl">
+            <li>White card overlaps hero image by 40-80px using negative margin</li>
+            <li>Card has medium border-radius (40px top-left)</li>
+            <li>Card background: white (#FFFFFF), text: navy (#071D49)</li>
+            <li>Card content center-aligned</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Variant C -->
+    <div class="vc2">
+      <div class="vh">
+        <h3>Variant C: Video Background</h3>
+        <div class="vb2"><span class="badge badge-hero">Hero</span><span class="badge badge-p0">P0</span></div>
+      </div>
+      <div class="vbd">
+        <p class="desc">Hero with an auto-playing background video (muted) with text overlay and a pause/play toggle button.</p>
+        <div class="ds">
+          <h4>Structure / Fields</h4>
+          <table class="st">
+            <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td>Background Video</td><td>Video</td><td class="req">Required</td><td>Auto-play, muted, loop</td></tr>
+              <tr><td>Fallback Poster</td><td>Image</td><td class="req">Required</td><td>Poster image for mobile/low-bandwidth</td></tr>
+              <tr><td>H1 Heading</td><td>Text</td><td class="req">Required</td><td>White text overlay</td></tr>
+              <tr><td>CTA Anchor</td><td>Link</td><td class="opt">Optional</td><td>Anchor link to next section</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="ds">
+          <h4>Acceptance Criteria</h4>
+          <ul class="cl">
+            <li>Video auto-plays on load, muted, loops continuously</li>
+            <li>Pause/Play button visible and accessible</li>
+            <li>Fallback poster image on mobile/low-bandwidth</li>
+            <li>No auto-play if prefers-reduced-motion enabled</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Variant D -->
+    <div class="vc2">
+      <div class="vh">
+        <h3>Variant D: Solid/Gradient Background</h3>
+        <div class="vb2"><span class="badge badge-hero">Hero</span><span class="badge badge-p0">P0</span></div>
+      </div>
+      <div class="vbd">
+        <p class="desc">Hero with a solid navy or gradient purple background color instead of an image, used for legal/static pages and bio pages.</p>
+        <div class="ds">
+          <h4>Acceptance Criteria</h4>
+          <ul class="cl">
+            <li>Background: solid #071D49 (navy) or CSS gradient</li>
+            <li>No background image required</li>
+            <li>Shorter height than image variants (200-300px)</li>
+            <li>White (#FFFFFF) text color</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Variant E -->
+    <div class="vc2">
+      <div class="vh">
+        <h3>Variant E: Image + Anchor Link</h3>
+        <div class="vb2"><span class="badge badge-hero">Hero</span><span class="badge badge-p0">P0</span></div>
+      </div>
+      <div class="vbd">
+        <p class="desc">Similar to Variant A but the CTA is an in-page anchor link that scrolls to the next section rather than navigating away.</p>
+        <div class="ds">
+          <h4>Acceptance Criteria</h4>
+          <ul class="cl">
+            <li>CTA link smooth-scrolls to target anchor section</li>
+            <li>Anchor target section has corresponding ID attribute</li>
+            <li>CTA styled as text link with arrow icon</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="ds">
+      <h4>Accessibility</h4>
+      <ul class="al">
+        <li>H1 MUST be the first heading in the document reading order</li>
+        <li>Background images MUST have appropriate alt text</li>
+        <li>Text MUST meet WCAG 2.1 AA contrast ratio (4.5:1 normal, 3:1 large)</li>
+        <li>Video pause/play button MUST be keyboard accessible</li>
+        <li>Skip-to-content link MUST bypass the hero to reach main content</li>
+      </ul>
+    </div>
+
+    <div class="ds">
+      <h4>Authoring Requirements</h4>
+      <table class="at">
+        <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Background Media</td><td>Image or Video</td><td class="req">Required</td><td>DAM asset, optimized for web delivery</td></tr>
+          <tr><td>Heading (H1)</td><td>Plain Text</td><td class="req">Required</td><td>Max ~80 characters recommended</td></tr>
+          <tr><td>Subtitle</td><td>Rich Text</td><td class="opt">Optional</td><td>1-2 sentences</td></tr>
+          <tr><td>CTA</td><td>Link</td><td class="opt">Optional</td><td>Internal page or anchor</td></tr>
+          <tr><td>Variant</td><td>Select</td><td class="req">Required</td><td>A, B, C, D, or E</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- B02: Press Release Carousel -->
+<!-- ============================================================ -->
+<div class="bs" id="b02">
+  <div class="bh">
+    <h2>B02: Press Release Carousel</h2>
+    <div class="bm">
+      <span class="badge badge-p3">P3 - Low</span>
+      <span>EDS: <code>carousel</code></span>
+      <span>0 Variants</span>
+      <span>1 Template</span>
+    </div>
+  </div>
+  <div class="bb">
+    <div class="bo">A sliding carousel of dated press release items with previous/next navigation controls. Each slide displays a date and linked headline.</div>
+
+    <div class="ds">
+      <h4>Structure / Fields</h4>
+      <table class="st">
+        <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>Section Heading</td><td>Text (H2)</td><td class="req">Required</td><td>"Press Releases"</td></tr>
+          <tr><td>Slide Items</td><td>Content Fragment List</td><td class="req">Required</td><td>Min 3 items: date + headline link</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="ds">
+      <h4>Acceptance Criteria</h4>
+      <ul class="cl">
+        <li>H2 heading with horizontal separator below</li>
+        <li>Prev/Next buttons with arrow icons, circular gray (#EFEFEF) bg</li>
+        <li>ARIA group role with position label (e.g., "1 of 3")</li>
+        <li>Smooth transition animation between slides</li>
+        <li>Touch swipe supported on mobile</li>
+      </ul>
+    </div>
+
+    <div class="ds">
+      <h4>Accessibility</h4>
+      <ul class="al">
+        <li>Carousel region MUST have an accessible name</li>
+        <li>Navigation buttons MUST have descriptive labels</li>
+        <li>Current slide position MUST be announced to screen readers</li>
+        <li>Auto-rotation MUST NOT be enabled</li>
+        <li>Keyboard: arrow keys cycle slides, Enter/Space activates links</li>
+      </ul>
+    </div>
+
+    <div class="ds">
+      <h4>Responsive Behavior</h4>
+      <div class="rg">
+        <div class="rc"><h5>Desktop</h5><p class="bp">1440px+</p><ul><li>Full-width carousel within container</li><li>Controls visible</li></ul></div>
+        <div class="rc"><h5>Tablet</h5><p class="bp">768px+</p><ul><li>Same carousel behavior</li></ul></div>
+        <div class="rc"><h5>Mobile</h5><p class="bp">&lt;768px</p><ul><li>Touch swipe supported</li><li>Controls accessible</li></ul></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- B03: Featured Story Card -->
+<!-- ============================================================ -->
+<div class="bs" id="b03">
+  <div class="bh">
+    <h2>B03: Featured Story Card (Large)</h2>
+    <div class="bm">
+      <span class="badge badge-p1">P1 - High</span>
+      <span>EDS: <code>featured-card</code></span>
+      <span>0 Variants</span>
+      <span>3 Templates</span>
+    </div>
+  </div>
+  <div class="bb">
+    <div class="bo">A large horizontal card highlighting a featured story with image, metadata (date, category, reading time), headline, description, and a read-more CTA.</div>
+
+    <div class="ds">
+      <h4>Structure / Fields</h4>
+      <table class="st">
+        <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>Image</td><td>Image</td><td class="req">Required</td><td>~50% of card width, object-fit: cover</td></tr>
+          <tr><td>Date</td><td>Date</td><td class="req">Required</td><td>Format: "Month DD, YYYY"</td></tr>
+          <tr><td>Category</td><td>Text (H2)</td><td class="req">Required</td><td>Eyebrow label (e.g., "Neuroscience")</td></tr>
+          <tr><td>Title</td><td>Text (H4)</td><td class="req">Required</td><td>F37 Lineca Medium, 30px</td></tr>
+          <tr><td>Description</td><td>Text</td><td class="req">Required</td><td>2-3 lines max</td></tr>
+          <tr><td>CTA</td><td>Link</td><td class="req">Required</td><td>"Read story" with arrow</td></tr>
+          <tr><td>Reading Time</td><td>Text</td><td class="opt">Optional</td><td>"X Minute Read"</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="ds">
+      <h4>Acceptance Criteria</h4>
+      <ul class="cl">
+        <li>Entire card area is clickable (single link wrapping both image and content)</li>
+        <li>Image fills ~50% of card width with object-fit: cover</li>
+        <li>CTA: "Read story" with arrow icon, Roboto Bold 14px uppercase, #0066F5</li>
+      </ul>
+    </div>
+
+    <div class="ds">
+      <h4>Responsive Behavior</h4>
+      <div class="rg">
+        <div class="rc"><h5>Desktop</h5><p class="bp">1440px+</p><ul><li>Horizontal layout (image left, content right)</li></ul></div>
+        <div class="rc"><h5>Tablet</h5><p class="bp">768px+</p><ul><li>Image stacks on top, content below</li></ul></div>
+        <div class="rc"><h5>Mobile</h5><p class="bp">&lt;768px</p><ul><li>Full-width stacked layout</li></ul></div>
+      </div>
+    </div>
+
+    <div class="ds">
+      <h4>Accessibility</h4>
+      <ul class="al">
+        <li>Card link MUST have descriptive accessible name including story title</li>
+        <li>Image MUST have meaningful alt text</li>
+        <li>Reading time and date should be programmatically available</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- B04: Text Statement -->
+<!-- ============================================================ -->
+<div class="bs" id="b04">
+  <div class="bh">
+    <h2>B04: Text Statement Block</h2>
+    <div class="bm">
+      <span class="badge badge-p1">P1 - High</span>
+      <span>EDS: <code>text-statement</code></span>
+      <span>0 Variants</span>
+      <span>3 Templates</span>
+    </div>
+  </div>
+  <div class="bb">
+    <div class="bo">A centered text block featuring a large statement heading with an optional highlighted keyword, a supporting description paragraph, and a CTA link.</div>
+
+    <div class="ds">
+      <h4>Acceptance Criteria</h4>
+      <ul class="cl">
+        <li>H3 heading: Roboto Regular 700, 56px desktop / 36px tablet / 28px mobile</li>
+        <li>Highlighted keyword via inline span with accent styling</li>
+        <li>Description: Roboto Regular 18px, center-aligned</li>
+        <li>CTA: Roboto Bold 14px uppercase, #0066F5</li>
+        <li>Container constrained to ~880px</li>
+      </ul>
+    </div>
+
+    <div class="ds">
+      <h4>Accessibility</h4>
+      <ul class="al">
+        <li>Heading level MUST be appropriate within page hierarchy</li>
+        <li>Highlighted keyword styling MUST NOT rely solely on color</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- B05: Video Feature -->
+<!-- ============================================================ -->
+<div class="bs" id="b05">
+  <div class="bh">
+    <h2>B05: Video Feature Block</h2>
+    <div class="bm">
+      <span class="badge badge-p1">P1 - High</span>
+      <span>EDS: <code>video</code></span>
+      <span>2 Variants</span>
+      <span>3 Templates</span>
+    </div>
+  </div>
+  <div class="bb">
+    <div class="bo">A video component featuring a poster image overlay with a play button. On click, reveals a Brightcove/YouTube video player.</div>
+
+    <div class="vc2">
+      <div class="vh">
+        <h3>Variant A: Full-Width Poster</h3>
+        <div class="vb2"><span class="badge badge-media">Media</span></div>
+      </div>
+      <div class="vbd">
+        <p class="desc">Large full-width video feature with cinematic poster image, title overlay, and prominent watch button.</p>
+        <div class="ds">
+          <h4>Structure / Fields</h4>
+          <table class="st">
+            <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td>Poster Image</td><td>Image</td><td class="req">Required</td><td>Full-width poster, object-fit: cover</td></tr>
+              <tr><td>Video ID</td><td>Text</td><td class="req">Required</td><td>Brightcove or YouTube video ID</td></tr>
+              <tr><td>Title</td><td>Text (H2)</td><td class="opt">Optional</td><td>Overlay title, F37 Lineca Medium 28px white</td></tr>
+              <tr><td>Subtitle</td><td>Text</td><td class="opt">Optional</td><td>Overlay subtitle</td></tr>
+              <tr><td>Duration</td><td>Text</td><td class="opt">Optional</td><td>Shown in button: "Watch 3:49"</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="ds">
+          <h4>Acceptance Criteria</h4>
+          <ul class="cl">
+            <li>Poster spans full content width (up to 1330px)</li>
+            <li>Title and play button centered on poster</li>
+            <li>Semi-transparent dark gradient over poster for text readability</li>
+            <li>Min-height: 400px desktop</li>
+            <li>16:9 aspect ratio maintained</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="vc2">
+      <div class="vh">
+        <h3>Variant B: Inline Article Embed</h3>
+        <div class="vb2"><span class="badge badge-media">Media</span></div>
+      </div>
+      <div class="vbd">
+        <p class="desc">Smaller contained video embed used within article body content (~640px width).</p>
+        <div class="ds">
+          <h4>Acceptance Criteria</h4>
+          <ul class="cl">
+            <li>Container constrained to article body width (~640px)</li>
+            <li>No overlaid title or subtitle on poster</li>
+            <li>Integrates inline within article text flow</li>
+            <li>16:9 aspect ratio</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="ds">
+      <h4>Accessibility</h4>
+      <ul class="al">
+        <li>Video player region MUST have accessible name (ARIA label with video title)</li>
+        <li>Play button MUST be keyboard accessible</li>
+        <li>Video MUST have captions/subtitles available</li>
+        <li>Auto-play MUST NOT be enabled for inline embeds</li>
+        <li>Focus MUST move to video controls after activation</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- B06: Section Heading -->
+<!-- ============================================================ -->
+<div class="bs" id="b06">
+  <div class="bh">
+    <h2>B06: Section Heading Block</h2>
+    <div class="bm">
+      <span class="badge badge-p1">P1 - High</span>
+      <span>EDS: <code>section-heading</code></span>
+      <span>0 Variants</span>
+      <span>3 Templates</span>
+    </div>
+  </div>
+  <div class="bb">
+    <div class="bo">A content section introducer featuring an H2 eyebrow/label, a large H3 statement heading, and a description paragraph.</div>
+
+    <div class="ds">
+      <h4>Structure / Fields</h4>
+      <table class="st">
+        <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>Eyebrow</td><td>Text (H2)</td><td class="req">Required</td><td>Roboto 700, 40px desktop. E.g., "SCIENCE &amp; INNOVATION"</td></tr>
+          <tr><td>Statement</td><td>Text (H3)</td><td class="req">Required</td><td>Roboto 700, 56px desktop. Key message</td></tr>
+          <tr><td>Description</td><td>Rich Text</td><td class="req">Required</td><td>Roboto Regular 18px</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="ds">
+      <h4>Responsive Behavior</h4>
+      <div class="rg">
+        <div class="rc"><h5>Desktop</h5><p class="bp">1440px+</p><ul><li>H2: 40px, H3: 56px, P: 18px</li></ul></div>
+        <div class="rc"><h5>Tablet</h5><p class="bp">768px+</p><ul><li>H2: 30px, H3: 36px, P: 16px</li></ul></div>
+        <div class="rc"><h5>Mobile</h5><p class="bp">&lt;768px</p><ul><li>H2: 24px, H3: 28px, P: 16px</li></ul></div>
+      </div>
+    </div>
+
+    <div class="ds">
+      <h4>Accessibility</h4>
+      <ul class="al">
+        <li>Heading hierarchy MUST be logical (H2 before H3)</li>
+        <li>Eyebrow text should not rely solely on text-transform: uppercase for meaning</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- B07: Feature Card -->
+<!-- ============================================================ -->
+<div class="bs" id="b07">
+  <div class="bh">
+    <h2>B07: Science/Feature Card (Linked)</h2>
+    <div class="bm">
+      <span class="badge badge-p2">P2 - Medium</span>
+      <span>EDS: <code>feature-card</code></span>
+      <span>0 Variants</span>
+      <span>2 Templates</span>
+    </div>
+  </div>
+  <div class="bb">
+    <div class="bo">A vertical linked card displaying an image, eyebrow category label, title, and a "Learn More" CTA. The entire card is a single link.</div>
+
+    <div class="ds">
+      <h4>Acceptance Criteria</h4>
+      <ul class="cl">
+        <li>Image fills card width, object-fit: cover</li>
+        <li>H2 eyebrow: 16px bold, #071D49</li>
+        <li>H4 title: F37 Lineca Medium 30px, #071D49</li>
+        <li>"Learn More" CTA: Roboto Bold 14px uppercase, #0066F5</li>
+        <li>Entire card wrapped in single anchor</li>
+        <li>Hover: subtle shadow or scale effect</li>
+      </ul>
+    </div>
+
+    <div class="ds">
+      <h4>Accessibility</h4>
+      <ul class="al">
+        <li>Card link MUST have descriptive accessible name</li>
+        <li>Image MUST have meaningful alt text</li>
+        <li>Hover/focus state MUST be clearly visible</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- B08: Stat Counter -->
+<!-- ============================================================ -->
+<div class="bs" id="b08">
+  <div class="bh">
+    <h2>B08: Stat Counter Card</h2>
+    <div class="bm">
+      <span class="badge badge-p2">P2 - Medium</span>
+      <span>EDS: <code>stats</code></span>
+      <span>2 Variants</span>
+      <span>2 Templates</span>
+    </div>
+  </div>
+  <div class="bb">
+    <div class="bo">A compact display component showing a large animated number (counter) with a category label and description text. Used to highlight key statistics.</div>
+
+    <div class="vc2">
+      <div class="vh">
+        <h3>Variant A: Single Stat Counter</h3>
+        <div class="vb2"><span class="badge badge-data">Data</span></div>
+      </div>
+      <div class="vbd">
+        <p class="desc">Standalone single stat counter in compact card format. Max-width 300px, center-aligned.</p>
+        <div class="ds">
+          <h4>Acceptance Criteria</h4>
+          <ul class="cl">
+            <li>Large animated number (48-64px), F37 Lineca Medium 800</li>
+            <li>Number animates from 0 to target on scroll-into-view</li>
+            <li>Supports formats: integers, decimals, currency ($725M), prefix/suffix (~, +, %, k, M)</li>
+            <li>Animation duration: 1-2 seconds, ease-out</li>
+            <li>If prefers-reduced-motion, show final value immediately</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="vc2">
+      <div class="vh">
+        <h3>Variant B: Row of Multiple Stats</h3>
+        <div class="vb2"><span class="badge badge-data">Data</span></div>
+      </div>
+      <div class="vbd">
+        <p class="desc">4 stat counters in a horizontal row. Responsive: 2x2 on tablet, stacked on mobile.</p>
+        <div class="ds">
+          <h4>Responsive Behavior</h4>
+          <div class="rg">
+            <div class="rc"><h5>Desktop</h5><p class="bp">1440px+</p><ul><li>4 columns side-by-side</li><li>Gap: 24-32px</li></ul></div>
+            <div class="rc"><h5>Tablet</h5><p class="bp">768px+</p><ul><li>2x2 grid</li></ul></div>
+            <div class="rc"><h5>Mobile</h5><p class="bp">&lt;768px</p><ul><li>1 column stacked</li></ul></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ds">
+      <h4>Accessibility</h4>
+      <ul class="al">
+        <li>Counter final value MUST be available in the DOM immediately (not only via animation)</li>
+        <li>If prefers-reduced-motion, animation MUST be disabled</li>
+        <li>Stat value and description MUST be readable as a complete phrase</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- B09: Media Promo -->
+<!-- ============================================================ -->
+<div class="bs" id="b09">
+  <div class="bh">
+    <h2>B09: Podcast/Media Promo Block</h2>
+    <div class="bm">
+      <span class="badge badge-p2">P2 - Medium</span>
+      <span>EDS: <code>media-promo</code></span>
+      <span>0 Variants</span>
+      <span>2 Templates</span>
+    </div>
+  </div>
+  <div class="bb">
+    <div class="bo">A two-column promotional block featuring an image on the left (~40%) and content (eyebrow, title, description, CTA) on the right (~60%).</div>
+
+    <div class="ds">
+      <h4>Acceptance Criteria</h4>
+      <ul class="cl">
+        <li>Image ~40% of block width, content ~60%</li>
+        <li>H2 eyebrow: Roboto 16px bold</li>
+        <li>H5 title: F37 Lineca Medium 28px, weight 800</li>
+        <li>Description: Roboto Regular 16px, 2-3 sentences max</li>
+        <li>"Learn more" CTA: Roboto Bold 14px uppercase, #0066F5</li>
+        <li>Stacks vertically on mobile (image top, content below)</li>
+      </ul>
+    </div>
+
+    <div class="ds">
+      <h4>Accessibility</h4>
+      <ul class="al">
+        <li>Image MUST have meaningful alt text</li>
+        <li>CTA link MUST clearly indicate destination</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- B10: Card Grid -->
+<!-- ============================================================ -->
+<div class="bs" id="b10">
+  <div class="bh">
+    <h2>B10: Three-Column Card Grid</h2>
+    <div class="bm">
+      <span class="badge badge-p2">P2 - Medium</span>
+      <span>EDS: <code>card-grid</code></span>
+      <span>2 Variants</span>
+      <span>3 Templates</span>
+    </div>
+  </div>
+  <div class="bb">
+    <div class="bo">A responsive grid of three equal-width cards displayed side-by-side on desktop, stacking to a single column on mobile.</div>
+
+    <div class="vc2">
+      <div class="vh">
+        <h3>Variant A: Image + Text + Link</h3>
+        <div class="vb2"><span class="badge badge-card">Card</span></div>
+      </div>
+      <div class="vbd">
+        <p class="desc">Simple card with image, description paragraph, and navigation link. No heading element.</p>
+        <div class="ds">
+          <h4>Acceptance Criteria</h4>
+          <ul class="cl">
+            <li>No heading element inside card</li>
+            <li>Description text provides card context</li>
+            <li>Link label indicates destination section</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="vc2">
+      <div class="vh">
+        <h3>Variant B: Image + Heading + Description + CTA</h3>
+        <div class="vb2"><span class="badge badge-card">Card</span></div>
+      </div>
+      <div class="vbd">
+        <p class="desc">Richer card with image, H2 heading, description paragraph, and "Learn more" CTA. Used as teaser cards.</p>
+        <div class="ds">
+          <h4>Acceptance Criteria</h4>
+          <ul class="cl">
+            <li>H2 heading below image, 24-28px</li>
+            <li>Description paragraph summary</li>
+            <li>"Learn more" CTA at bottom, #0066F5</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="ds">
+      <h4>Responsive Behavior</h4>
+      <div class="rg">
+        <div class="rc"><h5>Desktop</h5><p class="bp">1440px+</p><ul><li>3 columns side-by-side</li><li>Gap: 24-32px</li></ul></div>
+        <div class="rc"><h5>Tablet</h5><p class="bp">768px+</p><ul><li>1 column stacked</li></ul></div>
+        <div class="rc"><h5>Mobile</h5><p class="bp">&lt;768px</p><ul><li>1 column stacked, full width</li></ul></div>
+      </div>
+    </div>
+
+    <div class="ds">
+      <h4>Accessibility</h4>
+      <ul class="al">
+        <li>Cards MUST have appropriate heading hierarchy</li>
+        <li>Card links MUST have descriptive accessible names</li>
+        <li>Images MUST have meaningful alt text</li>
+        <li>Grid MUST maintain logical reading order when stacked</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- B11: CTA Banner -->
+<!-- ============================================================ -->
+<div class="bs" id="b11">
+  <div class="bh">
+    <h2>B11: CTA Banner</h2>
+    <div class="bm">
+      <span class="badge badge-p1">P1 - High</span>
+      <span>EDS: <code>cta-banner</code></span>
+      <span>2 Variants</span>
+      <span>3 Templates</span>
+    </div>
+  </div>
+  <div class="bb">
+    <div class="bo">A full-width colored banner with a heading, description text, and a prominent call-to-action button.</div>
+
+    <div class="vc2">
+      <div class="vh">
+        <h3>Variant A: Navy Background</h3>
+        <div class="vb2"><span class="badge badge-cta">CTA</span></div>
+      </div>
+      <div class="vbd">
+        <p class="desc">Dark navy (#071D49) background with white text. Used for general CTAs like "Explore opportunities".</p>
+        <div class="ds">
+          <h4>Acceptance Criteria</h4>
+          <ul class="cl">
+            <li>Background: #071D49 (navy), full-width fill</li>
+            <li>H4 heading: F37 Lineca Medium 30px white</li>
+            <li>Description: Roboto Regular 16px white</li>
+            <li>CTA: outlined or text link with arrow, white</li>
+            <li>Contrast: 14.4:1 (white on navy)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="vc2">
+      <div class="vh">
+        <h3>Variant B: Blue Background</h3>
+        <div class="vb2"><span class="badge badge-cta">CTA</span></div>
+      </div>
+      <div class="vbd">
+        <p class="desc">Bright blue (#0066F5) background with white text. Used for job/career CTAs.</p>
+        <div class="ds">
+          <h4>Acceptance Criteria</h4>
+          <ul class="cl">
+            <li>Background: #0066F5 (blue)</li>
+            <li>Same text/CTA structure as Variant A</li>
+            <li>Contrast: 4.7:1 (white on blue, meets AA)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="ds">
+      <h4>Responsive Behavior</h4>
+      <div class="rg">
+        <div class="rc"><h5>Desktop</h5><p class="bp">1440px+</p><ul><li>Heading/text left, button right (inline)</li><li>Padding: 40px 55px</li></ul></div>
+        <div class="rc"><h5>Tablet</h5><p class="bp">768px+</p><ul><li>Stacked layout</li></ul></div>
+        <div class="rc"><h5>Mobile</h5><p class="bp">&lt;768px</p><ul><li>Stacked, padding: 32px 20px</li></ul></div>
+      </div>
+    </div>
+
+    <div class="ds">
+      <h4>Accessibility</h4>
+      <ul class="al">
+        <li>Banner text MUST meet WCAG AA contrast on colored background</li>
+        <li>CTA button MUST be keyboard accessible</li>
+        <li>External links MUST indicate "opens in a new window"</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- B12: Investor Resources -->
+<!-- ============================================================ -->
+<div class="bs" id="b12">
+  <div class="bh">
+    <h2>B12: Investor Resources Block</h2>
+    <div class="bm">
+      <span class="badge badge-p3">P3 - Low</span>
+      <span>EDS: <code>investor-resources</code></span>
+      <span>0 Variants</span>
+      <span>1 Template</span>
+    </div>
+  </div>
+  <div class="bb">
+    <div class="bo">A two-column block featuring a quarterly earnings card on the left (~60%) and an investor resource link list on the right (~40%). Homepage exclusive.</div>
+
+    <div class="ds">
+      <h4>Acceptance Criteria</h4>
+      <ul class="cl">
+        <li>Left: Earnings card (H2 eyebrow + H4 title + CTA), entire card is a link</li>
+        <li>Right: "investor resources" label + H5 heading + link list with arrow icons</li>
+        <li>External links open in new window with indicator icon</li>
+        <li>Stacks vertically on tablet/mobile</li>
+      </ul>
+    </div>
+
+    <div class="ds">
+      <h4>Accessibility</h4>
+      <ul class="al">
+        <li>External links MUST indicate they open in a new window</li>
+        <li>Earnings card link MUST have descriptive accessible name</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- B13: ESG Impact -->
+<!-- ============================================================ -->
+<div class="bs" id="b13">
+  <div class="bh">
+    <h2>B13: ESG Impact Block</h2>
+    <div class="bm">
+      <span class="badge badge-p3">P3 - Low</span>
+      <span>EDS: <code>esg-impact</code></span>
+      <span>0 Variants</span>
+      <span>1 Template</span>
+    </div>
+  </div>
+  <div class="bb">
+    <div class="bo">A complex full-width block with a background image overlaid with multiple content cards: stat counter, feature/navigation card, and quick links card.</div>
+
+    <div class="ds">
+      <h4>Acceptance Criteria</h4>
+      <ul class="cl">
+        <li>Full-width background image (object-fit: cover)</li>
+        <li>Stat counter card with animated number (IntersectionObserver triggered)</li>
+        <li>Feature card: H2 eyebrow + H4 title + "Learn More" CTA, entire card linked</li>
+        <li>Quick links: heading + list of PDF download links (open in new window)</li>
+        <li>Cards stack vertically on mobile</li>
+      </ul>
+    </div>
+
+    <div class="ds">
+      <h4>Accessibility</h4>
+      <ul class="al">
+        <li>Background image MUST have alt text or be marked decorative</li>
+        <li>PDF links MUST indicate file type and new window</li>
+        <li>Stat counter final value MUST be in DOM for screen readers</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- B14: Footer -->
+<!-- ============================================================ -->
+<div class="bs" id="b14">
+  <div class="bh">
+    <h2>B14: Footer</h2>
+    <div class="bm">
+      <span class="badge badge-p0">P0 - Critical</span>
+      <span>EDS: <code>footer</code></span>
+      <span>0 Variants</span>
+      <span>ALL Templates</span>
+    </div>
+  </div>
+  <div class="bb">
+    <div class="bo">The global site footer appearing on every page. Contains AbbVie logo, primary navigation links, social media icons, popular pages, external links, legal/copyright text, and utility navigation links.</div>
+
+    <div class="ds">
+      <h4>Structure / Fields</h4>
+      <table class="st">
+        <thead><tr><th>Section</th><th>Content</th><th>Required</th></tr></thead>
+        <tbody>
+          <tr><td>Logo</td><td>AbbVie corporate logo image</td><td class="req">Required</td></tr>
+          <tr><td>Primary Nav</td><td>Who We Are, Science, Patients, Join Us, Sustainability</td><td class="req">Required</td></tr>
+          <tr><td>Social Icons</td><td>Facebook, X/Twitter, Instagram, LinkedIn, YouTube, TikTok</td><td class="req">Required</td></tr>
+          <tr><td>Popular Pages</td><td>Pipeline, Products, Partner with Us, Patient Support</td><td class="req">Required</td></tr>
+          <tr><td>External Links</td><td>News Center, Investors, Contract Manufacturing, Medical Info</td><td class="req">Required</td></tr>
+          <tr><td>Legal Text</td><td>Trademark + copyright notice</td><td class="req">Required</td></tr>
+          <tr><td>Utility Links</td><td>Contact Us, Accessibility, Site Map, Terms, Privacy, Cookie, Privacy Choices</td><td class="req">Required</td></tr>
+          <tr><td>Scroll-to-Top</td><td>Button with up arrow icon</td><td class="req">Required</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="ds">
+      <h4>Accessibility</h4>
+      <ul class="al">
+        <li>Social media icons MUST have alt text</li>
+        <li>External links MUST indicate they open in a new window</li>
+        <li>Cookie Settings link MUST trigger consent dialog accessibly</li>
+        <li>Scroll-to-top button MUST have descriptive label</li>
+        <li>Footer SHOULD use semantic footer element</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- B15: Header/Navigation -->
+<!-- ============================================================ -->
+<div class="bs" id="b15">
+  <div class="bh">
+    <h2>B15: Header/Navigation</h2>
+    <div class="bm">
+      <span class="badge badge-p0">P0 - Critical</span>
+      <span>EDS: <code>header</code></span>
+      <span>0 Variants</span>
+      <span>ALL Templates</span>
+    </div>
+  </div>
+  <div class="bb">
+    <div class="bo">The global sticky header appearing on every page. Contains AbbVie logo, 5 primary navigation items with mega-menu dropdowns, and utility controls (More, Global selector, Search).</div>
+
+    <div class="ds">
+      <h4>Structure / Fields</h4>
+      <table class="st">
+        <thead><tr><th>Element</th><th>Description</th><th>Required</th></tr></thead>
+        <tbody>
+          <tr><td>Logo</td><td>AbbVie logo linked to homepage. Max 112px desktop, 80px mobile</td><td class="req">Required</td></tr>
+          <tr><td>Primary Nav</td><td>5 items: Who We Are, Science, Patients, Join Us, Sustainability</td><td class="req">Required</td></tr>
+          <tr><td>Mega-Menu</td><td>Full-width dropdown per nav item with category links + featured card</td><td class="req">Required</td></tr>
+          <tr><td>More Button</td><td>Additional site links (desktop only)</td><td class="opt">Optional</td></tr>
+          <tr><td>Global Selector</td><td>Country/region picker (desktop only)</td><td class="opt">Optional</td></tr>
+          <tr><td>Search</td><td>Opens search input field</td><td class="req">Required</td></tr>
+          <tr><td>Hamburger Menu</td><td>Mobile navigation toggle, visible at &lt;~1000px</td><td class="req">Required</td></tr>
+          <tr><td>Skip-to-Content</td><td>First focusable element, links to #maincontent</td><td class="req">Required</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="ds">
+      <h4>Interactions</h4>
+      <div class="ig">
+        <div class="ii"><div class="tp">Nav Item Click/Hover</div><div class="dt">Opens mega-menu dropdown panel</div></div>
+        <div class="ii"><div class="tp">Escape Key</div><div class="dt">Closes open mega-menu dropdown</div></div>
+        <div class="ii"><div class="tp">Click Outside</div><div class="dt">Closes open mega-menu dropdown</div></div>
+        <div class="ii"><div class="tp">Hamburger Click</div><div class="dt">Opens full-screen or slide-in navigation panel</div></div>
+        <div class="ii"><div class="tp">Search Click</div><div class="dt">Toggles search input visibility</div></div>
+        <div class="ii"><div class="tp">Scroll</div><div class="dt">Header remains sticky at top, z-index above all content</div></div>
+      </div>
+    </div>
+
+    <div class="ds">
+      <h4>Accessibility</h4>
+      <ul class="al">
+        <li>Navigation MUST use nav element with aria-label="Primary"</li>
+        <li>Skip-to-content link MUST be the first focusable element</li>
+        <li>Mega-menu MUST be keyboard navigable (Tab, Arrow keys, Escape)</li>
+        <li>Hamburger button MUST have accessible label "Menu"</li>
+        <li>Current page MUST be indicated via aria-current="page"</li>
+        <li>Search input MUST have associated label</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- B16: Breadcrumb -->
+<!-- ============================================================ -->
+<div class="bs" id="b16">
+  <div class="bh">
+    <h2>B16: Breadcrumb</h2>
+    <div class="bm">
+      <span class="badge badge-p2">P2 - Medium</span>
+      <span>EDS: <code>breadcrumb</code></span>
+      <span>0 Variants</span>
+      <span>4 Templates</span>
+    </div>
+  </div>
+  <div class="bb">
+    <div class="bo">A horizontal breadcrumb navigation trail showing the hierarchical path from the homepage to the current page.</div>
+
+    <div class="ds">
+      <h4>Acceptance Criteria</h4>
+      <ul class="cl">
+        <li>Each ancestor page displayed as a link</li>
+        <li>Current page displayed as non-linked text (last item)</li>
+        <li>Separator character: "&gt;" between items</li>
+        <li>Font: Roboto Regular 14px, links #0066F5, current #071D49</li>
+        <li>May truncate or wrap on narrow viewports</li>
+      </ul>
+    </div>
+
+    <div class="ds">
+      <h4>Accessibility</h4>
+      <ul class="al">
+        <li>Breadcrumb MUST use nav element with aria-label="Breadcrumb"</li>
+        <li>Items MUST be in an ordered list (ol)</li>
+        <li>Current page item MUST have aria-current="page"</li>
+        <li>Separator characters MUST be decorative (hidden from screen readers)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- B17: Leader Bio -->
+<!-- ============================================================ -->
+<div class="bs" id="b17">
+  <div class="bh">
+    <h2>B17: Leader Bio Block</h2>
+    <div class="bm">
+      <span class="badge badge-p2">P2 - Medium</span>
+      <span>EDS: <code>leader-bio</code></span>
+      <span>0 Variants</span>
+      <span>2 Templates</span>
+    </div>
+  </div>
+  <div class="bb">
+    <div class="bo">A two-column biography block featuring a headshot photograph on the left (~30%) and biographical text with a LinkedIn CTA on the right (~70%).</div>
+
+    <div class="ds">
+      <h4>Structure / Fields</h4>
+      <table class="st">
+        <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>Headshot</td><td>Image</td><td class="req">Required</td><td>Portrait, ~30% width, alt: "{Name} headshot"</td></tr>
+          <tr><td>Title/Role</td><td>Text</td><td class="req">Required</td><td>Roboto Regular 16-18px</td></tr>
+          <tr><td>Biography</td><td>Rich Text</td><td class="req">Required</td><td>3-5 paragraphs, Roboto Regular 16px</td></tr>
+          <tr><td>LinkedIn</td><td>Link</td><td class="opt">Optional</td><td>Opens in new window</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="ds">
+      <h4>Responsive Behavior</h4>
+      <div class="rg">
+        <div class="rc"><h5>Desktop</h5><p class="bp">1440px+</p><ul><li>Image left (~30%), text right (~70%)</li></ul></div>
+        <div class="rc"><h5>Tablet</h5><p class="bp">768px+</p><ul><li>Stacked layout</li></ul></div>
+        <div class="rc"><h5>Mobile</h5><p class="bp">&lt;768px</p><ul><li>Image full-width on top, text below</li></ul></div>
+      </div>
+    </div>
+
+    <div class="ds">
+      <h4>Accessibility</h4>
+      <ul class="al">
+        <li>Headshot MUST have descriptive alt text including the person's name</li>
+        <li>LinkedIn link MUST indicate it opens in a new window</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- B18: Article Body -->
+<!-- ============================================================ -->
+<div class="bs" id="b18">
+  <div class="bh">
+    <h2>B18: Article Body Block</h2>
+    <div class="bm">
+      <span class="badge badge-p1">P1 - High</span>
+      <span>EDS: <code>article</code></span>
+      <span>0 Variants</span>
+      <span>2 Templates</span>
+    </div>
+  </div>
+  <div class="bb">
+    <div class="bo">A single-column article layout for story/content detail pages. Includes metadata bar, main heading, lead paragraph, body content with subheadings, inline images, video embeds, pull quotes, and reference footnotes.</div>
+
+    <div class="ds">
+      <h4>Structure / Fields</h4>
+      <table class="st">
+        <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>Back Link</td><td>Link</td><td class="req">Required</td><td>"All Stories" link to stories hub</td></tr>
+          <tr><td>Date</td><td>Date</td><td class="req">Required</td><td>"Month DD, YYYY"</td></tr>
+          <tr><td>Category</td><td>Link</td><td class="req">Required</td><td>Category label link (e.g., "Neuroscience")</td></tr>
+          <tr><td>Reading Time</td><td>Text</td><td class="opt">Optional</td><td>"X Minute Read"</td></tr>
+          <tr><td>Title (H1)</td><td>Text</td><td class="req">Required</td><td>F37 Lineca Medium 64px desktop</td></tr>
+          <tr><td>Lead Paragraph</td><td>Rich Text</td><td class="opt">Optional</td><td>Roboto Regular 18px</td></tr>
+          <tr><td>Body Content</td><td>Rich Text</td><td class="req">Required</td><td>Roboto Regular 16px, H5 subheadings 28px</td></tr>
+          <tr><td>Inline Images</td><td>Image</td><td class="opt">Optional</td><td>~640px width, alt text required</td></tr>
+          <tr><td>Inline Video</td><td>Video</td><td class="opt">Optional</td><td>Poster + Brightcove/YouTube</td></tr>
+          <tr><td>Footnotes</td><td>Rich Text</td><td class="opt">Optional</td><td>Numbered references at bottom</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="ds">
+      <h4>Responsive Behavior</h4>
+      <div class="rg">
+        <div class="rc"><h5>Desktop</h5><p class="bp">1440px+</p><ul><li>H1: 64px, H5: 28px, Body: 16px</li><li>Content max-width: 640px</li></ul></div>
+        <div class="rc"><h5>Tablet</h5><p class="bp">768px+</p><ul><li>H1: 40px, H5: 22px</li></ul></div>
+        <div class="rc"><h5>Mobile</h5><p class="bp">&lt;768px</p><ul><li>H1: 30px, Body: 16px</li><li>Full-width content</li></ul></div>
+      </div>
+    </div>
+
+    <div class="ds">
+      <h4>Accessibility</h4>
+      <ul class="al">
+        <li>Article MUST have proper heading hierarchy (H1 &gt; H5 for subheadings)</li>
+        <li>Images MUST have meaningful alt text</li>
+        <li>Footnote links MUST be bidirectional (body to footnote and back)</li>
+        <li>Reading time and metadata SHOULD be available to screen readers</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- B19: Pull Quote -->
+<!-- ============================================================ -->
+<div class="bs" id="b19">
+  <div class="bh">
+    <h2>B19: Pull Quote</h2>
+    <div class="bm">
+      <span class="badge badge-p2">P2 - Medium</span>
+      <span>EDS: <code>quote</code></span>
+      <span>2 Variants</span>
+      <span>4 Templates</span>
+    </div>
+  </div>
+  <div class="bb">
+    <div class="bo">A styled blockquote component displaying quoted text with author attribution. Can appear as a simple inline quote or a full-width testimonial with background image.</div>
+
+    <div class="vc2">
+      <div class="vh">
+        <h3>Variant A: Simple Inline Quote</h3>
+        <div class="vb2"><span class="badge badge-content">Content</span></div>
+      </div>
+      <div class="vbd">
+        <p class="desc">Contained pull quote within article body (~640px). No background image.</p>
+        <div class="ds">
+          <h4>Acceptance Criteria</h4>
+          <ul class="cl">
+            <li>Max-width: 640px (article body)</li>
+            <li>F37 Lineca Medium, 24-28px, #071D49</li>
+            <li>Optional left border: 4px solid #0066F5</li>
+            <li>Author name below quote, 14-16px</li>
+            <li>Transparent background</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="vc2">
+      <div class="vh">
+        <h3>Variant B: Full-Width with Background Image</h3>
+        <div class="vb2"><span class="badge badge-content">Content</span></div>
+      </div>
+      <div class="vbd">
+        <p class="desc">Large testimonial spanning full width with background image, semi-transparent dark overlay. White text.</p>
+        <div class="ds">
+          <h4>Acceptance Criteria</h4>
+          <ul class="cl">
+            <li>Background image spans full container width</li>
+            <li>Semi-transparent dark overlay (rgba(0,0,0,0.5))</li>
+            <li>Quote text and attribution in white (#FFFFFF)</li>
+            <li>Font: 28-32px, border-radius: 64px 0 0 0</li>
+            <li>Min-height: 400px</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="ds">
+      <h4>Accessibility</h4>
+      <ul class="al">
+        <li>Quote MUST use blockquote element or ARIA role</li>
+        <li>Attribution MUST be programmatically associated with the quote</li>
+        <li>White text on image overlay MUST meet WCAG AA contrast</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- B20: Related Content -->
+<!-- ============================================================ -->
+<div class="bs" id="b20">
+  <div class="bh">
+    <h2>B20: Related Content Card</h2>
+    <div class="bm">
+      <span class="badge badge-p2">P2 - Medium</span>
+      <span>EDS: <code>related-content</code></span>
+      <span>0 Variants</span>
+      <span>2 Templates</span>
+    </div>
+  </div>
+  <div class="bb">
+    <div class="bo">A horizontal card placed at the bottom of detail pages linking to a related article or story.</div>
+
+    <div class="ds">
+      <h4>Acceptance Criteria</h4>
+      <ul class="cl">
+        <li>H2 label "Related content" above card</li>
+        <li>Image ~40-50% of card width, object-fit: cover</li>
+        <li>Metadata: date, H2 category eyebrow, optional reading time</li>
+        <li>H4 title: F37 Lineca Medium 28-30px, #071D49</li>
+        <li>Entire card is a single clickable link</li>
+        <li>Stacks on mobile (image top, content below)</li>
+      </ul>
+    </div>
+
+    <div class="ds">
+      <h4>Accessibility</h4>
+      <ul class="al">
+        <li>Card link MUST have descriptive accessible name</li>
+        <li>Image MUST have meaningful alt text</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- B21: Accordion/FAQ -->
+<!-- ============================================================ -->
+<div class="bs" id="b21">
+  <div class="bh">
+    <h2>B21: Accordion/FAQ Block</h2>
+    <div class="bm">
+      <span class="badge badge-p2">P2 - Medium</span>
+      <span>EDS: <code>accordion</code></span>
+      <span>0 Variants</span>
+      <span>1 Template</span>
+    </div>
+  </div>
+  <div class="bb">
+    <div class="bo">An expandable accordion component with a section heading and multiple collapsible panels. Each panel has a question/title header that expands to reveal answer/body content.</div>
+
+    <div class="ds">
+      <h4>Structure / Fields</h4>
+      <table class="st">
+        <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>Section Heading</td><td>Text (H2)</td><td class="req">Required</td><td>Roboto Regular 40px bold</td></tr>
+          <tr><td>Panel Header</td><td>Text</td><td class="req">Required</td><td>Roboto Bold 16-18px, clickable</td></tr>
+          <tr><td>Panel Content</td><td>Rich Text</td><td class="req">Required</td><td>Roboto Regular 16px, rich text</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="ds">
+      <h4>Interactions</h4>
+      <div class="ig">
+        <div class="ii"><div class="tp">Panel Header Click</div><div class="dt">Toggles panel open/closed with smooth animation (300ms)</div></div>
+        <div class="ii"><div class="tp">Chevron Icon</div><div class="dt">Rotates or changes on toggle</div></div>
+        <div class="ii"><div class="tp">Desktop Tab Mode</div><div class="dt">May render as horizontal tabs on desktop viewports</div></div>
+        <div class="ii"><div class="tp">Mobile</div><div class="dt">Always accordion behavior</div></div>
+      </div>
+    </div>
+
+    <div class="ds">
+      <h4>Accessibility</h4>
+      <ul class="al">
+        <li>Panel headers MUST use button elements with aria-expanded attribute</li>
+        <li>Panel content MUST have aria-hidden when collapsed</li>
+        <li>Keyboard: Enter/Space toggles panel, Arrow keys navigate between headers</li>
+        <li>Focus MUST move logically through panels</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- B22: Dashboard Card Grid -->
+<!-- ============================================================ -->
+<div class="bs" id="b22">
+  <div class="bh">
+    <h2>B22: Dashboard Card Grid</h2>
+    <div class="bm">
+      <span class="badge badge-p1">P1 - High</span>
+      <span>EDS: <code>cards</code></span>
+      <span>2 Variants</span>
+      <span>4 Templates</span>
+    </div>
+  </div>
+  <div class="bb">
+    <div class="bo">A responsive grid of linked content cards (2x2 or 3-column). Each card displays an image, eyebrow label, title, and CTA.</div>
+
+    <div class="vc2">
+      <div class="vh">
+        <h3>Variant A: Full Teaser Card (Story Card)</h3>
+        <div class="vb2"><span class="badge badge-card">Card</span></div>
+      </div>
+      <div class="vbd">
+        <p class="desc">Rich card with image, date, eyebrow, title, description, and CTA. Reading time badge. Used for story/article cards.</p>
+        <div class="ds">
+          <h4>Structure / Fields</h4>
+          <table class="st">
+            <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td>Image</td><td>Image</td><td class="req">Required</td><td>16:9 or 3:2 aspect ratio</td></tr>
+              <tr><td>Date</td><td>Date</td><td class="opt">Optional</td><td>"Month DD, YYYY"</td></tr>
+              <tr><td>Eyebrow</td><td>Text (H2)</td><td class="opt">Optional</td><td>Category label</td></tr>
+              <tr><td>Title</td><td>Text (H4)</td><td class="req">Required</td><td>F37 Lineca Medium 28-30px</td></tr>
+              <tr><td>Description</td><td>Text</td><td class="opt">Optional</td><td>Short summary paragraph</td></tr>
+              <tr><td>CTA Text</td><td>Text</td><td class="opt">Optional</td><td>"Read story" or "Learn more" with arrow</td></tr>
+              <tr><td>Reading Time</td><td>Text</td><td class="opt">Optional</td><td>"X Minute Read" badge</td></tr>
+              <tr><td>Link URL</td><td>Link</td><td class="req">Required</td><td>Entire card is clickable</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="vc2">
+      <div class="vh">
+        <h3>Variant B: Compact Linked Card</h3>
+        <div class="vb2"><span class="badge badge-card">Card</span></div>
+      </div>
+      <div class="vbd">
+        <p class="desc">Simpler card with image and title only. No date, reading time, or CTA text. Used for navigating to sub-sections.</p>
+        <div class="ds">
+          <h4>Acceptance Criteria</h4>
+          <ul class="cl">
+            <li>No date, reading time, or CTA text displayed</li>
+            <li>Title serves as primary content</li>
+            <li>Used in 2x2 grid layout typically</li>
+            <li>Image aspect ratio: 3:2</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="ds">
+      <h4>Responsive Behavior</h4>
+      <div class="rg">
+        <div class="rc"><h5>Desktop</h5><p class="bp">1440px+</p><ul><li>2x2, 3-col, or 4-col grid</li><li>Gap: 24-32px</li><li>Equal-height cards per row</li></ul></div>
+        <div class="rc"><h5>Tablet</h5><p class="bp">768px+</p><ul><li>2-column grid</li></ul></div>
+        <div class="rc"><h5>Mobile</h5><p class="bp">&lt;768px</p><ul><li>1 column stacked</li></ul></div>
+      </div>
+    </div>
+
+    <div class="ds">
+      <h4>Accessibility</h4>
+      <ul class="al">
+        <li>Card links MUST have descriptive accessible names</li>
+        <li>Images MUST have meaningful alt text</li>
+        <li>Grid MUST maintain logical reading order when stacked</li>
+        <li>Card hover/focus state MUST be clearly visible</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- B23: Location/Address -->
+<!-- ============================================================ -->
+<div class="bs" id="b23">
+  <div class="bh">
+    <h2>B23: Location/Address Block</h2>
+    <div class="bm">
+      <span class="badge badge-p3">P3 - Low</span>
+      <span>EDS: <code>locations</code></span>
+      <span>0 Variants</span>
+      <span>1 Template</span>
+    </div>
+  </div>
+  <div class="bb">
+    <div class="bo">A content block displaying grouped physical addresses organized by state/region with headings and optional phone numbers.</div>
+
+    <div class="ds">
+      <h4>Acceptance Criteria</h4>
+      <ul class="cl">
+        <li>H5 heading for each region/state (F37 Lineca Medium 28px)</li>
+        <li>Complete address: office name, street, city/state/zip</li>
+        <li>Phone numbers as clickable tel: links, #0066F5</li>
+        <li>Horizontal separators between groups</li>
+        <li>Roboto Regular 16px for address text</li>
+      </ul>
+    </div>
+
+    <div class="ds">
+      <h4>Accessibility</h4>
+      <ul class="al">
+        <li>Heading hierarchy should be corrected (H1 &gt; H2/H3 for states, not H5)</li>
+        <li>Phone numbers MUST use tel: protocol</li>
+        <li>Address blocks SHOULD use address element or structured data</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- B24: Separator -->
+<!-- ============================================================ -->
+<div class="bs" id="b24">
+  <div class="bh">
+    <h2>B24: Separator</h2>
+    <div class="bm">
+      <span class="badge badge-p3">P3 - Low</span>
+      <span>EDS: <code>separator</code></span>
+      <span>4 Variants</span>
+      <span>ALL Templates</span>
+    </div>
+  </div>
+  <div class="bb">
+    <div class="bo">A horizontal rule used as a visual divider between content sections. Available in multiple height variants to control vertical spacing.</div>
+
+    <div class="vc2">
+      <div class="vh">
+        <h3>Default: Standard Separator</h3>
+        <div class="vb2"><span class="badge badge-utility">Utility</span></div>
+      </div>
+      <div class="vbd">
+        <p class="desc">Default height with minimal spacing. Rendered as hr element.</p>
+      </div>
+    </div>
+
+    <div class="vc2">
+      <div class="vh">
+        <h3>Height-80: Medium Spacing</h3>
+        <div class="vb2"><span class="badge badge-utility">Utility</span></div>
+      </div>
+      <div class="vbd">
+        <p class="desc">80px total height separator for medium vertical spacing between sections.</p>
+      </div>
+    </div>
+
+    <div class="vc2">
+      <div class="vh">
+        <h3>Height-96: Large Spacing</h3>
+        <div class="vb2"><span class="badge badge-utility">Utility</span></div>
+      </div>
+      <div class="vbd">
+        <p class="desc">96px total height separator for large vertical spacing.</p>
+      </div>
+    </div>
+
+    <div class="vc2">
+      <div class="vh">
+        <h3>Height-112: Extra-Large Spacing</h3>
+        <div class="vb2"><span class="badge badge-utility">Utility</span></div>
+      </div>
+      <div class="vbd">
+        <p class="desc">112px total height separator for extra-large vertical spacing between major sections.</p>
+      </div>
+    </div>
+
+    <div class="ds">
+      <h4>Accessibility</h4>
+      <ul class="al">
+        <li>Separator MUST be decorative (role="separator" or aria-hidden)</li>
+        <li>MUST NOT break content reading flow for screen readers</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- B25: Two-Column Grid -->
+<!-- ============================================================ -->
+<div class="bs" id="b25">
+  <div class="bh">
+    <h2>B25: Two-Column Grid (Generic)</h2>
+    <div class="bm">
+      <span class="badge badge-p2">P2 - Medium</span>
+      <span>EDS: <code>columns</code></span>
+      <span>0 Variants</span>
+      <span>4 Templates</span>
+    </div>
+  </div>
+  <div class="bb">
+    <div class="bo">A generic two-column split layout used for pairing different content types side by side: image + text, video + text, or text + text. Supports 50/50 and asymmetrical splits.</div>
+
+    <div class="ds">
+      <h4>Structure / Fields</h4>
+      <table class="st">
+        <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>Left Column</td><td>Mixed</td><td class="req">Required</td><td>Image, video, or text content</td></tr>
+          <tr><td>Right Column</td><td>Mixed</td><td class="req">Required</td><td>Heading + paragraphs + CTA, or other content</td></tr>
+          <tr><td>Column Split</td><td>Select</td><td class="opt">Optional</td><td>50/50, 40/60, or 30/70</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="ds">
+      <h4>Acceptance Criteria</h4>
+      <ul class="cl">
+        <li>Two distinct content columns side by side on desktop</li>
+        <li>Supports: 50/50, 40/60, 30/70 splits</li>
+        <li>Gap between columns: 24-32px</li>
+        <li>Images: object-fit cover, fills column width</li>
+        <li>Text column: heading (H2-H5), paragraphs, CTA link</li>
+        <li>Content can be reversed (text left, media right)</li>
+      </ul>
+    </div>
+
+    <div class="ds">
+      <h4>Responsive Behavior</h4>
+      <div class="rg">
+        <div class="rc"><h5>Desktop</h5><p class="bp">1440px+</p><ul><li>Side-by-side columns</li><li>Within 1330px container</li></ul></div>
+        <div class="rc"><h5>Tablet</h5><p class="bp">768px+</p><ul><li>Stacked (image/media first, text second)</li></ul></div>
+        <div class="rc"><h5>Mobile</h5><p class="bp">&lt;768px</p><ul><li>Full-width stacked</li></ul></div>
+      </div>
+    </div>
+
+    <div class="ds">
+      <h4>Accessibility</h4>
+      <ul class="al">
+        <li>Reading order MUST be logical when columns stack</li>
+        <li>Images MUST have meaningful alt text</li>
+        <li>Content in both columns MUST be accessible via keyboard</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+{
+  "blockId": "B14",
+  "blockName": "Footer",
+  "edsBlockName": "footer",
+  "description": "The global site footer appearing on every page. Contains the AbbVie logo, primary navigation links, social media icons, popular pages, external links, legal/copyright text, and utility navigation links.",
+  "category": "Navigation / Global",
+  "priority": "P0 - Critical",
+  "usedOnTemplates": ["ALL"],
+  "usedOnPages": ["All 321 URLs"],
+  "position": "Bottom",
+  "screenshots": ["homepage-full.png", "All page screenshots"],
+  "layout": {
+    "structure": "Multi-section vertical layout: logo + nav, social icons, popular pages, external links, legal text, utility links",
+    "alignment": "Left-aligned (nav), centered (legal text)",
+    "containerWidth": "1330px max-width, near-white background (#FAFAFA)"
+  },
+  "functionalRequirements": {
+    "FR-01": {
+      "title": "AbbVie Logo",
+      "description": "The footer MUST display the AbbVie corporate logo.",
+      "acceptance": [
+        "Logo image with alt text 'AbbVie logo'",
+        "Not linked (decorative brand element in footer)"
+      ]
+    },
+    "FR-02": {
+      "title": "Primary Navigation Links",
+      "description": "The footer MUST display the 5 primary site navigation links.",
+      "acceptance": [
+        "Links: Who We Are, Science, Patients, Join Us, Sustainability",
+        "Each link opens in same window",
+        "Styled as a horizontal or multi-column list"
+      ]
+    },
+    "FR-03": {
+      "title": "Social Media Icons",
+      "description": "The footer MUST display social media profile links with branded icons.",
+      "acceptance": [
+        "6 social platforms: Facebook, X/Twitter, Instagram, LinkedIn, YouTube, TikTok",
+        "Each link opens in a new window",
+        "Icons have alt text (e.g., 'Facebook Logo')",
+        "Displayed in a horizontal row"
+      ]
+    },
+    "FR-04": {
+      "title": "Popular Pages Section",
+      "description": "The footer MUST display a 'Popular pages' section with commonly accessed links.",
+      "acceptance": [
+        "H2 heading: 'Popular pages'",
+        "Links: Pipeline, Products, Partner with Us, Patient Support",
+        "Opens in same window"
+      ]
+    },
+    "FR-05": {
+      "title": "External Links Section",
+      "description": "The footer MUST display an 'External links' section with off-site resources.",
+      "acceptance": [
+        "H2 heading: 'External links'",
+        "Links: News Center, Investors, Contract Manufacturing, Medical Information",
+        "Each opens in a new window with external indicator icon"
+      ]
+    },
+    "FR-06": {
+      "title": "Legal/Copyright Text",
+      "description": "The footer MUST display trademark and copyright legal text.",
+      "acceptance": [
+        "Trademark notice paragraph",
+        "Copyright notice: 'Copyright (c) 2026 AbbVie Inc. North Chicago, Illinois, U.S.A.'",
+        "Smaller font size (12-14px)"
+      ]
+    },
+    "FR-07": {
+      "title": "Utility Links Bar",
+      "description": "The footer MUST display a utility links bar at the very bottom.",
+      "acceptance": [
+        "Links: Contact Us, Accessibility Statement, Site Map, Terms of Use, Privacy Notice, Consumer Health Data Privacy Notice, Cookie Settings, Your Privacy Choices",
+        "Cookie Settings link triggers the cookie preferences dialog",
+        "Your Privacy Choices includes the privacy icon image",
+        "Horizontal list with separators"
+      ]
+    },
+    "FR-08": {
+      "title": "Scroll-to-Top Button",
+      "description": "The footer area MUST include a 'Scroll to top of page' button.",
+      "acceptance": [
+        "Button positioned above the footer content",
+        "Scrolls page to top on click",
+        "Up arrow icon",
+        "Keyboard accessible"
+      ]
+    },
+    "FR-09": {
+      "title": "Responsive Layout",
+      "description": "Footer MUST adapt to mobile viewports.",
+      "acceptance": [
+        "Desktop: Multi-column layout for nav and link sections",
+        "Mobile: Single column, stacked sections",
+        "Social icons remain horizontal at all sizes"
+      ]
+    }
+  },
+  "variants": {},
+  "accessibility": {
+    "AC-01": "Social media icons MUST have alt text",
+    "AC-02": "External links MUST indicate they open in a new window",
+    "AC-03": "Cookie Settings link MUST trigger the consent dialog accessibly",
+    "AC-04": "Scroll-to-top button MUST have descriptive label",
+    "AC-05": "Footer SHOULD use appropriate ARIA landmark or semantic footer element"
+  },
+  "designTokens": {
+    "fontFamily": "\"Roboto Regular\", Helvetica, Arial, sans-serif",
+    "fontSize_heading": "16px",
+    "fontSize_links": "14px",
+    "fontSize_legal": "12px",
+    "color_text": "#071D49",
+    "color_link": "#071D49",
+    "color_bg": "#FAFAFA",
+    "color_bottomBar": "#071D49"
+  }
+}

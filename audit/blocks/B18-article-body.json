@@ -1,0 +1,126 @@
+{
+  "blockId": "B18",
+  "blockName": "Article Body Block",
+  "edsBlockName": "article",
+  "description": "A single-column article layout for story/content detail pages. Includes a metadata bar (back link, date, category, read time), main heading, lead paragraph, body content with subheadings, inline images, video embeds, pull quotes, and reference footnotes.",
+  "category": "Content/Article",
+  "priority": "P1 - High",
+  "usedOnTemplates": ["T04-Story Detail", "T12-Static/Legal"],
+  "usedOnPages": [
+    "https://www.abbvie.com/who-we-are/our-stories/two-lives-converging-in-the-fight-against-parkinsons.html",
+    "https://www.abbvie.com/accessibility-statement.html"
+  ],
+  "position": "Mid",
+  "screenshots": ["story-detail.png", "accessibility-statement.png"],
+  "layout": {
+    "structure": "Single column article body",
+    "alignment": "Left-aligned, centered within page",
+    "containerWidth": "~640px (article body width), centered within 780px root"
+  },
+  "functionalRequirements": {
+    "FR-01": {
+      "title": "Article Metadata Bar",
+      "description": "The article MUST display a metadata bar above the main heading.",
+      "acceptance": [
+        "Back link: 'All Stories' (links to stories hub)",
+        "Publication date in format 'Month DD, YYYY'",
+        "Category label as a link (e.g., 'Neuroscience')",
+        "Reading time: 'X Minute Read'",
+        "Horizontal layout with items separated"
+      ]
+    },
+    "FR-02": {
+      "title": "Article Title (H1)",
+      "description": "The article MUST display a prominent H1 title.",
+      "acceptance": [
+        "F37 Lineca Medium, 64px desktop, 40px tablet, 30px mobile",
+        "Weight: 800",
+        "Color: #071D49",
+        "Single H1 per page"
+      ]
+    },
+    "FR-03": {
+      "title": "Lead Paragraph",
+      "description": "The article SHOULD display a lead/intro paragraph with slightly larger or distinguished styling.",
+      "acceptance": [
+        "First paragraph after H1",
+        "May use cmp-text-x-large or cmp-text-xx-large variant",
+        "Roboto Regular, 18px"
+      ]
+    },
+    "FR-04": {
+      "title": "Body Content",
+      "description": "The article MUST support rich body content including paragraphs, subheadings, lists, and inline formatting.",
+      "acceptance": [
+        "Paragraphs: Roboto Regular, 16px, line-height 22px",
+        "Subheadings: H5 for section breaks (F37 Lineca Medium, 28px)",
+        "Bold and italic inline formatting supported",
+        "Bulleted and numbered lists supported"
+      ]
+    },
+    "FR-05": {
+      "title": "Inline Images",
+      "description": "The article MUST support inline images within the body content.",
+      "acceptance": [
+        "Images displayed at article body width (~640px)",
+        "Alt text required",
+        "Images sourced from DAM (Scene7)"
+      ]
+    },
+    "FR-06": {
+      "title": "Inline Video Embed",
+      "description": "The article MUST support inline video embeds (Brightcove/YouTube).",
+      "acceptance": [
+        "Video contained within article width",
+        "Poster image with play overlay",
+        "Standard video controls on activation"
+      ]
+    },
+    "FR-07": {
+      "title": "Pull Quote",
+      "description": "The article MUST support pull quotes (see B19) inline within the body content.",
+      "acceptance": [
+        "Styled blockquote with author attribution",
+        "Visually distinguished from body text"
+      ]
+    },
+    "FR-08": {
+      "title": "Reference Footnotes",
+      "description": "The article SHOULD support numbered footnotes with superscript references in the body text.",
+      "acceptance": [
+        "Superscript numbers in body text link to footnote section",
+        "Footnote section at bottom of article with numbered references",
+        "References may link to external sources"
+      ]
+    },
+    "FR-09": {
+      "title": "Responsive Typography",
+      "description": "Article typography MUST scale across breakpoints.",
+      "acceptance": [
+        "H1: 64px (desktop) → 40px (tablet) → 30px (mobile)",
+        "H5 subheadings: 28px (desktop) → 22px (mobile)",
+        "Body: 16px consistent, line-height adjusts"
+      ]
+    }
+  },
+  "variants": {},
+  "accessibility": {
+    "AC-01": "Article MUST have proper heading hierarchy (H1 > H5 for subheadings)",
+    "AC-02": "Images MUST have meaningful alt text",
+    "AC-03": "Footnote links MUST be bidirectional (body to footnote and back)",
+    "AC-04": "Reading time and metadata SHOULD be available to screen readers"
+  },
+  "designTokens": {
+    "fontFamily_heading": "\"F37 Lineca Medium\", Helvetica, Arial, sans-serif",
+    "fontFamily_body": "\"Roboto Regular\", Helvetica, Arial, sans-serif",
+    "fontSize_h1_desktop": "64px",
+    "fontSize_h5_desktop": "28px",
+    "fontSize_body": "16px",
+    "fontSize_lead": "18px",
+    "lineHeight_body": "22px",
+    "color_text": "#071D49",
+    "color_meta": "#666B7A",
+    "color_link": "#0066F5",
+    "contentMaxWidth": "640px"
+  }
+}

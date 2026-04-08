@@ -1,0 +1,62 @@
+{
+  "blockId": "B12",
+  "blockName": "Investor Resources Block",
+  "edsBlockName": "investor-resources",
+  "description": "A two-column block featuring a quarterly earnings card on the left and an investor resource link list on the right. Used exclusively on the homepage to surface financial information.",
+  "category": "Financial/Investor",
+  "priority": "P3 - Low",
+  "usedOnTemplates": ["T01-Homepage"],
+  "usedOnPages": ["https://www.abbvie.com/"],
+  "position": "Mid/Bottom",
+  "screenshots": ["homepage-full.png"],
+  "layout": {
+    "structure": "2-column asymmetrical (earnings card ~60%, link list ~40%)",
+    "alignment": "Left-aligned",
+    "containerWidth": "Within 1330px container"
+  },
+  "functionalRequirements": {
+    "FR-01": {
+      "title": "Earnings Card",
+      "description": "The left column MUST display a linked earnings card with category, title, and CTA.",
+      "acceptance": [
+        "H2 eyebrow: 'Quarterly Earnings'",
+        "H4 title: Earnings report headline",
+        "CTA: 'LATEST EARNINGS RELEASE' with arrow",
+        "Entire card is a single link to earnings page"
+      ]
+    },
+    "FR-02": {
+      "title": "Investor Resource Links",
+      "description": "The right column MUST display a heading and a vertical list of investor resource links.",
+      "acceptance": [
+        "Label: 'investor resources'",
+        "H5 heading: 'Get the latest information about AbbVie'",
+        "Link list: Events and presentations, Stakeholders contacts, Annual report",
+        "Each link has arrow icon and 'Opens in a new window' indicator",
+        "Links point to investors.abbvie.com subdomain"
+      ]
+    },
+    "FR-03": {
+      "title": "Responsive Behavior",
+      "description": "Columns MUST stack vertically on tablet/mobile.",
+      "acceptance": [
+        "Desktop: Side-by-side layout",
+        "Tablet/Mobile: Earnings card on top, links below"
+      ]
+    }
+  },
+  "variants": {},
+  "accessibility": {
+    "AC-01": "External links MUST indicate they open in a new window",
+    "AC-02": "Earnings card link MUST have descriptive accessible name"
+  },
+  "designTokens": {
+    "fontFamily_heading": "\"F37 Lineca Medium\", Helvetica, Arial, sans-serif",
+    "fontFamily_body": "\"Roboto Regular\", Helvetica, Arial, sans-serif",
+    "fontSize_eyebrow": "16px",
+    "fontSize_title": "30px",
+    "fontSize_linkList": "16px",
+    "color_text": "#071D49",
+    "color_link": "#0066F5"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "blockId": "B02",
+  "blockName": "Press Release Carousel",
+  "edsBlockName": "carousel",
+  "description": "A sliding carousel of dated press release items with previous/next navigation controls. Each slide displays a date and linked headline.",
+  "category": "Content Carousel",
+  "priority": "P3 - Low",
+  "usedOnTemplates": ["T01-Homepage"],
+  "usedOnPages": ["https://www.abbvie.com/"],
+  "position": "Top/Mid",
+  "screenshots": ["homepage-full.png"],
+  "layout": {
+    "structure": "Horizontal carousel with grouped slides",
+    "alignment": "Left-aligned content",
+    "containerWidth": "Constrained within 1330px container",
+    "slidesVisible": "1 slide visible at a time (3 total)"
+  },
+  "functionalRequirements": {
+    "FR-01": {
+      "title": "Section Heading",
+      "description": "The carousel MUST display a section heading ('Press Releases') above the carousel area.",
+      "acceptance": [
+        "H2 heading rendered in Roboto Regular, 700 weight",
+        "Heading followed by a horizontal separator line"
+      ]
+    },
+    "FR-02": {
+      "title": "Carousel Navigation Controls",
+      "description": "Previous and Next navigation buttons MUST be provided to cycle through slides.",
+      "acceptance": [
+        "Previous button labeled 'Go to last slide'",
+        "Next button labeled 'Next slide'",
+        "Buttons use arrow icons",
+        "Background: #EFEFEF (light gray), circular shape",
+        "Disabled state when at first/last slide"
+      ]
+    },
+    "FR-03": {
+      "title": "Slide Content Structure",
+      "description": "Each slide MUST display a dated press release item with a linked headline.",
+      "acceptance": [
+        "Date displayed in a label format (e.g., 'April 8, 2026')",
+        "Headline as a paragraph element, linked to the full press release",
+        "Entire slide area is clickable (linked)",
+        "Link opens to external news.abbvie.com domain"
+      ]
+    },
+    "FR-04": {
+      "title": "Slide Grouping",
+      "description": "Slides MUST be grouped and announce position (e.g., '1 of 3').",
+      "acceptance": [
+        "ARIA group role with label indicating position",
+        "Minimum 3 slides",
+        "Smooth transition animation between slides"
+      ]
+    },
+    "FR-05": {
+      "title": "Responsive Behavior",
+      "description": "Carousel MUST function at all viewport sizes.",
+      "acceptance": [
+        "Desktop: Full-width carousel within container",
+        "Mobile: Same carousel behavior, touch swipe supported",
+        "Controls remain accessible at all breakpoints"
+      ]
+    }
+  },
+  "variants": {},
+  "accessibility": {
+    "AC-01": "Carousel region MUST have an accessible name",
+    "AC-02": "Navigation buttons MUST have descriptive labels",
+    "AC-03": "Current slide position MUST be announced to screen readers",
+    "AC-04": "Auto-rotation MUST NOT be enabled (user-controlled only)",
+    "AC-05": "Keyboard navigation: arrow keys cycle slides, Enter/Space activates links"
+  },
+  "designTokens": {
+    "fontFamily_heading": "\"Roboto Regular\", Helvetica, Arial, sans-serif",
+    "fontWeight_heading": "700",
+    "fontSize_heading": "16px",
+    "fontSize_date": "14px",
+    "fontSize_headline": "16px",
+    "color_text": "#071D49",
+    "color_link": "#0066F5",
+    "color_controlBg": "#EFEFEF",
+    "color_separator": "#071D49"
+  }
+}

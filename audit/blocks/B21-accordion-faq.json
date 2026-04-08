@@ -1,0 +1,84 @@
+{
+  "blockId": "B21",
+  "blockName": "Accordion/FAQ Block",
+  "edsBlockName": "accordion",
+  "description": "An expandable accordion component with a section heading and multiple collapsible panels. Each panel has a question/title header that expands to reveal answer/body content. Used for FAQ sections.",
+  "category": "Interactive/Content",
+  "priority": "P2 - Medium",
+  "usedOnTemplates": ["T02-Hub Landing"],
+  "usedOnPages": ["https://www.abbvie.com/science.html"],
+  "position": "Bottom",
+  "screenshots": ["science-hub.png"],
+  "layout": {
+    "structure": "Single column, stacked expandable panels",
+    "alignment": "Left-aligned",
+    "containerWidth": "Within 1330px container"
+  },
+  "functionalRequirements": {
+    "FR-01": {
+      "title": "Section Heading",
+      "description": "The block MUST display an H2 section heading above the accordion.",
+      "acceptance": [
+        "H2 heading (e.g., 'Frequently asked questions')",
+        "Roboto Regular, 40px desktop, bold"
+      ]
+    },
+    "FR-02": {
+      "title": "Expandable Panels",
+      "description": "The block MUST render multiple expandable/collapsible panels.",
+      "acceptance": [
+        "Minimum 2 panels, typically 4+",
+        "Each panel has a clickable header (question/title)",
+        "Clicking header toggles panel open/closed",
+        "Only one panel open at a time (optional mutual exclusion)"
+      ]
+    },
+    "FR-03": {
+      "title": "Panel Header",
+      "description": "Each panel header MUST display the question or title text with an expand/collapse indicator.",
+      "acceptance": [
+        "Text displayed in bold (Roboto Bold, 16-18px)",
+        "Expand/collapse icon (chevron or plus/minus) on the right",
+        "Icon rotates or changes on toggle",
+        "Entire header row is clickable"
+      ]
+    },
+    "FR-04": {
+      "title": "Panel Content",
+      "description": "Each expanded panel MUST display the answer or body content.",
+      "acceptance": [
+        "Rich text content: paragraphs, lists, links",
+        "Roboto Regular, 16px",
+        "Smooth expand/collapse animation",
+        "Content hidden from view (and screen readers) when collapsed"
+      ]
+    },
+    "FR-05": {
+      "title": "Desktop Tab Variant",
+      "description": "On desktop, the accordion MAY render as tabbed panels (show-tabs-desktop behavior).",
+      "acceptance": [
+        "Tabs displayed horizontally on desktop viewports",
+        "Accordion behavior on mobile/tablet",
+        "Content area updates based on selected tab"
+      ]
+    }
+  },
+  "variants": {},
+  "accessibility": {
+    "AC-01": "Panel headers MUST use button elements with aria-expanded attribute",
+    "AC-02": "Panel content MUST have aria-hidden when collapsed",
+    "AC-03": "Keyboard navigation: Enter/Space toggles panel, Arrow keys navigate between headers",
+    "AC-04": "Focus MUST move logically through panels"
+  },
+  "designTokens": {
+    "fontFamily_header": "\"Roboto Bold\", Helvetica, Arial, sans-serif",
+    "fontFamily_body": "\"Roboto Regular\", Helvetica, Arial, sans-serif",
+    "fontSize_header": "16-18px",
+    "fontSize_body": "16px",
+    "color_header": "#071D49",
+    "color_body": "#071D49",
+    "color_icon": "#0066F5",
+    "borderBottom": "1px solid #EFEFEF",
+    "animationDuration": "300ms"
+  }
+}

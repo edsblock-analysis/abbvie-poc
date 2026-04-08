@@ -1,0 +1,441 @@
+### Page state
+- Page URL: https://www.abbvie.com/
+- Page Title: Pharmaceutical Research & Development | AbbVie
+- Page Snapshot:
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e5]:
+    - generic [ref=e10]:
+      - link "Skip to main content" [ref=e11] [cursor=pointer]:
+        - /url: "#maincontent"
+      - banner [ref=e12]:
+        - generic [ref=e13]:
+          - link "Logo AbbVie" [ref=e16] [cursor=pointer]:
+            - /url: /
+            - img "Logo AbbVie" [ref=e17]
+          - navigation "Primary" [ref=e18]:
+            - list [ref=e19]:
+              - listitem [ref=e20]:
+                - button "Who We Are" [ref=e21] [cursor=pointer]
+                - text:                 
+              - listitem [ref=e22]:
+                - button "Science" [ref=e23] [cursor=pointer]
+                - text:                      
+              - listitem [ref=e24]:
+                - button "Patients" [ref=e25] [cursor=pointer]
+                - text:        
+              - listitem [ref=e26]:
+                - button "Join Us" [ref=e27] [cursor=pointer]
+                - text:             
+              - listitem [ref=e28]:
+                - button "Sustainability" [ref=e29] [cursor=pointer]
+                - text:           
+              - text:                                                                             
+        - list [ref=e30]:
+          - listitem [ref=e31]:
+            - button "More - Overflow Links" [ref=e32] [cursor=pointer]:
+              - img [ref=e33]
+              - generic [ref=e34]: MORE
+            - text:                     
+          - listitem [ref=e35]:
+            - button "GLOBAL" [ref=e36] [cursor=pointer]:
+              - img [ref=e37]
+              - generic [ref=e38]: GLOBAL
+            - text:                                                        
+          - listitem [ref=e39]:
+            - button "Search AbbVie.com" [ref=e40] [cursor=pointer]:
+              - img [ref=e41]
+            - text: 
+    - generic [ref=e43]:
+      - generic [ref=e45]:
+        - text:             
+        - generic [ref=e52]:
+          - img "devan patient hero"
+          - generic [ref=e54]:
+            - generic [ref=e56]:
+              - separator
+            - heading "Inspired by the people behind the medicine we make" [level=1] [ref=e59]
+            - paragraph [ref=e62]:
+              - link "Learn more" [ref=e63] [cursor=pointer]:
+                - /url: "#section01"
+      - generic [ref=e68]:
+        - generic [ref=e69]:
+          - heading "Press Releases" [level=2] [ref=e72]
+          - generic [ref=e74]:
+            - separator
+          - generic [ref=e76]:
+            - separator
+          - region [ref=e78]:
+            - generic [ref=e79]:
+              - button "Go to last slide" [ref=e80] [cursor=pointer]: 
+              - button "Next slide" [ref=e81] [cursor=pointer]: 
+            - group [ref=e82]:
+              - group "1 of 3" [ref=e83]:
+                - link "April 8, 2026 BOTOX® Cosmetic (onabotulinumtoxinA) Empowers Women Entrepreneurs Through \"The Confidence Collective\" for Fourth Year" [ref=e84] [cursor=pointer]:
+                  - /url: https://news.abbvie.com/2026-04-08-BOTOX-R-Cosmetic-onabotulinumtoxinA-Empowers-Women-Entrepreneurs-Through-The-Confidence-Collective-for-Fourth-Year
+                  - generic [ref=e85]: April 8, 2026
+                  - paragraph [ref=e86]: BOTOX® Cosmetic (onabotulinumtoxinA) Empowers Women Entrepreneurs Through "The Confidence Collective" for Fourth Year
+              - group [ref=e87]:
+                - link [ref=e88] [cursor=pointer]:
+                  - /url: https://news.abbvie.com/2026-04-07-Allergan-Aesthetics-Third-State-of-the-Art-AMI-Center-Opens-in-Austin
+                  - generic [ref=e89]: April 7, 2026
+                  - paragraph [ref=e90]: Allergan Aesthetics Third State-of-the-Art AMI Center Opens in Austin
+              - group [ref=e91]:
+                - link [ref=e92] [cursor=pointer]:
+                  - /url: https://news.abbvie.com/2026-03-31-Allergan-Aesthetics-Announces-Fourth-Annual,-All-Access-CoolMonth-with-Deals-on-CoolSculpting-R
+                  - generic [ref=e93]: March 31, 2026
+                  - paragraph [ref=e94]: Allergan Aesthetics Announces Fourth Annual, All-Access CoolMonth with Deals on CoolSculpting®
+        - generic [ref=e96]:
+          - heading "Featured" [level=2] [ref=e99]
+          - generic [ref=e101]:
+            - separator
+          - generic [ref=e103]:
+            - separator
+          - link "wp card story image December 15, 2025 Neuroscience Beyond the Diagnosis Meet a patient learning to navigate life with Parkinson’s, and a scientist dedicated to advancing research in the field. Read story  3 Minute Read" [ref=e105] [cursor=pointer]:
+            - /url: /who-we-are/our-stories/two-lives-converging-in-the-fight-against-parkinsons.html
+            - img "wp card story image" [ref=e108]
+            - generic [ref=e109]:
+              - generic [ref=e110]:
+                - generic [ref=e111]:
+                  - generic [ref=e112]: December 15, 2025
+                  - heading "Neuroscience" [level=2] [ref=e113]
+                - generic [ref=e114]:
+                  - heading "Beyond the Diagnosis" [level=4] [ref=e115]
+                  - paragraph [ref=e116]: Meet a patient learning to navigate life with Parkinson’s, and a scientist dedicated to advancing research in the field.
+              - generic [ref=e117]:
+                - generic [ref=e118]: Read story
+                - generic [ref=e119]:  3 Minute Read
+      - generic [ref=e122]:
+        - heading "Patients are at the heart of everything we do." [level=3] [ref=e123]:
+          - paragraph [ref=e124]: Patients are at the heart of everything we do.
+        - paragraph [ref=e126]: Explore the real life stories that inspire us to make medicines and solutions that put impact first.
+        - link "Learn more Opens in same window" [ref=e128] [cursor=pointer]:
+          - /url: /patients.html
+          - text: Learn more 
+      - generic [ref=e131]:
+        - generic [ref=e132]:
+          - 'img "Portrait of two women: one a Parkinson’s patient and the other an AbbVie scientist" [ref=e135]'
+          - generic [ref=e136]:
+            - heading "Advancing Parkinson’s Research" [level=2] [ref=e137]
+            - paragraph [ref=e138]: One Patient’s Journey, One Scientist’s Mission
+            - button "Watch 3:49" [ref=e139] [cursor=pointer]:
+              - text: 
+              - generic [ref=e140]: Watch 3:49
+        - region "Video Player ABBVIExWPCG-HERO-VIDEO-FINAL CUT-110625" [ref=e142]:
+          - application "ABBVIExWPCG-HERO-VIDEO-FINAL CUT-110625" [ref=e143]
+          - generic:
+            - generic: ABBVIExWPCG-HERO-VIDEO-FINAL CUT-110625
+          - button "Play Video" [ref=e144] [cursor=pointer]:
+            - text: 
+            - generic [ref=e145]: Play Video
+          - text:           
+      - generic [ref=e147]:
+        - separator
+      - generic [ref=e150]:
+        - heading "Science & Innovation" [level=2] [ref=e151]
+        - heading "We solve the tough challenges." [level=3] [ref=e152]:
+          - paragraph [ref=e153]: We solve the tough challenges.
+        - paragraph [ref=e155]: By working closely with patients and physicians, we solve real, complex challenges they're facing right now, first with science and support.
+      - generic [ref=e158]:
+        - 'link "ambily card image Science Striving for Breakthroughs: First, Faster and for Patients Learn More " [ref=e161] [cursor=pointer]':
+          - /url: /science.html
+          - img "ambily card image" [ref=e164]
+          - generic [ref=e165]:
+            - generic [ref=e166]:
+              - heading "Science" [level=2] [ref=e167]
+              - 'heading "Striving for Breakthroughs: First, Faster and for Patients" [level=4] [ref=e169]'
+            - generic [ref=e170]: Learn More 
+        - generic [ref=e175]:
+          - heading "impact" [level=2] [ref=e176]
+          - generic [ref=e177]:
+            - generic [ref=e178]: "75"
+            - generic [ref=e179]: +
+          - generic [ref=e180]: conditions treated
+        - generic [ref=e185]:
+          - heading "Company" [level=2] [ref=e186]
+          - generic [ref=e187]:
+            - generic [ref=e188]: ~57
+            - generic [ref=e189]: k
+          - generic [ref=e190]: employees turning possibilities into reality for people and patients
+      - generic [ref=e192]:
+        - separator
+      - generic [ref=e197]:
+        - img "the persistence lab promo" [ref=e202]
+        - generic [ref=e204]:
+          - heading "Science" [level=2] [ref=e207]
+          - heading "The Persistence Lab Podcast" [level=5] [ref=e210]
+          - paragraph [ref=e213]: Discover The Persistence Lab—stories of real people who are driving change in medicine and health care. Listen to how persistence turns possibilities into real impact.
+          - link "Learn more Opens in same window" [ref=e215] [cursor=pointer]:
+            - /url: /who-we-are/our-stories/the-persistence-lab-podcasts.html
+            - generic [ref=e216]: Learn more
+            - text: 
+      - generic [ref=e219]:
+        - separator
+      - generic [ref=e222]:
+        - heading "a culture of curiosity" [level=2] [ref=e223]
+        - heading "We find the answers together." [level=3] [ref=e224]:
+          - paragraph [ref=e225]: We find the answers together.
+        - paragraph [ref=e227]: We make investments that empower our people and strengthen our partnerships.
+      - generic [ref=e230]:
+        - generic [ref=e231]:
+          - img "man looking at test tube" [ref=e234]
+          - paragraph [ref=e237]: To develop innovative medicines, you need innovative people. We collaborate across disciplines to connect people and ideas, fueling a culture of curiosity and problem-solving.
+          - link "SCIENCE Opens in a new window" [ref=e239] [cursor=pointer]:
+            - /url: /science.html
+            - generic [ref=e240]: SCIENCE
+            - text: 
+        - generic [ref=e241]:
+          - img "young woman smiling" [ref=e244]
+          - paragraph [ref=e247]: Grow and fulfill your unique potential in our supportive environment that champions collaboration. AbbVie offers functional training, global events, leadership programs and more.
+          - link "Learning and Development Opens in same window" [ref=e249] [cursor=pointer]:
+            - /url: /join-us/life-at-abbvie/learning-and-development.html
+            - generic [ref=e250]: Learning and Development
+            - text: 
+        - generic [ref=e251]:
+          - img "woman in conference room" [ref=e254]
+          - paragraph [ref=e257]: 250+ active external innovation partners to conduct groundbreaking science to discover and develop transformational medicines.
+          - link "Partnerships Opens in same window" [ref=e259] [cursor=pointer]:
+            - /url: /science/partner-with-us.html
+            - generic [ref=e260]: Partnerships
+            - text: 
+      - generic [ref=e262]:
+        - separator
+      - generic [ref=e267]:
+        - generic [ref=e268]:
+          - heading "Explore opportunities" [level=4] [ref=e271]
+          - paragraph [ref=e274]: If you thrive as part of a diverse, collaborative team—we’re ready for you.
+        - link "Browse jobs Opens in same window" [ref=e278] [cursor=pointer]:
+          - /url: https://careers.abbvie.com
+          - generic [ref=e279]: Browse jobs
+      - generic [ref=e281]:
+        - separator
+      - generic [ref=e284]:
+        - heading "INVESTOR RESOURCES" [level=2] [ref=e285]
+        - heading "We invest in creating better futures." [level=3] [ref=e286]:
+          - paragraph [ref=e287]: We invest in creating better futures.
+        - paragraph [ref=e289]: Our focus and capabilities address tough challenges that lead to improved lives.
+      - generic [ref=e292]:
+        - link "Quarterly Earnings AbbVie Reports Third-Quarter 2025 Financial Results LATEST EARNINGS RELEASE " [ref=e295] [cursor=pointer]:
+          - /url: /latest-earnings.html
+          - generic [ref=e296]:
+            - generic [ref=e297]:
+              - heading "Quarterly Earnings" [level=2] [ref=e298]
+              - generic [ref=e299]:
+                - heading "AbbVie Reports Third-Quarter 2025 Financial Results" [level=4] [ref=e300]
+                - paragraph
+            - generic [ref=e301]: LATEST EARNINGS RELEASE 
+        - generic [ref=e305]:
+          - generic [ref=e306]: investor resources
+          - generic [ref=e307]:
+            - heading "Get the latest information about AbbVie" [level=5] [ref=e308]
+            - generic [ref=e309]:
+              - link "Events and presentations Opens in a new window" [ref=e310] [cursor=pointer]:
+                - /url: https://investors.abbvie.com/events-and-presentations/upcoming-events
+                - generic [ref=e311]: Events and presentations
+                - generic [ref=e312]: 
+              - link "Stakeholders contacts Opens in a new window" [ref=e313] [cursor=pointer]:
+                - /url: https://investors.abbvie.com/shareholder-information
+                - generic [ref=e314]: Stakeholders contacts
+                - generic [ref=e315]: 
+              - link "Annual report Opens in a new window" [ref=e316] [cursor=pointer]:
+                - /url: https://investors.abbvie.com/annual-report-proxy
+                - generic [ref=e317]: Annual report
+                - generic [ref=e318]: 
+      - generic [ref=e320]:
+        - separator
+      - generic [ref=e323]:
+        - heading "ENVIRONMENTAL, SOCIAL AND GOVERNANCE" [level=2] [ref=e324]
+        - heading "We make an impact that lasts." [level=3] [ref=e325]:
+          - paragraph [ref=e326]: We make an impact that lasts.
+        - paragraph [ref=e328]: Leading with purpose, we are willing to make the tough choices that deliver a lasting impact to patients, their families and our employees.
+      - generic [ref=e330]:
+        - img "kids playing soccer on grass"
+        - generic [ref=e332]:
+          - separator
+        - generic [ref=e335]:
+          - generic [ref=e340]:
+            - heading "Environmental Stewardship" [level=2] [ref=e341]
+            - generic [ref=e342]:
+              - generic [ref=e343]: "32"
+              - generic [ref=e344]: "%"
+            - generic [ref=e345]: reduction in absolute Scope 1 and 2 (market-based) GHG emissions ahead of our 42% reduction target by 2030
+          - link "SUSTAINABILITY Environmental, Social & Governance Learn More " [ref=e348] [cursor=pointer]:
+            - /url: /sustainability/environmental-social-and-governance.html
+            - generic [ref=e349]:
+              - generic [ref=e350]:
+                - heading "SUSTAINABILITY" [level=2] [ref=e351]
+                - heading "Environmental, Social & Governance" [level=4] [ref=e353]
+              - generic [ref=e354]: Learn More 
+          - generic [ref=e358]:
+            - generic [ref=e359]: Quick Links
+            - generic [ref=e360]:
+              - heading "AbbVie’s Positions & Views" [level=5] [ref=e361]
+              - generic [ref=e362]:
+                - link "Our Environmental Stewardship Opens in a new window" [ref=e363] [cursor=pointer]:
+                  - /url: /content/dam/abbvie-com2/pdfs/about/our-environmental-stewardship.pdf
+                  - generic [ref=e364]: Our Environmental Stewardship
+                  - generic [ref=e365]: 
+                - link "Pricing and Access of Our Innovative Medicines Opens in a new window" [ref=e366] [cursor=pointer]:
+                  - /url: /content/dam/abbvie-com2/pdfs/about/pricing-and-access-of-our-innovative-medicines.pdf
+                  - generic [ref=e367]: Pricing and Access of Our Innovative Medicines
+                  - generic [ref=e368]: 
+                - link "AbbVie's Code of Conduct Opens in a new window" [ref=e369] [cursor=pointer]:
+                  - /url: /content/dam/abbvie-com2/pdfs/cobc/cobc_English.pdf
+                  - generic [ref=e370]: AbbVie's Code of Conduct
+                  - generic [ref=e371]: 
+        - generic [ref=e373]:
+          - separator
+    - generic [ref=e381]:
+      - button "Scroll to top of page" [ref=e383] [cursor=pointer]: 
+      - generic [ref=e386]:
+        - img "AbbVie logo" [ref=e390]
+        - generic [ref=e391]:
+          - list [ref=e393]:
+            - listitem [ref=e394]:
+              - link "Who We Are Opens in same window" [ref=e395] [cursor=pointer]:
+                - /url: https://www.abbvie.com/who-we-are.html
+                - generic [ref=e396]: Who We Are
+            - listitem [ref=e397]:
+              - link "Science Opens in same window" [ref=e398] [cursor=pointer]:
+                - /url: https://www.abbvie.com/science.html
+                - generic [ref=e399]: Science
+            - listitem [ref=e400]:
+              - link "Patients Opens in same window" [ref=e401] [cursor=pointer]:
+                - /url: https://www.abbvie.com/patients.html
+                - generic [ref=e402]: Patients
+            - listitem [ref=e403]:
+              - link "Join Us Opens in same window" [ref=e404] [cursor=pointer]:
+                - /url: https://www.abbvie.com/join-us.html
+                - generic [ref=e405]: Join Us
+            - listitem [ref=e406]:
+              - link "Sustainability Opens in same window" [ref=e407] [cursor=pointer]:
+                - /url: https://www.abbvie.com/sustainability.html
+                - generic [ref=e408]: Sustainability
+          - list [ref=e410]:
+            - listitem [ref=e411]:
+              - link "Facebook Logo Opens in a new window" [ref=e412] [cursor=pointer]:
+                - /url: https://www.facebook.com/AbbVieGlobal
+                - img "Facebook Logo" [ref=e413]
+            - listitem [ref=e414]:
+              - link "Twitter Logo Opens in a new window" [ref=e415] [cursor=pointer]:
+                - /url: https://twitter.com/abbvie
+                - img "Twitter Logo" [ref=e416]
+            - listitem [ref=e417]:
+              - link "Instagram Logo Opens in a new window" [ref=e418] [cursor=pointer]:
+                - /url: https://www.instagram.com/abbvie/?hl=en
+                - img "Instagram Logo" [ref=e419]
+            - listitem [ref=e420]:
+              - link "LinkedIn Logo Opens in a new window" [ref=e421] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/abbvie
+                - img "LinkedIn Logo" [ref=e422]
+            - listitem [ref=e423]:
+              - link "YouTube Logo Opens in a new window" [ref=e424] [cursor=pointer]:
+                - /url: https://www.youtube.com/user/AbbVie
+                - img "YouTube Logo" [ref=e425]
+            - listitem [ref=e426]:
+              - link "TikTok Logo Opens in a new window" [ref=e427] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@abbvie
+                - img "TikTok Logo" [ref=e428]
+        - generic [ref=e429]:
+          - heading "Popular pages" [level=2] [ref=e432]
+          - list [ref=e434]:
+            - listitem [ref=e435]:
+              - link "Pipeline Opens in same window" [ref=e436] [cursor=pointer]:
+                - /url: https://www.abbvie.com/science/pipeline.html
+                - generic [ref=e437]: Pipeline
+            - listitem [ref=e438]:
+              - link "Products Opens in same window" [ref=e439] [cursor=pointer]:
+                - /url: https://www.abbvie.com/patients/products.html
+                - generic [ref=e440]: Products
+            - listitem [ref=e441]:
+              - link "Partner with Us Opens in same window" [ref=e442] [cursor=pointer]:
+                - /url: https://www.abbvie.com/science/partner-with-us.html
+                - generic [ref=e443]: Partner with Us
+            - listitem [ref=e444]:
+              - link "Patient Support Opens in same window" [ref=e445] [cursor=pointer]:
+                - /url: https://www.abbvie.com/patients/patient-support.html
+                - generic [ref=e446]: Patient Support
+        - generic [ref=e447]:
+          - heading "External links" [level=2] [ref=e450]
+          - list [ref=e452]:
+            - listitem [ref=e453]:
+              - link "News Center Opens in a new window" [ref=e454] [cursor=pointer]:
+                - /url: https://news.abbvie.com/
+                - generic [ref=e455]: News Center
+                - text: 
+            - listitem [ref=e456]:
+              - link "Investors Opens in a new window" [ref=e457] [cursor=pointer]:
+                - /url: https://investors.abbvie.com/
+                - generic [ref=e458]: Investors
+                - text: 
+            - listitem [ref=e459]:
+              - link "Contract Manufacturing Opens in a new window" [ref=e460] [cursor=pointer]:
+                - /url: https://www.abbviecontractmfg.com/
+                - generic [ref=e461]: Contract Manufacturing
+                - text: 
+            - listitem [ref=e462]:
+              - link "Medical Information Opens in a new window" [ref=e463] [cursor=pointer]:
+                - /url: https://www.abbviemedinfo.com/
+                - generic [ref=e464]: Medical Information
+                - text: 
+          - generic [ref=e466]:
+            - separator
+          - generic [ref=e468]:
+            - paragraph [ref=e469]:
+              - generic [ref=e470]: Unless otherwise specified, all product names appearing in this internet site are trademarks owned by or licensed to AbbVie Inc., its subsidiaries or affiliates. No use of any AbbVie trademark, trade name, or trade dress in this site may be made without the prior written authorization of AbbVie Inc., except to identify the product or services of the company.
+            - paragraph [ref=e471]:
+              - generic [ref=e472]: Copyright © 2026 AbbVie Inc. North Chicago, Illinois, U.S.A.
+      - generic [ref=e474]:
+        - separator
+      - generic [ref=e476]:
+        - separator
+      - list [ref=e478]:
+        - listitem [ref=e479]:
+          - link "Contact Us Opens in same window" [ref=e480] [cursor=pointer]:
+            - /url: https://www.abbvie.com/contact-center.html
+            - generic [ref=e481]: Contact Us
+        - listitem [ref=e482]:
+          - link "Accessibility Statement Opens in same window" [ref=e483] [cursor=pointer]:
+            - /url: https://www.abbvie.com/accessibility-statement.html
+            - generic [ref=e484]: Accessibility Statement
+        - listitem [ref=e485]:
+          - link "Site Map Opens in same window" [ref=e486] [cursor=pointer]:
+            - /url: https://www.abbvie.com/site-map.html
+            - generic [ref=e487]: Site Map
+        - listitem [ref=e488]:
+          - link "Terms of Use Opens in same window" [ref=e489] [cursor=pointer]:
+            - /url: https://www.abbvie.com/terms-of-use.html
+            - generic [ref=e490]: Terms of Use
+        - listitem [ref=e491]:
+          - link "Privacy Notice Opens in same window" [ref=e492] [cursor=pointer]:
+            - /url: https://privacy.abbvie/privacy-policies/us-privacy-policy.html
+            - generic [ref=e493]: Privacy Notice
+        - listitem [ref=e494]:
+          - link "Consumer Health Data Privacy Notice Opens in same window" [ref=e495] [cursor=pointer]:
+            - /url: https://abbv.ie/PrivacyConsumerHealth
+            - generic [ref=e496]: Consumer Health Data Privacy Notice
+        - listitem [ref=e497]:
+          - link "Cookie Settings Opens in same window" [ref=e498] [cursor=pointer]:
+            - /url: "#"
+            - text: Cookies Settings
+        - listitem [ref=e499]:
+          - link "Your Privacy Choices Opens in a new window" [ref=e500] [cursor=pointer]:
+            - /url: https://abbviemetadata.my.site.com/AbbvieDSRM
+            - generic [ref=e501]: Your Privacy Choices
+          - generic "Your Privacy Choices":
+            - img "Your Privacy Choices"
+  - generic: 
+  - region "Cookie banner" [active] [ref=e502]:
+    - alertdialog "Privacy" [ref=e503]:
+      - generic [ref=e505]:
+        - paragraph [ref=e509]:
+          - text: AbbVie may use and disclose online usage data about you collected automatically through online tracking technologies such as cookies, pixels, and web beacons (collectively, "cookies"). We use this data for multiple purposes, including for online targeted advertising (advertisements based on your interests inferred from your activity across other unaffiliated sites and services) and website analytics purposes, as well as to personalize content, save your preferences, provide social media features, and track the site’s performance, as further described in the
+          - link "\"Cookies and similar tracking and data collection technologies" [ref=e510] [cursor=pointer]:
+            - /url: https://abbv.ie/PrivacyTrackingCollection
+          - text: "\" section of our Privacy Notice. We retain this data for as long as necessary to fulfill these purposes or as needed to comply with our record retention obligations. We do not sell your data, but we may disclose it to our marketing and advertising partners for purposes of online targeted advertising or for website analytics purposes. To opt out of the use or disclosure of your cookie-based personal data for online targeted advertising or for website analytics purposes, or to otherwise manage your preferences, please click on Cookie Settings below. For additional information on the categories of data we collect, the purposes for their collection, disclosures to third parties, and data retention, please visit our"
+          - link "Privacy Notice" [ref=e511] [cursor=pointer]:
+            - /url: https://abbv.ie/corpprivacy
+          - text: .
+        - button "Cookies Settings" [ref=e514] [cursor=pointer]
+      - button "Close" [ref=e516] [cursor=pointer]
+```

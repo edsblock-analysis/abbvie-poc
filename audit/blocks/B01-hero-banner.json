@@ -1,0 +1,196 @@
+{
+  "blockId": "B01",
+  "blockName": "Hero Banner",
+  "edsBlockName": "hero",
+  "description": "Full-width hero section at the top of pages featuring a large background image or video with overlaid text content, heading, and call-to-action.",
+  "category": "Hero",
+  "priority": "P0 - Critical",
+  "usedOnTemplates": ["T01-Homepage", "T02-Hub Landing", "T03-Sub-Section Landing", "T04-Story Detail", "T06-Leader Bio", "T08-ERG Detail", "T11-Acquisition Landing", "T12-Static/Legal"],
+  "usedOnPages": [
+    "https://www.abbvie.com/",
+    "https://www.abbvie.com/science.html",
+    "https://www.abbvie.com/patients.html",
+    "https://www.abbvie.com/join-us.html",
+    "https://www.abbvie.com/sustainability.html",
+    "https://www.abbvie.com/who-we-are.html",
+    "https://www.abbvie.com/who-we-are/our-stories/two-lives-converging-in-the-fight-against-parkinsons.html",
+    "https://www.abbvie.com/who-we-are/our-leaders/robert-michael.html",
+    "https://www.abbvie.com/join-us/life-at-abbvie/employee-resource-groups/abbvie-pride.html",
+    "https://www.abbvie.com/accessibility-statement.html",
+    "https://www.abbvie.com/cerevel.html"
+  ],
+  "position": "Top",
+  "screenshots": ["homepage-full.png", "science-hub.png", "sustainability-hub.png", "join-us-hub.png", "patients-hub.png", "erg-detail.png", "leader-bio.png", "accessibility-statement.png", "acquisition-landing.png"],
+  "layout": {
+    "structure": "Full-width, single column with overlay content",
+    "alignment": "Center or left-aligned text over full-bleed image",
+    "containerWidth": "Full viewport width (1440px at desktop)",
+    "contentMaxWidth": "1330px (inner content constrained)",
+    "borderRadius": "64px top-left on some variants (large-radius class)"
+  },
+  "functionalRequirements": {
+    "FR-01": {
+      "title": "Full-Width Background Media",
+      "description": "The hero block MUST render a full-viewport-width background media element (image or video) that spans edge-to-edge with no horizontal margins.",
+      "acceptance": [
+        "Background image fills 100% viewport width",
+        "Image scales proportionally (object-fit: cover)",
+        "Image maintains minimum height of 416px on desktop",
+        "Image source served from DAM (Scene7 or equivalent CDN)"
+      ]
+    },
+    "FR-02": {
+      "title": "Heading Display",
+      "description": "The hero MUST display a primary heading (H1) overlaid on the background media.",
+      "acceptance": [
+        "H1 rendered in F37 Lineca Medium, weight 800",
+        "Desktop: 64px / 68px line-height",
+        "Tablet: 40px / 44px line-height",
+        "Mobile: 30px / 34px line-height",
+        "Text color: white (#FFFFFF) on dark/image backgrounds, navy (#071D49) on light backgrounds"
+      ]
+    },
+    "FR-03": {
+      "title": "Subtitle/Description",
+      "description": "The hero SHOULD display an optional subtitle or description paragraph below the heading.",
+      "acceptance": [
+        "Rendered in Roboto Regular, 18px at desktop, 16px at mobile",
+        "Maximum content width constrained within the hero overlay",
+        "Color matches heading color scheme"
+      ]
+    },
+    "FR-04": {
+      "title": "Call-to-Action",
+      "description": "The hero SHOULD include an optional CTA link or button.",
+      "acceptance": [
+        "CTA rendered as uppercase text link or button",
+        "Font: Roboto Bold, 14px, uppercase",
+        "Color: #0066F5 (blue) on light backgrounds, #FFFFFF on dark backgrounds",
+        "Links to internal page or anchor (#section01)"
+      ]
+    },
+    "FR-05": {
+      "title": "Responsive Behavior",
+      "description": "The hero layout MUST adapt across breakpoints.",
+      "acceptance": [
+        "Desktop (1440px): Full-width image with text overlay positioned over image",
+        "Tablet (768px): Image displayed, text may move below image",
+        "Mobile (375px): Image stacked above text, reduced font sizes",
+        "Height adjusts based on content and variant"
+      ]
+    },
+    "FR-06": {
+      "title": "Pause/Play Control (Video Variant)",
+      "description": "When the hero contains a video background, a pause/play toggle button MUST be provided.",
+      "acceptance": [
+        "Button visually accessible in hero area",
+        "Toggles video playback on click",
+        "Accessible label: 'Pause/Play button'"
+      ]
+    }
+  },
+  "variants": {
+    "A": {
+      "variantName": "Image Background + White Text Overlay",
+      "description": "Standard hero with a full-width background image and white text overlaid directly on the image with a dark overlay or positioned on a darker region of the image.",
+      "usedOn": ["Homepage", "Science Hub", "Sustainability Hub", "Patients Hub"],
+      "elements": ["Background image", "H1 heading (white)", "Description paragraph (white)", "CTA link (white/blue)"],
+      "additionalRequirements": {
+        "FR-A01": "Background image MUST have sufficient contrast with white text. A semi-transparent dark overlay or strategic image composition ensures readability.",
+        "FR-A02": "Text content positioned in the lower-left or center of the hero area."
+      },
+      "styling": {
+        "backgroundColor": "Transparent (image provides background)",
+        "textColor": "#FFFFFF",
+        "minHeight": "416px desktop, auto mobile",
+        "borderRadius": "64px 0 0 0 (large-radius variant)"
+      }
+    },
+    "B": {
+      "variantName": "Image Background + Overlapping White Card",
+      "description": "Hero with a full-width background image and a white card that overlaps the bottom of the hero, creating a layered visual effect using the overlap-predecessor pattern.",
+      "usedOn": ["Join Us Hub", "ERG Detail Pages"],
+      "elements": ["Background image", "Overlapping white card container", "H1 heading (navy)", "Description paragraph (navy)", "Breadcrumb (optional)"],
+      "additionalRequirements": {
+        "FR-B01": "White card MUST visually overlap the hero image by 40-80px using negative margin or overlap-predecessor class.",
+        "FR-B02": "Card has medium border-radius (40px top-left).",
+        "FR-B03": "Card background: white (#FFFFFF), text: navy (#071D49).",
+        "FR-B04": "Card content center-aligned."
+      },
+      "styling": {
+        "cardBackgroundColor": "#FFFFFF",
+        "cardTextColor": "#071D49",
+        "cardBorderRadius": "40px 0 0 0",
+        "overlapAmount": "40-80px negative margin-top"
+      }
+    },
+    "C": {
+      "variantName": "Video Background + Text Overlay",
+      "description": "Hero with an auto-playing background video (muted) with text overlay and a pause/play toggle button.",
+      "usedOn": ["Homepage"],
+      "elements": ["Background video (auto-play, muted, loop)", "H1 heading (white)", "Description paragraph (white)", "CTA anchor link", "Pause/Play button"],
+      "additionalRequirements": {
+        "FR-C01": "Video MUST auto-play on page load, muted, and loop continuously.",
+        "FR-C02": "A Pause/Play button MUST be visible and accessible.",
+        "FR-C03": "On mobile/low-bandwidth, a fallback poster image SHOULD display instead of video.",
+        "FR-C04": "Video MUST NOT auto-play if user has prefers-reduced-motion enabled."
+      },
+      "styling": {
+        "backgroundColor": "Transparent (video provides background)",
+        "textColor": "#FFFFFF",
+        "videoObjectFit": "cover"
+      }
+    },
+    "D": {
+      "variantName": "Solid/Gradient Color Background + Text",
+      "description": "Hero with a solid navy or gradient purple background color instead of an image, used for legal/static pages and bio pages.",
+      "usedOn": ["Accessibility Statement", "Leader Bio", "Contact Location"],
+      "elements": ["Solid or gradient background", "H1 heading (white)", "Optional subtitle paragraph (white)"],
+      "additionalRequirements": {
+        "FR-D01": "Background MUST be a solid brand color (#071D49 navy) or a CSS gradient.",
+        "FR-D02": "No background image required.",
+        "FR-D03": "Shorter height than image-based heroes (height-short variant)."
+      },
+      "styling": {
+        "backgroundColor": "#071D49 (navy) or purple/violet gradient",
+        "textColor": "#FFFFFF",
+        "minHeight": "200-300px (shorter than image variants)"
+      }
+    },
+    "E": {
+      "variantName": "Image Background + Anchor Link",
+      "description": "Similar to Variant A but the CTA is an in-page anchor link that scrolls to the next section rather than navigating away.",
+      "usedOn": ["Homepage (main hero)"],
+      "elements": ["Background image", "H1 heading (white)", "Description paragraph (white)", "Anchor CTA ('Learn more' linking to #section01)"],
+      "additionalRequirements": {
+        "FR-E01": "CTA link MUST smooth-scroll to the target anchor section.",
+        "FR-E02": "Anchor target section MUST have a corresponding ID attribute."
+      },
+      "styling": {
+        "ctaStyle": "Text link with arrow icon",
+        "scrollBehavior": "smooth"
+      }
+    }
+  },
+  "accessibility": {
+    "AC-01": "H1 MUST be the first heading in the document reading order",
+    "AC-02": "Background images MUST have appropriate alt text",
+    "AC-03": "Text MUST meet WCAG 2.1 AA contrast ratio (4.5:1 for normal text, 3:1 for large text)",
+    "AC-04": "Video pause/play button MUST be keyboard accessible",
+    "AC-05": "Skip-to-content link MUST bypass the hero to reach main content"
+  },
+  "designTokens": {
+    "fontFamily_heading": "\"F37 Lineca Medium\", Helvetica, Arial, sans-serif",
+    "fontFamily_body": "\"Roboto Regular\", Helvetica, Arial, sans-serif",
+    "fontSize_h1_desktop": "64px",
+    "fontSize_h1_tablet": "40px",
+    "fontSize_h1_mobile": "30px",
+    "lineHeight_h1_desktop": "68px",
+    "fontWeight_h1": "800",
+    "color_text_light": "#FFFFFF",
+    "color_text_dark": "#071D49",
+    "color_cta": "#0066F5",
+    "borderRadius_large": "64px 0 0 0",
+    "borderRadius_medium": "40px 0 0 0"
+  }
+}

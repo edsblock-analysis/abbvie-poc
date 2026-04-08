@@ -1,0 +1,151 @@
+# Join Us Hub Page - Accessibility Snapshot
+## URL: https://www.abbvie.com/join-us.html
+## Title: Join AbbVie | AbbVie
+
+```yaml
+- generic:
+  - generic:
+    - generic:
+      - link "Skip to main content":
+        - /url: "#maincontent"
+      - banner:
+        - generic:
+          - link "Logo AbbVie":
+            - /url: /
+            - img "Logo AbbVie"
+          - navigation "Primary":
+            - button "Menu"
+        - list:
+          - listitem:
+            - button (search icon)
+    - generic (main content area):
+      - generic (Hero Section):
+        - img "eyoel walking on path"
+      - generic (Hero Text Overlay):
+        - heading "Join AbbVie" [level=1]
+        - paragraph: "It's more than a job, it's a chance to make a real difference."
+      - generic (Job CTA Section):
+        - generic:
+          - heading "Explore opportunities" [level=4]
+          - paragraph: "If you thrive as part of a diverse, collaborative team—we're ready for you."
+        - link "Browse jobs Opens in same window":
+          - /url: https://careers.abbvie.com
+      - generic (separator)
+      - generic (Card Links Section - 3 cards):
+        - link "Join Us Why AbbVie? Challenging work. Global impact. Every day. Learn More":
+          - /url: /join-us/why-abbvie.html
+          - heading "Join Us" [level=2]
+          - heading "Why AbbVie?" [level=4]
+          - paragraph: "Challenging work. Global impact. Every day."
+        - link "Who We Are We create medicines and solutions But it's more than what we discover—it's how we get there. Learn More":
+          - /url: /who-we-are.html
+          - heading "Who We Are" [level=2]
+          - heading "We create medicines and solutions" [level=4]
+          - paragraph: "But it's more than what we discover—it's how we get there."
+        - link "Join Us Life at AbbVie How we work together is as important as what we achieve together. Learn More":
+          - /url: /join-us/life-at-abbvie.html
+          - heading "Join Us" [level=2]
+          - heading "Life at AbbVie" [level=4]
+          - paragraph: "How we work together is as important as what we achieve together."
+      - generic (separator)
+      - generic (Employee Quote Section):
+        - img "amanda leiting headshot"
+        - separator
+        - generic:
+          - paragraph: "Here you have a broader impact on many, many patients. I really enjoy that part of my job. I also enjoy the challenge and complexity of it."
+          - generic:
+            - generic: "Amanda Leiting"
+            - generic: "Director, Precision Medicine and Diagnostics Marketing, Commercial, AbbVie"
+      - generic (separator)
+      - generic (Performance Section):
+        - generic:
+          - heading "PERFORMANCE" [level=2]
+          - heading "What makes you stand out, makes you ready to make an impact. At AbbVie." [level=3]
+          - paragraph: "Through comprehensive benefits, competitive compensation, development programs and more, we give you the support you need to be your best, both at work and at home."
+        - generic:
+          - generic:
+            - img "woman writing on board"
+          - list:
+            - listitem:
+              - link "Well-Being":
+                - /url: https://www.abbvie.com/join-us/life-at-abbvie/well-being-in-the-workplace.html
+            - listitem:
+              - link "Benefits":
+                - /url: https://www.abbvie.com/join-us/life-at-abbvie/benefits.html
+            - listitem:
+              - link "Learning & Development":
+                - /url: https://www.abbvie.com/join-us/life-at-abbvie/learning-and-development.html
+      - generic (Collaboration Section):
+        - heading "collaboration" [level=2]
+        - heading "Transforming medicine, aesthetics and science—together" [level=2]
+        - separator
+        - generic (Employee Quote):
+          - img "jody alde headshot"
+          - paragraph: "We definitely have a team-based culture. A diverse set of ideas are appreciated and wanted at the table. That's how we make possibilities real."
+          - generic:
+            - generic: "Jody Alde"
+            - generic: "Director, Third Party Manufacturing, Operations, AbbVie"
+        - generic (Teams CTA):
+          - heading "Dynamic teams creating the capabilities of tomorrow" [level=3]
+          - link "View all teams":
+            - /url: /join-us/opportunities.html
+        - generic (Team Cards - 3 cards):
+          - generic:
+            - img "man in lab in blue"
+            - heading "RESEARCH & DEVELOPMENT" [level=2]
+            - paragraph: "Contribute directly to our pipeline by discovering and developing innovative medicines and solutions."
+          - generic:
+            - img "two women smiling"
+            - heading "COMMERCIAL" [level=2]
+            - paragraph: "Join sales, marketing and business support teams connecting patients to new therapies and solutions that can make a positive impact on their lives."
+          - generic:
+            - img "nicole in conference room"
+            - heading "CORPORATE" [level=2]
+            - paragraph: "Find new ways to increase our competitive advantage and support our people, technology and the business."
+        - separator
+    - generic (Footer):
+      - button "Scroll to top of page"
+      - generic:
+        - generic:
+          - img "AbbVie logo"
+        - generic:
+          - list (Primary Footer Nav):
+            - link "Who We Are" -> /who-we-are.html
+            - link "Science" -> /science.html
+            - link "Patients" -> /patients.html
+            - link "Join Us" -> /join-us.html
+            - link "Sustainability" -> /sustainability.html
+          - list (Social Media):
+            - link "Facebook Logo" -> https://www.facebook.com/AbbVieGlobal
+            - link "Twitter Logo" -> https://twitter.com/abbvie
+            - link "Instagram Logo" -> https://www.instagram.com/abbvie/
+            - link "LinkedIn Logo" -> https://www.linkedin.com/company/abbvie
+            - link "YouTube Logo" -> https://www.youtube.com/user/AbbVie
+            - link "TikTok Logo" -> https://www.tiktok.com/@abbvie
+        - generic:
+          - heading "Popular pages" [level=2]
+          - list:
+            - link "Pipeline" -> /science/pipeline.html
+            - link "Products" -> /patients/products.html
+            - link "Partner with Us" -> /science/partner-with-us.html
+            - link "Patient Support" -> /patients/patient-support.html
+        - generic:
+          - heading "External links" [level=2]
+          - list:
+            - link "News Center" -> https://news.abbvie.com/
+            - link "Investors" -> https://investors.abbvie.com/
+            - link "Contract Manufacturing" -> https://www.abbviecontractmfg.com/
+            - link "Medical Information" -> https://www.abbviemedinfo.com/
+          - paragraph: "Unless otherwise specified, all product names appearing in this internet site are trademarks owned by or licensed to AbbVie Inc..."
+          - paragraph: "Copyright 2026 AbbVie Inc. North Chicago, Illinois, U.S.A."
+      - separator
+      - list (Legal Footer):
+        - link "Contact Us"
+        - link "Accessibility Statement"
+        - link "Site Map"
+        - link "Terms of Use"
+        - link "Privacy Notice"
+        - link "Consumer Health Data Privacy Notice"
+        - link "Cookie Settings"
+        - link "Your Privacy Choices"
+```

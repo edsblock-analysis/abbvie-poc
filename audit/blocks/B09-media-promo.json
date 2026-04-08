@@ -1,0 +1,90 @@
+{
+  "blockId": "B09",
+  "blockName": "Podcast/Media Promo Block",
+  "edsBlockName": "media-promo",
+  "description": "A two-column promotional block featuring an image on the left and content (eyebrow, title, description, CTA) on the right. Used to promote podcasts, series, or other media content.",
+  "category": "Promo/Marketing",
+  "priority": "P2 - Medium",
+  "usedOnTemplates": ["T01-Homepage", "T02-Hub Landing"],
+  "usedOnPages": [
+    "https://www.abbvie.com/",
+    "https://www.abbvie.com/science.html"
+  ],
+  "position": "Mid",
+  "screenshots": ["homepage-full.png"],
+  "layout": {
+    "structure": "2-column asymmetrical (image ~40%, content ~60%)",
+    "alignment": "Left-aligned content",
+    "containerWidth": "Within 1330px container"
+  },
+  "functionalRequirements": {
+    "FR-01": {
+      "title": "Promo Image",
+      "description": "The block MUST display a promotional image on the left side.",
+      "acceptance": [
+        "Image occupies approximately 40% of block width",
+        "Object-fit: cover or contain depending on asset",
+        "Alt text required"
+      ]
+    },
+    "FR-02": {
+      "title": "Eyebrow Label",
+      "description": "The block MUST display an H2 eyebrow label identifying the content type.",
+      "acceptance": [
+        "H2, Roboto Regular, 16px, bold",
+        "Color: #071D49",
+        "Examples: 'Science'"
+      ]
+    },
+    "FR-03": {
+      "title": "Content Title",
+      "description": "The block MUST display an H5 title for the promoted content.",
+      "acceptance": [
+        "H5 heading, F37 Lineca Medium, 28px, weight 800",
+        "Color: #071D49"
+      ]
+    },
+    "FR-04": {
+      "title": "Description Paragraph",
+      "description": "The block MUST display a description paragraph.",
+      "acceptance": [
+        "Roboto Regular, 16px",
+        "Color: #071D49",
+        "2-3 sentences maximum"
+      ]
+    },
+    "FR-05": {
+      "title": "CTA Link",
+      "description": "The block MUST include a 'Learn more' CTA link.",
+      "acceptance": [
+        "Roboto Bold, 14px, uppercase",
+        "Color: #0066F5",
+        "Opens in same window"
+      ]
+    },
+    "FR-06": {
+      "title": "Responsive Behavior",
+      "description": "The block MUST stack vertically on mobile.",
+      "acceptance": [
+        "Desktop: Side-by-side layout (image left, content right)",
+        "Tablet/Mobile: Image stacked on top, content below",
+        "Image becomes full-width on mobile"
+      ]
+    }
+  },
+  "variants": {},
+  "accessibility": {
+    "AC-01": "Image MUST have meaningful alt text",
+    "AC-02": "CTA link MUST clearly indicate destination"
+  },
+  "designTokens": {
+    "fontFamily_title": "\"F37 Lineca Medium\", Helvetica, Arial, sans-serif",
+    "fontFamily_body": "\"Roboto Regular\", Helvetica, Arial, sans-serif",
+    "fontSize_title": "28px",
+    "fontSize_body": "16px",
+    "fontSize_eyebrow": "16px",
+    "color_title": "#071D49",
+    "color_cta": "#0066F5",
+    "imageSplit": "40%/60%"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "blockId": "B10",
+  "blockName": "Three-Column Card Grid",
+  "edsBlockName": "card-grid",
+  "description": "A responsive grid of three equal-width cards displayed side-by-side on desktop, stacking to a single column on mobile. Each card contains an image, text content, and a CTA link.",
+  "category": "Card Grid",
+  "priority": "P2 - Medium",
+  "usedOnTemplates": ["T01-Homepage", "T02-Hub Landing", "T03-Sub-Section Landing"],
+  "usedOnPages": [
+    "https://www.abbvie.com/",
+    "https://www.abbvie.com/sustainability.html",
+    "https://www.abbvie.com/join-us.html"
+  ],
+  "position": "Mid",
+  "screenshots": ["homepage-full.png", "sustainability-hub.png"],
+  "layout": {
+    "structure": "3-column equal grid, responsive to 1-column",
+    "alignment": "Left-aligned content within each card",
+    "containerWidth": "Within 1330px container",
+    "gap": "24-32px between cards"
+  },
+  "functionalRequirements": {
+    "FR-01": {
+      "title": "Three-Column Grid Layout",
+      "description": "The block MUST render three cards in a horizontal row on desktop.",
+      "acceptance": [
+        "3 equal-width columns at desktop (1440px)",
+        "Gap between cards: 24-32px",
+        "Cards aligned to same height"
+      ]
+    },
+    "FR-02": {
+      "title": "Card Content",
+      "description": "Each card MUST contain an image, text content, and a CTA link.",
+      "acceptance": [
+        "Card image at top",
+        "Text content below image",
+        "CTA link at bottom of card"
+      ]
+    },
+    "FR-03": {
+      "title": "Card Link",
+      "description": "Each card SHOULD be a clickable link navigating to a detail page.",
+      "acceptance": [
+        "CTA text with arrow icon",
+        "Font: Roboto Bold, 14px, uppercase",
+        "Color: #0066F5"
+      ]
+    },
+    "FR-04": {
+      "title": "Responsive Stacking",
+      "description": "Cards MUST stack vertically on tablet and mobile.",
+      "acceptance": [
+        "Desktop (1440px): 3 columns side-by-side",
+        "Tablet (768px): 1 column stacked",
+        "Mobile (375px): 1 column stacked, full width"
+      ]
+    }
+  },
+  "variants": {
+    "A": {
+      "variantName": "Image + Text + Link",
+      "description": "Simple card with image, a description paragraph, and a navigation link. No heading within the card.",
+      "usedOn": ["Homepage (Culture section - Science, Learning & Development, Partnerships)"],
+      "elements": ["Image", "Description paragraph", "Link with label"],
+      "additionalRequirements": {
+        "FR-A01": "No heading element inside the card.",
+        "FR-A02": "Description text provides the card context.",
+        "FR-A03": "Link label indicates the destination section (e.g., 'SCIENCE', 'Learning and Development')."
+      },
+      "styling": {
+        "cardBackground": "transparent or white",
+        "textColor": "#071D49",
+        "linkColor": "#0066F5"
+      }
+    },
+    "B": {
+      "variantName": "Image + Heading + Description + CTA",
+      "description": "Richer card with image, H2 heading, description paragraph, and a 'Learn more' CTA link. Used as teaser cards for sub-sections.",
+      "usedOn": ["Sustainability Hub (AbbVie Foundation, Disaster Relief, ESG)"],
+      "elements": ["Image", "H2 heading", "Description paragraph", "'Learn more' CTA link"],
+      "additionalRequirements": {
+        "FR-B01": "H2 heading displayed below image.",
+        "FR-B02": "Description paragraph provides a summary.",
+        "FR-B03": "'Learn more' CTA at the bottom of each card."
+      },
+      "styling": {
+        "cardBackground": "white or transparent",
+        "headingSize": "24-28px",
+        "textColor": "#071D49",
+        "ctaColor": "#0066F5"
+      }
+    }
+  },
+  "accessibility": {
+    "AC-01": "Cards MUST have appropriate heading hierarchy within the page",
+    "AC-02": "Card links MUST have descriptive accessible names",
+    "AC-03": "Images MUST have meaningful alt text",
+    "AC-04": "Grid MUST maintain logical reading order when stacked"
+  },
+  "designTokens": {
+    "gridColumns": "3 (desktop), 1 (tablet/mobile)",
+    "gridGap": "24-32px",
+    "fontFamily_heading": "\"Roboto Regular\", Helvetica, Arial, sans-serif",
+    "fontFamily_body": "\"Roboto Regular\", Helvetica, Arial, sans-serif",
+    "fontSize_heading": "24-28px",
+    "fontSize_body": "16px",
+    "color_text": "#071D49",
+    "color_cta": "#0066F5"
+  }
+}

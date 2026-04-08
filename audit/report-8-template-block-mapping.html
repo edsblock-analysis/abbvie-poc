@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Report 8: Template-Block Mapping - AbbVie Migration</title>
+<link rel="stylesheet" href="report-styles.css">
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="top-nav-inner">
+    <a href="index.html">&#8962; Dashboard</a>
+    <span class="sep">&middot;</span>
+    <span class="project">AbbVie AEM &rarr; EDS Migration</span>
+    <span class="sep">&middot;</span>
+    <span class="project">Report 8: Template-Block Mapping</span>
+  </div>
+</nav>
+
+<div class="report-header">
+  <div class="report-header-inner">
+    <h1>Template-Block Mapping</h1>
+    <p class="subtitle">Visual mapping of which blocks are used in each template, showing block composition across all 16 template types.</p>
+    <p class="meta">Report 4 of 5 &middot; Generated 2026-04-08</p>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="summary-box">
+    <h3>Legend</h3>
+    <p>
+      <span class="badge" style="background:#fff9c4;color:#f57f17">Hero</span>
+      <span class="badge" style="background:#e0e0e0;color:#333">Card</span>
+      <span class="badge" style="background:#e3f2fd;color:#0d47a1">Nav</span>
+      <span class="badge" style="background:#e8f5e9;color:#2e7d32">Content</span>
+      <span class="badge" style="background:#f3e5f5;color:#7b1fa2">Media</span>
+      <span class="badge" style="background:#e8eaf6;color:#283593">Layout</span>
+      <span class="badge" style="background:#fff3e0;color:#bf360c">CTA</span>
+      <span class="badge" style="background:#fce4ec;color:#880e4f">Data</span>
+      <span class="badge" style="background:#efebe9;color:#4e342e">Utility</span>
+      <span class="badge" style="background:#e0f2f1;color:#00695c">Interactive</span>
+    </p>
+  </div>
+
+  <!-- T01: Homepage -->
+  <div class="template-card">
+    <h3>T01: Homepage</h3>
+    <div class="tc-meta">
+      <span>1 page</span>
+      <span>16 blocks used</span>
+      <span>Most complex template</span>
+    </div>
+    <div class="tc-blocks">
+      <span class="badge map-nav">B15 Header</span>
+      <span class="badge map-hero">B01 Hero (C: Video)</span>
+      <span class="badge map-content">B02 Carousel</span>
+      <span class="badge map-card">B03 Featured Card</span>
+      <span class="badge map-content">B04 Text Statement</span>
+      <span class="badge map-media">B05 Video (A)</span>
+      <span class="badge map-content">B06 Section Heading</span>
+      <span class="badge map-card">B07 Feature Card</span>
+      <span class="badge map-data">B08 Stats (A)</span>
+      <span class="badge map-media">B09 Media Promo</span>
+      <span class="badge map-card">B10 Card Grid (A)</span>
+      <span class="badge map-cta">B11 CTA Banner (A)</span>
+      <span class="badge map-data">B12 Investor Resources</span>
+      <span class="badge map-data">B13 ESG Impact</span>
+      <span class="badge map-utility">B24 Separator</span>
+      <span class="badge map-nav">B14 Footer</span>
+    </div>
+  </div>
+
+  <!-- T02: Hub/Section Landing -->
+  <div class="template-card">
+    <h3>T02: Hub/Section Landing</h3>
+    <div class="tc-meta">
+      <span>5 pages</span>
+      <span>12 blocks used</span>
+      <span>Science, Patients, Join Us, Sustainability, Who We Are</span>
+    </div>
+    <div class="tc-blocks">
+      <span class="badge map-nav">B15 Header</span>
+      <span class="badge map-hero">B01 Hero (A: Image)</span>
+      <span class="badge map-content">B06 Section Heading</span>
+      <span class="badge map-data">B08 Stats (B: Row)</span>
+      <span class="badge map-media">B05 Video (A)</span>
+      <span class="badge map-card">B22 Cards (A/B)</span>
+      <span class="badge map-card">B10 Card Grid (B)</span>
+      <span class="badge map-content">B19 Quote (A)</span>
+      <span class="badge map-cta">B11 CTA Banner (A/B)</span>
+      <span class="badge map-interactive">B21 Accordion</span>
+      <span class="badge map-utility">B24 Separator</span>
+      <span class="badge map-nav">B14 Footer</span>
+    </div>
+  </div>
+
+  <!-- T03: Sub-Section Landing -->
+  <div class="template-card">
+    <h3>T03: Sub-Section Landing</h3>
+    <div class="tc-meta">
+      <span>~25 pages</span>
+      <span>Focused topic pages</span>
+    </div>
+    <div class="tc-blocks">
+      <span class="badge map-nav">B15 Header</span>
+      <span class="badge map-hero">B01 Hero (A)</span>
+      <span class="badge map-content">B06 Section Heading</span>
+      <span class="badge map-card">B22 Cards</span>
+      <span class="badge map-card">B10 Card Grid</span>
+      <span class="badge map-layout">B25 Columns</span>
+      <span class="badge map-utility">B24 Separator</span>
+      <span class="badge map-nav">B14 Footer</span>
+    </div>
+  </div>
+
+  <!-- T04: Story Detail -->
+  <div class="template-card">
+    <h3>T04: Story Detail (Article)</h3>
+    <div class="tc-meta">
+      <span>~130 pages</span>
+      <span>8 blocks used</span>
+      <span>Most used template (40.5%)</span>
+    </div>
+    <div class="tc-blocks">
+      <span class="badge map-nav">B15 Header</span>
+      <span class="badge map-hero">B01 Hero (A: Image)</span>
+      <span class="badge map-content">B18 Article Body</span>
+      <span class="badge map-media">B05 Video (B: Inline)</span>
+      <span class="badge map-content">B19 Quote (A)</span>
+      <span class="badge map-card">B20 Related Content</span>
+      <span class="badge map-utility">B24 Separator</span>
+      <span class="badge map-nav">B14 Footer</span>
+    </div>
+  </div>
+
+  <!-- T05: Stories Hub -->
+  <div class="template-card">
+    <h3>T05: Stories Hub / Category Listing</h3>
+    <div class="tc-meta">
+      <span>~15 pages</span>
+      <span>Filterable story card grid</span>
+    </div>
+    <div class="tc-blocks">
+      <span class="badge map-nav">B15 Header</span>
+      <span class="badge map-hero">B01 Hero</span>
+      <span class="badge map-card">B22 Cards (A)</span>
+      <span class="badge map-card">B03 Featured Card</span>
+      <span class="badge map-utility">B24 Separator</span>
+      <span class="badge map-nav">B14 Footer</span>
+    </div>
+  </div>
+
+  <!-- T06: Leader Bio -->
+  <div class="template-card">
+    <h3>T06: Leader Bio</h3>
+    <div class="tc-meta">
+      <span>25 pages</span>
+      <span>6 blocks used</span>
+    </div>
+    <div class="tc-blocks">
+      <span class="badge map-nav">B15 Header</span>
+      <span class="badge map-nav">B16 Breadcrumb</span>
+      <span class="badge map-hero">B01 Hero (D: Solid navy)</span>
+      <span class="badge map-content">B17 Leader Bio</span>
+      <span class="badge map-utility">B24 Separator</span>
+      <span class="badge map-nav">B14 Footer</span>
+    </div>
+  </div>
+
+  <!-- T07: R&D Leader Bio -->
+  <div class="template-card">
+    <h3>T07: R&amp;D Leader Bio</h3>
+    <div class="tc-meta">
+      <span>13 pages</span>
+      <span>Same structure as T06</span>
+    </div>
+    <div class="tc-blocks">
+      <span class="badge map-nav">B15 Header</span>
+      <span class="badge map-nav">B16 Breadcrumb</span>
+      <span class="badge map-hero">B01 Hero (D: Solid navy)</span>
+      <span class="badge map-content">B17 Leader Bio</span>
+      <span class="badge map-utility">B24 Separator</span>
+      <span class="badge map-nav">B14 Footer</span>
+    </div>
+  </div>
+
+  <!-- T08: ERG Detail -->
+  <div class="template-card">
+    <h3>T08: ERG/Community Detail</h3>
+    <div class="tc-meta">
+      <span>7 pages</span>
+      <span>10 blocks used</span>
+    </div>
+    <div class="tc-blocks">
+      <span class="badge map-nav">B15 Header</span>
+      <span class="badge map-hero">B01 Hero (B: Overlapping card)</span>
+      <span class="badge map-nav">B16 Breadcrumb</span>
+      <span class="badge map-cta">B11 CTA Banner (B: Blue)</span>
+      <span class="badge map-content">B04 Text Statement</span>
+      <span class="badge map-content">B19 Quote (B: Bg Image)</span>
+      <span class="badge map-layout">B25 Columns</span>
+      <span class="badge map-card">B20 Related Content</span>
+      <span class="badge map-utility">B24 Separator</span>
+      <span class="badge map-nav">B14 Footer</span>
+    </div>
+  </div>
+
+  <!-- T09: Contact Location -->
+  <div class="template-card">
+    <h3>T09: Contact Location Detail</h3>
+    <div class="tc-meta">
+      <span>14 pages</span>
+      <span>6 blocks used</span>
+    </div>
+    <div class="tc-blocks">
+      <span class="badge map-nav">B15 Header</span>
+      <span class="badge map-nav">B16 Breadcrumb</span>
+      <span class="badge map-hero">B01 Hero (D: Solid navy)</span>
+      <span class="badge map-content">B23 Locations</span>
+      <span class="badge map-utility">B24 Separator</span>
+      <span class="badge map-nav">B14 Footer</span>
+    </div>
+  </div>
+
+  <!-- T10: Contact Hub -->
+  <div class="template-card">
+    <h3>T10: Contact Center Hub</h3>
+    <div class="tc-meta">
+      <span>2 pages</span>
+    </div>
+    <div class="tc-blocks">
+      <span class="badge map-nav">B15 Header</span>
+      <span class="badge map-hero">B01 Hero</span>
+      <span class="badge map-card">B22 Cards</span>
+      <span class="badge map-utility">B24 Separator</span>
+      <span class="badge map-nav">B14 Footer</span>
+    </div>
+  </div>
+
+  <!-- T11: Acquisition Landing -->
+  <div class="template-card">
+    <h3>T11: Acquisition/Partnership Landing</h3>
+    <div class="tc-meta">
+      <span>7 pages</span>
+      <span>5 blocks used</span>
+    </div>
+    <div class="tc-blocks">
+      <span class="badge map-nav">B15 Header</span>
+      <span class="badge map-hero">B01 Hero (A: Image)</span>
+      <span class="badge map-layout">B25 Columns (Card variant)</span>
+      <span class="badge map-utility">B24 Separator</span>
+      <span class="badge map-nav">B14 Footer</span>
+    </div>
+  </div>
+
+  <!-- T12: Static/Legal -->
+  <div class="template-card">
+    <h3>T12: Static/Legal Page</h3>
+    <div class="tc-meta">
+      <span>6 pages</span>
+      <span>5 blocks used</span>
+    </div>
+    <div class="tc-blocks">
+      <span class="badge map-nav">B15 Header</span>
+      <span class="badge map-hero">B01 Hero (D: Gradient/solid)</span>
+      <span class="badge map-content">B18 Article Body (Legal)</span>
+      <span class="badge map-utility">B24 Separator</span>
+      <span class="badge map-nav">B14 Footer</span>
+    </div>
+  </div>
+
+  <!-- T13: Patient Support -->
+  <div class="template-card">
+    <h3>T13: Patient Support Sub-Pages</h3>
+    <div class="tc-meta">
+      <span>~10 pages</span>
+    </div>
+    <div class="tc-blocks">
+      <span class="badge map-nav">B15 Header</span>
+      <span class="badge map-hero">B01 Hero</span>
+      <span class="badge map-card">B22 Cards</span>
+      <span class="badge map-content">B06 Section Heading</span>
+      <span class="badge map-utility">B24 Separator</span>
+      <span class="badge map-nav">B14 Footer</span>
+    </div>
+  </div>
+
+  <!-- T14: Science Detail -->
+  <div class="template-card">
+    <h3>T14: Science Detail Pages</h3>
+    <div class="tc-meta">
+      <span>~20 pages</span>
+    </div>
+    <div class="tc-blocks">
+      <span class="badge map-nav">B15 Header</span>
+      <span class="badge map-hero">B01 Hero</span>
+      <span class="badge map-content">B06 Section Heading</span>
+      <span class="badge map-card">B22 Cards</span>
+      <span class="badge map-media">B05 Video</span>
+      <span class="badge map-utility">B24 Separator</span>
+      <span class="badge map-nav">B14 Footer</span>
+    </div>
+  </div>
+
+  <!-- T15: Brand Partnership -->
+  <div class="template-card">
+    <h3>T15: Brand Partnership</h3>
+    <div class="tc-meta">
+      <span>3 pages</span>
+    </div>
+    <div class="tc-blocks">
+      <span class="badge map-nav">B15 Header</span>
+      <span class="badge map-hero">B01 Hero</span>
+      <span class="badge map-media">B05 Video</span>
+      <span class="badge map-layout">B25 Columns</span>
+      <span class="badge map-utility">B24 Separator</span>
+      <span class="badge map-nav">B14 Footer</span>
+    </div>
+  </div>
+
+  <!-- T16: Contact Form -->
+  <div class="template-card">
+    <h3>T16: Contact Us (Form)</h3>
+    <div class="tc-meta">
+      <span>1 page</span>
+    </div>
+    <div class="tc-blocks">
+      <span class="badge map-nav">B15 Header</span>
+      <span class="badge map-hero">B01 Hero</span>
+      <span class="badge map-content">Form Block</span>
+      <span class="badge map-utility">B24 Separator</span>
+      <span class="badge map-nav">B14 Footer</span>
+    </div>
+  </div>
+
+  <h2>Block Usage Across Templates</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Block</th>
+        <th># Templates</th>
+        <th>Templates</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="badge map-nav">B15 Header</span></td>
+        <td>16</td>
+        <td>ALL</td>
+      </tr>
+      <tr>
+        <td><span class="badge map-nav">B14 Footer</span></td>
+        <td>16</td>
+        <td>ALL</td>
+      </tr>
+      <tr>
+        <td><span class="badge map-utility">B24 Separator</span></td>
+        <td>16</td>
+        <td>ALL</td>
+      </tr>
+      <tr>
+        <td><span class="badge map-hero">B01 Hero</span></td>
+        <td>16</td>
+        <td>ALL (5 variants)</td>
+      </tr>
+      <tr>
+        <td><span class="badge map-card">B22 Cards</span></td>
+        <td>7</td>
+        <td>T01, T02, T03, T05, T10, T13, T14</td>
+      </tr>
+      <tr>
+        <td><span class="badge map-content">B06 Section Heading</span></td>
+        <td>4</td>
+        <td>T01, T02, T03, T13, T14</td>
+      </tr>
+      <tr>
+        <td><span class="badge map-media">B05 Video</span></td>
+        <td>4</td>
+        <td>T01, T02, T04, T14, T15</td>
+      </tr>
+      <tr>
+        <td><span class="badge map-layout">B25 Columns</span></td>
+        <td>4</td>
+        <td>T03, T08, T11, T15</td>
+      </tr>
+      <tr>
+        <td><span class="badge map-nav">B16 Breadcrumb</span></td>
+        <td>4</td>
+        <td>T06, T07, T08, T09</td>
+      </tr>
+      <tr>
+        <td><span class="badge map-cta">B11 CTA Banner</span></td>
+        <td>3</td>
+        <td>T01, T02, T08</td>
+      </tr>
+      <tr>
+        <td><span class="badge map-content">B19 Quote</span></td>
+        <td>3</td>
+        <td>T02, T04, T08</td>
+      </tr>
+      <tr>
+        <td><span class="badge map-card">B10 Card Grid</span></td>
+        <td>3</td>
+        <td>T01, T02, T03</td>
+      </tr>
+      <tr>
+        <td><span class="badge map-content">B04 Text Statement</span></td>
+        <td>2</td>
+        <td>T01, T08</td>
+      </tr>
+      <tr>
+        <td><span class="badge map-content">B18 Article Body</span></td>
+        <td>2</td>
+        <td>T04, T12</td>
+      </tr>
+      <tr>
+        <td><span class="badge map-content">B17 Leader Bio</span></td>
+        <td>2</td>
+        <td>T06, T07</td>
+      </tr>
+      <tr>
+        <td><span class="badge map-card">B20 Related Content</span></td>
+        <td>2</td>
+        <td>T04, T08</td>
+      </tr>
+      <tr>
+        <td><span class="badge map-data">B08 Stats</span></td>
+        <td>2</td>
+        <td>T01, T02</td>
+      </tr>
+      <tr>
+        <td><span class="badge map-card">B03 Featured Card</span></td>
+        <td>2</td>
+        <td>T01, T05</td>
+      </tr>
+      <tr>
+        <td><span class="badge map-media">B09 Media Promo</span></td>
+        <td>1</td>
+        <td>T01</td>
+      </tr>
+      <tr>
+        <td><span class="badge map-card">B07 Feature Card</span></td>
+        <td>1</td>
+        <td>T01</td>
+      </tr>
+      <tr>
+        <td><span class="badge map-content">B02 Carousel</span></td>
+        <td>1</td>
+        <td>T01</td>
+      </tr>
+      <tr>
+        <td><span class="badge map-data">B12 Investor Resources</span></td>
+        <td>1</td>
+        <td>T01</td>
+      </tr>
+      <tr>
+        <td><span class="badge map-data">B13 ESG Impact</span></td>
+        <td>1</td>
+        <td>T01</td>
+      </tr>
+      <tr>
+        <td><span class="badge map-interactive">B21 Accordion</span></td>
+        <td>1</td>
+        <td>T02</td>
+      </tr>
+      <tr>
+        <td><span class="badge map-content">B23 Locations</span></td>
+        <td>1</td>
+        <td>T09</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+{
+  "blockId": "B04",
+  "blockName": "Text Statement Block",
+  "edsBlockName": "text-statement",
+  "description": "A centered text block featuring a large statement heading with an optional highlighted keyword, a supporting description paragraph, and a CTA link. Used to introduce major page sections.",
+  "category": "Text/Content",
+  "priority": "P1 - High",
+  "usedOnTemplates": ["T01-Homepage", "T02-Hub Landing", "T08-ERG Detail"],
+  "usedOnPages": [
+    "https://www.abbvie.com/",
+    "https://www.abbvie.com/patients.html",
+    "https://www.abbvie.com/join-us/life-at-abbvie/employee-resource-groups/abbvie-pride.html"
+  ],
+  "position": "Mid",
+  "screenshots": ["homepage-full.png"],
+  "layout": {
+    "structure": "Single column, center-aligned",
+    "alignment": "Center",
+    "containerWidth": "Constrained (~880px or x-large)"
+  },
+  "functionalRequirements": {
+    "FR-01": {
+      "title": "Statement Heading",
+      "description": "The block MUST display a large statement heading (H3) that conveys a key message.",
+      "acceptance": [
+        "H3 heading, Roboto Regular, 700 weight",
+        "Desktop: 56px / 68px line-height",
+        "Tablet: 36px / 40px line-height",
+        "Mobile: 28px / 32px line-height",
+        "Color: #071D49 (navy)"
+      ]
+    },
+    "FR-02": {
+      "title": "Highlighted Keyword",
+      "description": "The heading SHOULD support a visually highlighted keyword (e.g., underline, color accent, or bold emphasis).",
+      "acceptance": [
+        "One or more words within the heading styled differently (e.g., underline decoration or accent color)",
+        "Implemented via inline <span> or <em> with CSS styling"
+      ]
+    },
+    "FR-03": {
+      "title": "Description Paragraph",
+      "description": "The block MUST display a supporting description paragraph below the heading.",
+      "acceptance": [
+        "Roboto Regular, 18px desktop, 16px mobile",
+        "Color: #071D49",
+        "Center-aligned"
+      ]
+    },
+    "FR-04": {
+      "title": "CTA Link",
+      "description": "The block SHOULD include an optional CTA link below the description.",
+      "acceptance": [
+        "Text link with 'Opens in same window' indicator",
+        "Font: Roboto Bold, 14px, uppercase",
+        "Color: #0066F5"
+      ]
+    }
+  },
+  "variants": {},
+  "accessibility": {
+    "AC-01": "Heading level MUST be appropriate within the page heading hierarchy",
+    "AC-02": "Highlighted keyword styling MUST NOT rely solely on color (use underline or font-weight as well)"
+  },
+  "designTokens": {
+    "fontFamily_heading": "\"Roboto Regular\", Helvetica, Arial, sans-serif",
+    "fontFamily_body": "\"Roboto Regular\", Helvetica, Arial, sans-serif",
+    "fontSize_heading_desktop": "56px",
+    "fontSize_heading_tablet": "36px",
+    "fontSize_heading_mobile": "28px",
+    "fontSize_body": "18px",
+    "color_heading": "#071D49",
+    "color_body": "#071D49",
+    "color_cta": "#0066F5",
+    "textAlign": "center"
+  }
+}

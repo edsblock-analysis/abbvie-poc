@@ -1,0 +1,306 @@
+{
+  "projectName": "AbbVie.com Site Audit - Block Functional Requirements",
+  "domain": "www.abbvie.com",
+  "auditDate": "2026-04-08",
+  "totalBlocks": 25,
+  "totalVariants": 17,
+  "summary": {
+    "P0_Critical": ["B01-Hero Banner (5 variants)", "B14-Footer", "B15-Header/Navigation"],
+    "P1_High": ["B03-Featured Story Card", "B04-Text Statement", "B05-Video Feature (2 variants)", "B06-Section Heading", "B11-CTA Banner (2 variants)", "B18-Article Body", "B22-Dashboard Card Grid (2 variants)"],
+    "P2_Medium": ["B07-Feature Card", "B08-Stat Counter (2 variants)", "B09-Media Promo", "B10-Three-Column Card Grid (2 variants)", "B16-Breadcrumb", "B17-Leader Bio", "B19-Pull Quote (2 variants)", "B20-Related Content", "B21-Accordion/FAQ", "B25-Two-Column Grid"],
+    "P3_Low": ["B02-Press Release Carousel", "B12-Investor Resources", "B13-ESG Impact", "B23-Location/Address", "B24-Separator (4 variants)"]
+  },
+  "blocks": [
+    {
+      "id": "B01",
+      "name": "Hero Banner",
+      "edsBlockName": "hero",
+      "file": "B01-hero-banner.json",
+      "variants": 5,
+      "variantNames": ["A: Image + White Text", "B: Overlapping Card", "C: Video Background", "D: Solid/Gradient", "E: Anchor Link"],
+      "priority": "P0",
+      "usedOnTemplateCount": 8
+    },
+    {
+      "id": "B02",
+      "name": "Press Release Carousel",
+      "edsBlockName": "carousel",
+      "file": "B02-press-release-carousel.json",
+      "variants": 0,
+      "priority": "P3",
+      "usedOnTemplateCount": 1
+    },
+    {
+      "id": "B03",
+      "name": "Featured Story Card (Large)",
+      "edsBlockName": "featured-card",
+      "file": "B03-featured-story-card.json",
+      "variants": 0,
+      "priority": "P1",
+      "usedOnTemplateCount": 3
+    },
+    {
+      "id": "B04",
+      "name": "Text Statement Block",
+      "edsBlockName": "text-statement",
+      "file": "B04-text-statement.json",
+      "variants": 0,
+      "priority": "P1",
+      "usedOnTemplateCount": 3
+    },
+    {
+      "id": "B05",
+      "name": "Video Feature Block",
+      "edsBlockName": "video",
+      "file": "B05-video-feature.json",
+      "variants": 2,
+      "variantNames": ["A: Full-Width Poster", "B: Inline Article Embed"],
+      "priority": "P1",
+      "usedOnTemplateCount": 3
+    },
+    {
+      "id": "B06",
+      "name": "Section Heading Block",
+      "edsBlockName": "section-heading",
+      "file": "B06-section-heading.json",
+      "variants": 0,
+      "priority": "P1",
+      "usedOnTemplateCount": 3
+    },
+    {
+      "id": "B07",
+      "name": "Science/Feature Card (Linked)",
+      "edsBlockName": "feature-card",
+      "file": "B07-feature-card.json",
+      "variants": 0,
+      "priority": "P2",
+      "usedOnTemplateCount": 2
+    },
+    {
+      "id": "B08",
+      "name": "Stat Counter Card",
+      "edsBlockName": "stats",
+      "file": "B08-stat-counter.json",
+      "variants": 2,
+      "variantNames": ["A: Single Stat", "B: Row of 4 Stats"],
+      "priority": "P2",
+      "usedOnTemplateCount": 2
+    },
+    {
+      "id": "B09",
+      "name": "Podcast/Media Promo Block",
+      "edsBlockName": "media-promo",
+      "file": "B09-media-promo.json",
+      "variants": 0,
+      "priority": "P2",
+      "usedOnTemplateCount": 2
+    },
+    {
+      "id": "B10",
+      "name": "Three-Column Card Grid",
+      "edsBlockName": "card-grid",
+      "file": "B10-three-column-card-grid.json",
+      "variants": 2,
+      "variantNames": ["A: Image + Text + Link", "B: Image + Heading + Description + CTA"],
+      "priority": "P2",
+      "usedOnTemplateCount": 3
+    },
+    {
+      "id": "B11",
+      "name": "CTA Banner",
+      "edsBlockName": "cta-banner",
+      "file": "B11-cta-banner.json",
+      "variants": 2,
+      "variantNames": ["A: Navy Background", "B: Blue Background"],
+      "priority": "P1",
+      "usedOnTemplateCount": 3
+    },
+    {
+      "id": "B12",
+      "name": "Investor Resources Block",
+      "edsBlockName": "investor-resources",
+      "file": "B12-investor-resources.json",
+      "variants": 0,
+      "priority": "P3",
+      "usedOnTemplateCount": 1
+    },
+    {
+      "id": "B13",
+      "name": "ESG Impact Block",
+      "edsBlockName": "esg-impact",
+      "file": "B13-esg-impact.json",
+      "variants": 0,
+      "priority": "P3",
+      "usedOnTemplateCount": 1
+    },
+    {
+      "id": "B14",
+      "name": "Footer",
+      "edsBlockName": "footer",
+      "file": "B14-footer.json",
+      "variants": 0,
+      "priority": "P0",
+      "usedOnTemplateCount": 16
+    },
+    {
+      "id": "B15",
+      "name": "Header/Navigation",
+      "edsBlockName": "header",
+      "file": "B15-header-navigation.json",
+      "variants": 0,
+      "priority": "P0",
+      "usedOnTemplateCount": 16
+    },
+    {
+      "id": "B16",
+      "name": "Breadcrumb",
+      "edsBlockName": "breadcrumb",
+      "file": "B16-breadcrumb.json",
+      "variants": 0,
+      "priority": "P2",
+      "usedOnTemplateCount": 4
+    },
+    {
+      "id": "B17",
+      "name": "Leader Bio Block",
+      "edsBlockName": "leader-bio",
+      "file": "B17-leader-bio.json",
+      "variants": 0,
+      "priority": "P2",
+      "usedOnTemplateCount": 2
+    },
+    {
+      "id": "B18",
+      "name": "Article Body Block",
+      "edsBlockName": "article",
+      "file": "B18-article-body.json",
+      "variants": 0,
+      "priority": "P1",
+      "usedOnTemplateCount": 2
+    },
+    {
+      "id": "B19",
+      "name": "Pull Quote",
+      "edsBlockName": "quote",
+      "file": "B19-pull-quote.json",
+      "variants": 2,
+      "variantNames": ["A: Simple Inline Quote", "B: Full-Width with Background Image"],
+      "priority": "P2",
+      "usedOnTemplateCount": 4
+    },
+    {
+      "id": "B20",
+      "name": "Related Content Card",
+      "edsBlockName": "related-content",
+      "file": "B20-related-content.json",
+      "variants": 0,
+      "priority": "P2",
+      "usedOnTemplateCount": 2
+    },
+    {
+      "id": "B21",
+      "name": "Accordion/FAQ Block",
+      "edsBlockName": "accordion",
+      "file": "B21-accordion-faq.json",
+      "variants": 0,
+      "priority": "P2",
+      "usedOnTemplateCount": 1
+    },
+    {
+      "id": "B22",
+      "name": "Dashboard Card Grid",
+      "edsBlockName": "cards",
+      "file": "B22-dashboard-card-grid.json",
+      "variants": 2,
+      "variantNames": ["A: Full Teaser (Story Card)", "B: Compact Linked Card"],
+      "priority": "P1",
+      "usedOnTemplateCount": 4
+    },
+    {
+      "id": "B23",
+      "name": "Location/Address Block",
+      "edsBlockName": "locations",
+      "file": "B23-location-address.json",
+      "variants": 0,
+      "priority": "P3",
+      "usedOnTemplateCount": 1
+    },
+    {
+      "id": "B24",
+      "name": "Separator",
+      "edsBlockName": "separator",
+      "file": "B24-separator.json",
+      "variants": 4,
+      "variantNames": ["Default", "Height-80", "Height-96", "Height-112"],
+      "priority": "P3",
+      "usedOnTemplateCount": 16
+    },
+    {
+      "id": "B25",
+      "name": "Two-Column Grid (Generic)",
+      "edsBlockName": "columns",
+      "file": "B25-two-column-grid.json",
+      "variants": 0,
+      "priority": "P2",
+      "usedOnTemplateCount": 4
+    }
+  ],
+  "variantBreakdown": {
+    "B01-hero-banner": {
+      "A": "Image Background + White Text Overlay",
+      "B": "Image Background + Overlapping White Card",
+      "C": "Video Background + Text Overlay",
+      "D": "Solid/Gradient Color Background + Text",
+      "E": "Image Background + Anchor Link"
+    },
+    "B05-video-feature": {
+      "A": "Full-Width Poster with Centered Text Overlay",
+      "B": "Contained Inline Video Embed"
+    },
+    "B08-stat-counter": {
+      "A": "Single Stat Counter",
+      "B": "Row of Multiple Stats"
+    },
+    "B10-card-grid": {
+      "A": "Image + Text + Link",
+      "B": "Image + Heading + Description + CTA"
+    },
+    "B11-cta-banner": {
+      "A": "Navy Background",
+      "B": "Blue Background"
+    },
+    "B19-pull-quote": {
+      "A": "Simple Inline Quote",
+      "B": "Full-Width Testimonial with Background Image"
+    },
+    "B22-dashboard-card-grid": {
+      "A": "Full Teaser Card (Story Card)",
+      "B": "Compact Linked Card"
+    },
+    "B24-separator": {
+      "default": "Standard Separator",
+      "height-80": "80px Height",
+      "height-96": "96px Height",
+      "height-112": "112px Height"
+    }
+  },
+  "designSystemReference": {
+    "primaryColors": {
+      "navy": "#071D49",
+      "blue": "#0066F5",
+      "white": "#FFFFFF"
+    },
+    "fonts": {
+      "display": "F37 Lineca Medium",
+      "body": "Roboto Regular",
+      "bold": "Roboto Bold"
+    },
+    "breakpoints": {
+      "desktop": "1440px",
+      "laptop": "1200px",
+      "tablet": "768px",
+      "mobile": "375px"
+    },
+    "containerMaxWidth": "1330px"
+  }
+}

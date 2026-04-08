@@ -1,0 +1,120 @@
+{
+  "blockId": "B15",
+  "blockName": "Header/Navigation",
+  "edsBlockName": "header",
+  "description": "The global sticky header appearing on every page. Contains the AbbVie logo, 5 primary navigation items with mega-menu dropdowns, and utility controls (More, Global selector, Search).",
+  "category": "Navigation / Global",
+  "priority": "P0 - Critical",
+  "usedOnTemplates": ["ALL"],
+  "usedOnPages": ["All 321 URLs"],
+  "position": "Top (sticky)",
+  "screenshots": ["homepage-full.png", "All page screenshots"],
+  "layout": {
+    "structure": "Horizontal bar: Logo left, 5 nav items center, utility controls right",
+    "alignment": "Space-between horizontal layout",
+    "containerWidth": "Full viewport width, content within 1330px",
+    "position": "sticky, top: 0, z-index: high"
+  },
+  "functionalRequirements": {
+    "FR-01": {
+      "title": "AbbVie Logo",
+      "description": "The header MUST display the AbbVie logo linked to the homepage.",
+      "acceptance": [
+        "Logo image with alt text 'Logo AbbVie'",
+        "Links to '/' (homepage)",
+        "Max-width: 112px (desktop), 80px (mobile)",
+        "Positioned on the left"
+      ]
+    },
+    "FR-02": {
+      "title": "Primary Navigation Items",
+      "description": "The header MUST display 5 primary navigation items on desktop.",
+      "acceptance": [
+        "Items: Who We Are, Science, Patients, Join Us, Sustainability",
+        "Each item triggers a mega-menu dropdown on click/hover",
+        "Current/active item visually indicated",
+        "Navigation labeled 'Primary' for accessibility"
+      ]
+    },
+    "FR-03": {
+      "title": "Mega-Menu Dropdown",
+      "description": "Each primary nav item MUST open a full-width mega-menu dropdown panel.",
+      "acceptance": [
+        "Dropdown spans full viewport width",
+        "Contains: category link list, featured story card (image + heading + CTA), dashboard card",
+        "Background: white (#FFFFFF) or light lavender (#F1F3FF)",
+        "Closes on click outside or Escape key",
+        "Uses accordion component internally (tabs on desktop, accordion on mobile)"
+      ]
+    },
+    "FR-04": {
+      "title": "Utility Controls",
+      "description": "The header MUST include utility controls on the right side.",
+      "acceptance": [
+        "MORE button (additional site links)",
+        "GLOBAL selector (country/region picker)",
+        "Search button (opens search input)",
+        "Desktop: All 3 visible",
+        "Mobile: Only Search visible next to hamburger"
+      ]
+    },
+    "FR-05": {
+      "title": "Mobile Hamburger Menu",
+      "description": "On tablet/mobile, navigation MUST collapse to a hamburger menu.",
+      "acceptance": [
+        "Hamburger button labeled 'Menu'",
+        "Visible at viewports < ~900-1000px",
+        "Opens full-screen or slide-in navigation panel",
+        "Contains all 5 primary nav items plus sub-navigation"
+      ]
+    },
+    "FR-06": {
+      "title": "Sticky Behavior",
+      "description": "The header MUST remain fixed at the top of the viewport on scroll.",
+      "acceptance": [
+        "Header stays visible during page scroll",
+        "Does not obscure content (proper spacing/padding on first content section)",
+        "Z-index above all other content"
+      ]
+    },
+    "FR-07": {
+      "title": "Skip-to-Content Link",
+      "description": "A 'Skip to main content' link MUST be the first focusable element.",
+      "acceptance": [
+        "Hidden visually but accessible to keyboard users and screen readers",
+        "Links to #maincontent anchor",
+        "Becomes visible on focus"
+      ]
+    },
+    "FR-08": {
+      "title": "Search Functionality",
+      "description": "The search button MUST open a search input field.",
+      "acceptance": [
+        "Click toggles search input visibility",
+        "Input field with label and submit button",
+        "Searches within abbvie.com"
+      ]
+    }
+  },
+  "variants": {},
+  "accessibility": {
+    "AC-01": "Navigation MUST use <nav> element with aria-label='Primary'",
+    "AC-02": "Skip-to-content link MUST be the first focusable element",
+    "AC-03": "Mega-menu dropdowns MUST be keyboard navigable (Tab, Arrow keys, Escape)",
+    "AC-04": "Hamburger button MUST have accessible label 'Menu'",
+    "AC-05": "Current page MUST be indicated in navigation (aria-current='page')",
+    "AC-06": "Search input MUST have associated label"
+  },
+  "designTokens": {
+    "fontFamily": "\"Roboto Regular\", Helvetica, Arial, sans-serif",
+    "fontSize_navItem": "14px",
+    "fontWeight_navItem": "700",
+    "color_navText": "#071D49",
+    "color_navBg": "#FFFFFF",
+    "color_megaMenuBg": "#FFFFFF or #F1F3FF",
+    "logoMaxWidth_desktop": "112px",
+    "logoMaxWidth_mobile": "80px",
+    "headerHeight": "~60px",
+    "zIndex": "1000+"
+  }
+}

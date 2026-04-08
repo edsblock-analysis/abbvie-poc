@@ -1,0 +1,83 @@
+{
+  "blockId": "B25",
+  "blockName": "Two-Column Grid (Generic)",
+  "edsBlockName": "columns",
+  "description": "A generic two-column split layout used for pairing different content types side by side: image + text, video + text, or text + text. Supports 50/50 and asymmetrical splits.",
+  "category": "Layout",
+  "priority": "P2 - Medium",
+  "usedOnTemplates": ["T01-Homepage", "T02-Hub Landing", "T08-ERG Detail", "T11-Acquisition Landing"],
+  "usedOnPages": [
+    "https://www.abbvie.com/",
+    "https://www.abbvie.com/sustainability.html",
+    "https://www.abbvie.com/join-us/life-at-abbvie/employee-resource-groups/abbvie-pride.html",
+    "https://www.abbvie.com/cerevel.html"
+  ],
+  "position": "Mid",
+  "screenshots": ["homepage-full.png", "sustainability-hub.png", "erg-detail.png", "acquisition-landing.png"],
+  "layout": {
+    "structure": "2-column layout (50/50 or asymmetrical)",
+    "alignment": "Left-aligned content in each column",
+    "containerWidth": "Within 1330px container"
+  },
+  "functionalRequirements": {
+    "FR-01": {
+      "title": "Two-Column Structure",
+      "description": "The block MUST render two distinct content columns side by side on desktop.",
+      "acceptance": [
+        "Left and right columns each contain independent content",
+        "Columns are equal width (50/50) or asymmetrical (40/60, 30/70)",
+        "Gap between columns: 24-32px"
+      ]
+    },
+    "FR-02": {
+      "title": "Content Flexibility",
+      "description": "Each column MUST support various content types.",
+      "acceptance": [
+        "Left column may contain: image, video, or text",
+        "Right column may contain: heading, paragraphs, CTA, or another content block",
+        "Content can be reversed (text left, media right)"
+      ]
+    },
+    "FR-03": {
+      "title": "Image/Media Column",
+      "description": "When a column contains an image or video, it MUST render responsively.",
+      "acceptance": [
+        "Image: object-fit cover, fills column width",
+        "Video: poster overlay with play button (inherits B05 behavior)",
+        "Alt text required for images"
+      ]
+    },
+    "FR-04": {
+      "title": "Text Column",
+      "description": "When a column contains text, it MUST support heading, paragraphs, and CTA.",
+      "acceptance": [
+        "Heading (H2-H5) at top",
+        "Body paragraphs",
+        "CTA link at bottom"
+      ]
+    },
+    "FR-05": {
+      "title": "Responsive Stacking",
+      "description": "Columns MUST stack vertically on mobile.",
+      "acceptance": [
+        "Desktop (1440px): Side-by-side",
+        "Tablet (768px): Stacked (image/media first, text second)",
+        "Mobile (375px): Full-width stacked"
+      ]
+    }
+  },
+  "variants": {},
+  "accessibility": {
+    "AC-01": "Reading order MUST be logical when columns stack",
+    "AC-02": "Images MUST have meaningful alt text",
+    "AC-03": "Content in both columns MUST be accessible via keyboard"
+  },
+  "designTokens": {
+    "fontFamily_heading": "\"F37 Lineca Medium\", Helvetica, Arial, sans-serif",
+    "fontFamily_body": "\"Roboto Regular\", Helvetica, Arial, sans-serif",
+    "columnGap": "24-32px",
+    "columnSplits": ["50/50", "40/60", "30/70"],
+    "color_text": "#071D49",
+    "color_cta": "#0066F5"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "blockId": "B07",
+  "blockName": "Science/Feature Card (Linked)",
+  "edsBlockName": "feature-card",
+  "description": "A vertical linked card displaying an image, eyebrow category label, title, and a 'Learn More' CTA. The entire card is a single link navigating to a section or detail page.",
+  "category": "Card",
+  "priority": "P2 - Medium",
+  "usedOnTemplates": ["T01-Homepage", "T02-Hub Landing"],
+  "usedOnPages": [
+    "https://www.abbvie.com/",
+    "https://www.abbvie.com/science.html"
+  ],
+  "position": "Mid",
+  "screenshots": ["homepage-full.png"],
+  "layout": {
+    "structure": "Vertical card (image top, content below)",
+    "alignment": "Left-aligned content",
+    "containerWidth": "Card within larger grid layout"
+  },
+  "functionalRequirements": {
+    "FR-01": {
+      "title": "Card Image",
+      "description": "The card MUST display an image at the top.",
+      "acceptance": [
+        "Image fills card width",
+        "Object-fit: cover",
+        "Alt text required"
+      ]
+    },
+    "FR-02": {
+      "title": "Eyebrow Category Label",
+      "description": "The card MUST display an H2 eyebrow label indicating the content category.",
+      "acceptance": [
+        "H2 heading, smaller size (16px), bold",
+        "Color: #071D49"
+      ]
+    },
+    "FR-03": {
+      "title": "Card Title",
+      "description": "The card MUST display a title as an H4 heading.",
+      "acceptance": [
+        "F37 Lineca Medium, 30px desktop",
+        "Color: #071D49"
+      ]
+    },
+    "FR-04": {
+      "title": "CTA Text",
+      "description": "The card MUST display a 'Learn More' CTA indicator.",
+      "acceptance": [
+        "Text: 'Learn More' with arrow icon",
+        "Roboto Bold, 14px, uppercase",
+        "Color: #0066F5"
+      ]
+    },
+    "FR-05": {
+      "title": "Full Card Link",
+      "description": "The entire card MUST be wrapped in a single anchor element.",
+      "acceptance": [
+        "Click anywhere on card navigates to target page",
+        "Hover state applied to entire card (subtle shadow or scale effect)"
+      ]
+    }
+  },
+  "variants": {},
+  "accessibility": {
+    "AC-01": "Card link MUST have descriptive accessible name",
+    "AC-02": "Image MUST have meaningful alt text",
+    "AC-03": "Hover/focus state MUST be clearly visible"
+  },
+  "designTokens": {
+    "fontFamily_title": "\"F37 Lineca Medium\", Helvetica, Arial, sans-serif",
+    "fontFamily_eyebrow": "\"Roboto Regular\", Helvetica, Arial, sans-serif",
+    "fontFamily_cta": "\"Roboto Bold\", Helvetica, Arial, sans-serif",
+    "fontSize_title": "30px",
+    "fontSize_eyebrow": "16px",
+    "fontSize_cta": "14px",
+    "color_title": "#071D49",
+    "color_cta": "#0066F5",
+    "cardPadding": "32px"
+  }
+}

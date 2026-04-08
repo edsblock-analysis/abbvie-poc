@@ -1,0 +1,107 @@
+{
+  "blockId": "B11",
+  "blockName": "CTA Banner",
+  "edsBlockName": "cta-banner",
+  "description": "A full-width colored banner with a heading, description text, and a prominent call-to-action button. Used to drive user action such as job browsing or section exploration.",
+  "category": "Call to Action",
+  "priority": "P1 - High",
+  "usedOnTemplates": ["T01-Homepage", "T02-Hub Landing", "T08-ERG Detail"],
+  "usedOnPages": [
+    "https://www.abbvie.com/",
+    "https://www.abbvie.com/join-us.html",
+    "https://www.abbvie.com/join-us/life-at-abbvie/employee-resource-groups/abbvie-pride.html"
+  ],
+  "position": "Mid/Bottom",
+  "screenshots": ["homepage-full.png", "join-us-hub.png", "erg-detail.png"],
+  "layout": {
+    "structure": "2-column (text left, button right) or stacked on mobile",
+    "alignment": "Left-aligned text, right-aligned button on desktop",
+    "containerWidth": "Within 1330px container or full-width"
+  },
+  "functionalRequirements": {
+    "FR-01": {
+      "title": "Heading",
+      "description": "The banner MUST display a heading (H4).",
+      "acceptance": [
+        "F37 Lineca Medium, 30px desktop, weight 800",
+        "Color: #FFFFFF (white text on colored background)"
+      ]
+    },
+    "FR-02": {
+      "title": "Description Text",
+      "description": "The banner SHOULD display a short description paragraph.",
+      "acceptance": [
+        "Roboto Regular, 16px",
+        "Color: #FFFFFF",
+        "1-2 sentences maximum"
+      ]
+    },
+    "FR-03": {
+      "title": "CTA Button",
+      "description": "The banner MUST include a prominent CTA button/link.",
+      "acceptance": [
+        "Button text with link to target page",
+        "Visually distinct from text (border, outline, or filled button style)",
+        "Color: #FFFFFF text on colored bg",
+        "May open in same window or new window"
+      ]
+    },
+    "FR-04": {
+      "title": "Background Color",
+      "description": "The banner MUST have a solid brand background color.",
+      "acceptance": [
+        "Variant A: #071D49 (navy)",
+        "Variant B: #0066F5 (blue)",
+        "Full-width background fill"
+      ]
+    },
+    "FR-05": {
+      "title": "Responsive Layout",
+      "description": "Banner MUST stack vertically on mobile.",
+      "acceptance": [
+        "Desktop: Heading/text left, button right (inline)",
+        "Mobile: Heading, text, and button stacked vertically",
+        "Padding adjusts for mobile"
+      ]
+    }
+  },
+  "variants": {
+    "A": {
+      "variantName": "Navy Background",
+      "description": "CTA banner with dark navy (#071D49) background and white text. Used for general CTAs like 'Explore opportunities'.",
+      "usedOn": ["Homepage"],
+      "styling": {
+        "backgroundColor": "#071D49",
+        "textColor": "#FFFFFF",
+        "buttonStyle": "Outlined or text link with arrow"
+      }
+    },
+    "B": {
+      "variantName": "Blue Background",
+      "description": "CTA banner with bright blue (#0066F5) background and white text. Used for job/career CTAs.",
+      "usedOn": ["Join Us Hub", "ERG Detail pages"],
+      "styling": {
+        "backgroundColor": "#0066F5",
+        "textColor": "#FFFFFF",
+        "buttonStyle": "Outlined white button or text link"
+      }
+    }
+  },
+  "accessibility": {
+    "AC-01": "Banner text MUST meet WCAG AA contrast on colored background (white on navy = 14.4:1, white on blue = 4.7:1)",
+    "AC-02": "CTA button MUST be keyboard accessible",
+    "AC-03": "External links MUST indicate 'opens in a new window'"
+  },
+  "designTokens": {
+    "fontFamily_heading": "\"F37 Lineca Medium\", Helvetica, Arial, sans-serif",
+    "fontFamily_body": "\"Roboto Regular\", Helvetica, Arial, sans-serif",
+    "fontSize_heading": "30px",
+    "fontSize_body": "16px",
+    "color_bg_navy": "#071D49",
+    "color_bg_blue": "#0066F5",
+    "color_text": "#FFFFFF",
+    "padding_desktop": "40px 55px",
+    "padding_mobile": "32px 20px",
+    "borderRadius": "40px 0 0 0 (optional)"
+  }
+}

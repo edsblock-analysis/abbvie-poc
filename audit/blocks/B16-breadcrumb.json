@@ -1,0 +1,73 @@
+{
+  "blockId": "B16",
+  "blockName": "Breadcrumb",
+  "edsBlockName": "breadcrumb",
+  "description": "A horizontal breadcrumb navigation trail showing the hierarchical path from the homepage to the current page. Used on detail and sub-section pages.",
+  "category": "Navigation",
+  "priority": "P2 - Medium",
+  "usedOnTemplates": ["T06-Leader Bio", "T07-R&D Leader Bio", "T08-ERG Detail", "T09-Contact Location"],
+  "usedOnPages": [
+    "https://www.abbvie.com/who-we-are/our-leaders/robert-michael.html",
+    "https://www.abbvie.com/join-us/life-at-abbvie/employee-resource-groups/abbvie-pride.html",
+    "https://www.abbvie.com/contact-center/locations/united-states.html"
+  ],
+  "position": "Top (below header, above content)",
+  "screenshots": ["leader-bio.png", "erg-detail.png", "contact-location.png"],
+  "layout": {
+    "structure": "Single horizontal row of linked path items",
+    "alignment": "Left-aligned",
+    "containerWidth": "Within content container"
+  },
+  "functionalRequirements": {
+    "FR-01": {
+      "title": "Path Hierarchy",
+      "description": "The breadcrumb MUST display the hierarchical path from the site root to the current page.",
+      "acceptance": [
+        "Each ancestor page displayed as a link",
+        "Current page displayed as non-linked text (last item)",
+        "Separator character: '>' between items",
+        "Example: 'Who We Are > Our Leaders > Robert A. Michael'"
+      ]
+    },
+    "FR-02": {
+      "title": "Linked Ancestors",
+      "description": "Each ancestor path item MUST be a clickable link to that page.",
+      "acceptance": [
+        "Links navigate to the respective ancestor page",
+        "Opens in same window",
+        "Link text matches the page title"
+      ]
+    },
+    "FR-03": {
+      "title": "Current Page Indicator",
+      "description": "The last breadcrumb item (current page) MUST NOT be a link.",
+      "acceptance": [
+        "Displayed as plain text or visually muted",
+        "Indicates current location"
+      ]
+    },
+    "FR-04": {
+      "title": "Responsive Behavior",
+      "description": "Breadcrumb MUST remain usable on mobile.",
+      "acceptance": [
+        "May truncate or wrap on narrow viewports",
+        "All items remain accessible"
+      ]
+    }
+  },
+  "variants": {},
+  "accessibility": {
+    "AC-01": "Breadcrumb MUST use <nav> element with aria-label='Breadcrumb'",
+    "AC-02": "Items MUST be in an ordered list (<ol>)",
+    "AC-03": "Current page item MUST have aria-current='page'",
+    "AC-04": "Separator characters MUST be decorative (hidden from screen readers)"
+  },
+  "designTokens": {
+    "fontFamily": "\"Roboto Regular\", Helvetica, Arial, sans-serif",
+    "fontSize": "14px",
+    "color_link": "#0066F5",
+    "color_current": "#071D49",
+    "color_separator": "#666B7A",
+    "spacing": "8px between items"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "blockId": "B20",
+  "blockName": "Related Content Card",
+  "edsBlockName": "related-content",
+  "description": "A horizontal card placed at the bottom of detail pages linking to a related article or story. Displays an image, date, category, title, and optional reading time.",
+  "category": "Card/Navigation",
+  "priority": "P2 - Medium",
+  "usedOnTemplates": ["T04-Story Detail", "T08-ERG Detail"],
+  "usedOnPages": [
+    "https://www.abbvie.com/who-we-are/our-stories/two-lives-converging-in-the-fight-against-parkinsons.html",
+    "https://www.abbvie.com/join-us/life-at-abbvie/employee-resource-groups/abbvie-pride.html"
+  ],
+  "position": "Bottom (above footer)",
+  "screenshots": ["story-detail.png", "erg-detail.png"],
+  "layout": {
+    "structure": "Horizontal card (image left, content right)",
+    "alignment": "Left-aligned",
+    "containerWidth": "Within article/content container"
+  },
+  "functionalRequirements": {
+    "FR-01": {
+      "title": "Section Label",
+      "description": "The block SHOULD display an H2 label 'Related content' above the card.",
+      "acceptance": [
+        "H2 heading: 'Related content'",
+        "Roboto Regular, bold"
+      ]
+    },
+    "FR-02": {
+      "title": "Card Image",
+      "description": "The card MUST display a thumbnail image on the left.",
+      "acceptance": [
+        "Image ~40-50% of card width",
+        "Object-fit: cover",
+        "Alt text required"
+      ]
+    },
+    "FR-03": {
+      "title": "Card Metadata",
+      "description": "The card MUST display article metadata: date, category, and reading time.",
+      "acceptance": [
+        "Date: 'Month DD, YYYY' format",
+        "Category: H2 eyebrow label (e.g., 'Neuroscience', 'Profile')",
+        "Reading time: 'X Minute Read' (optional)"
+      ]
+    },
+    "FR-04": {
+      "title": "Card Title",
+      "description": "The card MUST display the related article title as an H4 heading.",
+      "acceptance": [
+        "F37 Lineca Medium, 28-30px",
+        "Color: #071D49"
+      ]
+    },
+    "FR-05": {
+      "title": "Full Card Link",
+      "description": "The entire card MUST be clickable, linking to the related article.",
+      "acceptance": [
+        "Single anchor wrapping the entire card",
+        "Opens in same window",
+        "Hover state on entire card"
+      ]
+    },
+    "FR-06": {
+      "title": "Responsive Behavior",
+      "description": "Card MUST stack on mobile.",
+      "acceptance": [
+        "Desktop: Horizontal (image left, content right)",
+        "Mobile: Image on top, content below"
+      ]
+    }
+  },
+  "variants": {},
+  "accessibility": {
+    "AC-01": "Card link MUST have descriptive accessible name",
+    "AC-02": "Image MUST have meaningful alt text"
+  },
+  "designTokens": {
+    "fontFamily_title": "\"F37 Lineca Medium\", Helvetica, Arial, sans-serif",
+    "fontFamily_meta": "\"Roboto Regular\", Helvetica, Arial, sans-serif",
+    "fontSize_title": "28-30px",
+    "fontSize_meta": "14px",
+    "color_title": "#071D49",
+    "color_meta": "#666B7A",
+    "cardPadding": "32px"
+  }
+}
