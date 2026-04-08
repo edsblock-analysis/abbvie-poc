@@ -1,0 +1,89 @@
+/* Feature Card — scoped to .feature-card */
+
+.feature-card {
+  background: var(--color-bg-lavender);
+  border-radius: var(--radius-s);
+  overflow: hidden;
+  transition: box-shadow var(--transition-default);
+}
+
+.feature-card:hover {
+  box-shadow: 0 4px 20px rgb(0 0 0 / 8%);
+}
+
+.feature-card .feature-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.feature-card .feature-card-link:hover {
+  color: inherit;
+}
+
+.feature-card .feature-card-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card .feature-card-image {
+  line-height: 0;
+}
+
+.feature-card .feature-card-image picture {
+  display: block;
+}
+
+.feature-card .feature-card-image img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.feature-card .feature-card-content {
+  padding: var(--spacing-m);
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card .feature-card-content h2 {
+  font-family: var(--font-body);
+  font-size: var(--font-size-h2);
+  font-weight: var(--weight-bold);
+  line-height: var(--line-height-h2);
+  letter-spacing: var(--letter-spacing-h2);
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.feature-card .feature-card-content h4 {
+  font-family: var(--font-display);
+  font-size: var(--font-size-h4);
+  font-weight: var(--weight-display);
+  line-height: var(--line-height-h4);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-s);
+}
+
+.feature-card .feature-card-content a {
+  font-size: var(--font-size-cta);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-cta);
+  color: var(--color-blue);
+  text-decoration: none;
+  margin-top: auto;
+}
+
+.feature-card .feature-card-content a:hover {
+  color: var(--color-blue-hover);
+}
+
+/* Desktop (>=900px) */
+@media (width >= 900px) {
+  .feature-card .feature-card-content {
+    padding: var(--spacing-l);
+  }
+}

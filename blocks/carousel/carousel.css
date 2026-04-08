@@ -1,0 +1,97 @@
+/* Carousel — scoped to .carousel */
+
+.carousel {
+  position: relative;
+}
+
+.carousel .carousel-viewport {
+  overflow: hidden;
+}
+
+.carousel .carousel-track {
+  display: flex;
+  transition: transform var(--transition-default);
+}
+
+.carousel .carousel-slide {
+  min-width: 100%;
+  flex-shrink: 0;
+  padding: var(--spacing-m) 0;
+}
+
+.carousel .carousel-slide > div {
+  padding: 0;
+}
+
+.carousel .carousel-slide p {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body-small);
+  line-height: var(--line-height-body-small);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.carousel .carousel-slide h3 {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: var(--weight-regular);
+  line-height: 28px;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-s);
+}
+
+.carousel .carousel-slide a {
+  font-size: var(--font-size-cta);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-cta);
+  color: var(--color-blue);
+  text-decoration: none;
+}
+
+.carousel .carousel-slide a:hover {
+  color: var(--color-blue-hover);
+}
+
+/* Navigation */
+.carousel .carousel-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--spacing-s);
+  padding-top: var(--spacing-m);
+}
+
+.carousel .carousel-counter {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body-small);
+  color: var(--color-text-secondary);
+}
+
+.carousel .carousel-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  color: var(--color-navy);
+  cursor: pointer;
+  padding: 0;
+  transition: color var(--transition-fast);
+}
+
+.carousel .carousel-btn:hover {
+  color: var(--color-blue);
+}
+
+.carousel .carousel-btn:disabled {
+  color: var(--color-border-divider);
+  cursor: default;
+}
+
+.carousel .carousel-btn svg {
+  width: 24px;
+  height: 24px;
+}

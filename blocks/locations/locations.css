@@ -1,0 +1,37 @@
+.locations .locations-entry {
+  padding: var(--spacing-m) 0;
+  border-bottom: 1px solid var(--color-border-divider);
+}
+
+.locations .locations-entry:first-child {
+  padding-top: 0;
+}
+
+.locations .locations-entry:last-child {
+  border-bottom: none;
+}
+
+.locations .locations-heading h5 {
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text-primary);
+}
+
+.locations .locations-details {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text-primary);
+}
+
+.locations .locations-details p {
+  margin-bottom: var(--spacing-xs);
+}
+
+.locations .locations-phone {
+  color: var(--color-blue);
+  text-decoration: none;
+}
+
+.locations .locations-phone:hover {
+  color: var(--color-blue-hover);
+}

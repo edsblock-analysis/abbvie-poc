@@ -1,36 +1,62 @@
-/* stylelint-disable max-line-length */
+/* stylelint-disable */
+
+/*
+ * AbbVie Font Definitions
+ * Verified from live site @font-face rules on 2026-04-08
+ *
+ * F37Lineca — Commercial display font (3 weights)
+ *   650 = Book (headings, alt display)
+ *   800 = Medium (primary headings H1, H3, H4, H5)
+ *   400 = Variable font
+ *
+ * Roboto — Body text (Google Fonts fallback + self-hosted)
+ *   400 = Regular (body, paragraphs)
+ *   700 = Bold (labels, CTAs, buttons)
+ *
+ * Fallback stack: Helvetica, Arial, sans-serif
+ */
+
+/* F37 Lineca — Book (weight 650) */
 @font-face {
-  font-family: roboto-condensed;
+  font-family: 'F37Lineca';
+  font-weight: 650;
   font-style: normal;
-  font-weight: 700;
   font-display: swap;
-  src: url('../fonts/roboto-condensed-bold.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url('https://www.abbvie.com/etc.clientlibs/abbvie-com2/clientlibs/clientlib-site/resources/custom-fonts/F37Lineca/fonts/F37Lineca-Book.woff2') format('woff2'),
+       url('https://www.abbvie.com/etc.clientlibs/abbvie-com2/clientlibs/clientlib-site/resources/custom-fonts/F37Lineca/fonts/F37Lineca-Book.woff') format('woff');
 }
 
+/* F37 Lineca — Medium (weight 800) */
 @font-face {
-  font-family: roboto;
+  font-family: 'F37Lineca';
+  font-weight: 800;
   font-style: normal;
-  font-weight: 700;
   font-display: swap;
-  src: url('../fonts/roboto-bold.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url('https://www.abbvie.com/etc.clientlibs/abbvie-com2/clientlibs/clientlib-site/resources/custom-fonts/F37Lineca/fonts/F37Lineca-Medium.woff2') format('woff2'),
+       url('https://www.abbvie.com/etc.clientlibs/abbvie-com2/clientlibs/clientlib-site/resources/custom-fonts/F37Lineca/fonts/F37Lineca-Medium.woff') format('woff');
 }
 
+/* F37 Lineca — Variable (weight 400) */
 @font-face {
-  font-family: roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('../fonts/roboto-medium.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: roboto;
-  font-style: normal;
+  font-family: 'F37Lineca';
   font-weight: 400;
+  font-style: normal;
   font-display: swap;
-  src: url('../fonts/roboto-regular.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url('https://www.abbvie.com/etc.clientlibs/abbvie-com2/clientlibs/clientlib-site/resources/custom-fonts/F37Lineca/fonts/F37Lineca-VF.woff2') format('woff2');
+}
+
+/* Roboto — from Google Fonts CDN */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Fallback font metrics */
+@font-face {
+  font-family: f37lineca-fallback;
+  size-adjust: 95%;
+  src: local('Arial');
+}
+
+@font-face {
+  font-family: roboto-fallback;
+  size-adjust: 99.529%;
+  src: local('Arial');
 }

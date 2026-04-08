@@ -1,0 +1,79 @@
+.esg-impact {
+  position: relative;
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  min-height: 500px;
+}
+
+.esg-impact .esg-impact-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.esg-impact .esg-impact-bg picture,
+.esg-impact .esg-impact-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.esg-impact .esg-impact-cards {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
+  padding: var(--spacing-xl) var(--spacing-m);
+}
+
+.esg-impact .esg-impact-card {
+  background-color: var(--color-bg-navy);
+  color: var(--color-text-white);
+  border-radius: var(--radius-s);
+  padding: var(--spacing-l) var(--spacing-m);
+}
+
+.esg-impact .esg-impact-card > div {
+  color: var(--color-text-white);
+}
+
+.esg-impact .esg-impact-card h2,
+.esg-impact .esg-impact-card h3,
+.esg-impact .esg-impact-card h4,
+.esg-impact .esg-impact-card h5 {
+  color: var(--color-text-white);
+}
+
+.esg-impact .esg-impact-card p {
+  color: var(--color-text-white);
+}
+
+.esg-impact .esg-impact-card a {
+  color: var(--color-blue-hover);
+}
+
+@media (width >= 600px) {
+  .esg-impact .esg-impact-cards {
+    flex-flow: row wrap;
+    padding: var(--spacing-xl) var(--spacing-l);
+  }
+
+  .esg-impact .esg-impact-card {
+    flex: 1 1 calc(50% - var(--spacing-m));
+  }
+}
+
+@media (width >= 900px) {
+  .esg-impact .esg-impact-cards {
+    flex-wrap: nowrap;
+    padding: var(--spacing-3xl) var(--spacing-xl);
+    align-items: flex-end;
+    min-height: 500px;
+  }
+
+  .esg-impact .esg-impact-card {
+    flex: 1;
+  }
+}

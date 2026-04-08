@@ -1,0 +1,22 @@
+.separator {
+  padding: var(--spacing-2xl) 0;
+}
+
+.separator hr {
+  border: none;
+  margin: 0;
+  height: 0;
+}
+
+/* Height variants */
+.separator.height-80 {
+  padding: 40px 0;
+}
+
+.separator.height-96 {
+  padding: 48px 0;
+}
+
+.separator.height-112 {
+  padding: 56px 0;
+}

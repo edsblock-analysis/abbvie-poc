@@ -1,20 +1,167 @@
+/* stylelint-disable no-descending-specificity */
+
+/* AbbVie Footer — white bg, navy text, multi-column grid */
+
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  background: var(--color-white, #fff);
+  border-top: 1px solid var(--color-border-divider, #e0e0e0);
+}
+
+footer .footer {
+  max-width: var(--page-max-width, 1440px);
+  margin: 0 auto;
+  padding: 40px var(--container-padding, 55px);
+  color: var(--color-navy, #071d49);
 }
 
 footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  max-width: none;
+  margin: 0;
+  padding: 0;
 }
 
-footer .footer p {
+/* Logo (first child div) */
+footer .footer > div > div:first-child {
+  grid-column: 1 / -1;
+  margin-bottom: 8px;
+}
+
+footer .footer > div > div:first-child p {
   margin: 0;
 }
 
-@media (width >= 900px) {
+footer .footer > div > div:first-child a {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: var(--weight-book, 650);
+  color: var(--color-navy, #071d49);
+  text-decoration: none;
+}
+
+/* Nav + social (second child) */
+footer .footer > div > div:nth-child(2) > ul:first-child {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer .footer > div > div:nth-child(2) > ul:first-child li {
+  margin-bottom: 12px;
+}
+
+footer .footer > div > div:nth-child(2) > ul:first-child a {
+  font-family: var(--font-display);
+  font-size: 40px;
+  line-height: 44px;
+  font-weight: var(--weight-book, 650);
+  color: var(--color-navy, #071d49);
+  text-decoration: none;
+}
+
+footer .footer > div > div:nth-child(2) > ul:first-child a:hover {
+  color: var(--color-blue, #0066f5);
+  text-decoration: none;
+}
+
+/* Social links */
+footer .footer > div > div:nth-child(2) > ul:nth-child(2) {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  padding: 24px 0 0;
+  margin: 24px 0 0;
+  border-top: 1px solid var(--color-border-divider, #e0e0e0);
+}
+
+footer .footer > div > div:nth-child(2) > ul:nth-child(2) a {
+  font-size: 14px;
+  color: var(--color-navy, #071d49);
+  text-decoration: none;
+}
+
+/* Column headings */
+footer .footer h2 {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: var(--weight-bold, 700);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-secondary, #666b7a);
+  margin: 0 0 16px;
+  line-height: 1.4;
+}
+
+footer .footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer .footer li {
+  margin-bottom: 8px;
+}
+
+footer .footer a {
+  font-size: 16px;
+  color: var(--color-navy, #071d49);
+  text-decoration: none;
+}
+
+footer .footer a:hover {
+  color: var(--color-blue, #0066f5);
+  text-decoration: none;
+}
+
+/* Legal text (5th child) */
+footer .footer > div > div:nth-child(5) {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--color-border-divider, #e0e0e0);
+  padding-top: 24px;
+  margin-top: 8px;
+}
+
+footer .footer > div > div:nth-child(5) p {
+  font-size: 12px;
+  color: var(--color-text-secondary, #666b7a);
+  line-height: 1.8;
+  margin: 0 0 8px;
+}
+
+/* Legal links bar (6th child — rendered as div with ul) */
+footer .footer > div > div:nth-child(6) {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--color-border-divider, #e0e0e0);
+  padding-top: 16px;
+}
+
+footer .footer > div > div:nth-child(6) ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+footer .footer > div > div:nth-child(6) a {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.48px;
+}
+
+/* Mobile */
+@media (width < 900px) {
+  footer .footer {
+    padding: 32px 20px;
+  }
+
   footer .footer > div {
-    padding: 40px 32px 24px;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  footer .footer > div > div:nth-child(2) > ul:first-child a {
+    font-size: 24px;
+    line-height: 30px;
   }
 }

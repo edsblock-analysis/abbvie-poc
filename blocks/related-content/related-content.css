@@ -1,0 +1,72 @@
+.related-content .related-content-card {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--color-border-divider);
+  padding: var(--spacing-m) 0;
+  transition: background-color var(--transition-fast);
+}
+
+.related-content .related-content-card:hover {
+  background-color: var(--color-bg-near-white);
+}
+
+.related-content .related-content-image {
+  width: 100%;
+  margin-bottom: var(--spacing-s);
+}
+
+.related-content .related-content-image picture,
+.related-content .related-content-image img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius-s);
+}
+
+.related-content .related-content-body {
+  flex: 1;
+}
+
+.related-content .related-content-body h2 {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.related-content .related-content-body h4 {
+  margin-bottom: var(--spacing-xs);
+}
+
+.related-content .related-content-body p {
+  font-size: var(--font-size-body-small);
+  line-height: var(--line-height-body-small);
+  color: var(--color-text-secondary);
+}
+
+.related-content .related-content-body a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+.related-content .related-content-body a:hover {
+  color: var(--color-blue);
+}
+
+@media (width >= 900px) {
+  .related-content .related-content-card {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--spacing-m);
+  }
+
+  .related-content .related-content-image {
+    flex: 0 0 40%;
+    width: 40%;
+    margin-bottom: 0;
+  }
+
+  .related-content .related-content-body {
+    flex: 1;
+    padding-top: var(--spacing-xs);
+  }
+}

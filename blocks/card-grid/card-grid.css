@@ -1,0 +1,72 @@
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-m);
+}
+
+.card-grid .card-grid-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg-white);
+  border-radius: var(--radius-s);
+  overflow: hidden;
+}
+
+.card-grid .card-grid-card-image {
+  width: 100%;
+}
+
+.card-grid .card-grid-card-image picture,
+.card-grid .card-grid-card-image img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+}
+
+.card-grid .card-grid-card-body {
+  padding: var(--spacing-m);
+}
+
+.card-grid .card-grid-card-body h2 {
+  margin-bottom: var(--spacing-xs);
+}
+
+.card-grid .card-grid-card-body h4,
+.card-grid .card-grid-card-body h5 {
+  margin-bottom: var(--spacing-s);
+}
+
+.card-grid .card-grid-card-body p {
+  margin-bottom: var(--spacing-s);
+}
+
+.card-grid .card-grid-cta {
+  font-family: var(--font-body);
+  font-size: var(--font-size-cta);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-cta);
+}
+
+/* Teaser variant */
+.card-grid.teaser .card-grid-card {
+  box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
+  transition: box-shadow var(--transition-default);
+}
+
+.card-grid.teaser .card-grid-card:hover {
+  box-shadow: 0 4px 16px rgb(0 0 0 / 14%);
+}
+
+@media (width >= 600px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 900px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

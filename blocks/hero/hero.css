@@ -1,37 +1,201 @@
-.hero-container .hero-wrapper {
+/* Hero Banner — scoped to .hero */
+
+/* Full-width container overrides */
+.hero-container > div {
   max-width: unset;
   padding: 0;
 }
 
 .hero {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  display: flex;
+  align-items: flex-end;
+  min-height: 360px;
+  overflow: hidden;
+  border-radius: 24px 0 0;
+  background-color: var(--color-navy);
 }
 
-.hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
-}
-
-.hero picture {
+/* Background picture */
+.hero > picture.hero-bg {
   position: absolute;
-  z-index: -1;
   inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
+  z-index: 0;
 }
 
-.hero img {
-  object-fit: cover;
+.hero > picture.hero-bg img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
+/* Video background */
+.hero .hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Dark overlay for image/video variants */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / 45%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* No overlay for solid variant */
+.hero.solid::after,
+.hero.no-media::after {
+  display: none;
+}
+
+/* Content overlay */
+.hero .hero-overlay {
+  position: relative;
+  z-index: 2;
+  max-width: var(--container-max-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--container-padding);
+}
+
+/* Typography — white text */
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: var(--font-size-h1);
+  font-weight: var(--weight-display);
+  line-height: var(--line-height-h1);
+  letter-spacing: var(--letter-spacing-h1);
+  color: var(--color-text-white);
+  margin-bottom: var(--spacing-s);
+}
+
+.hero p {
+  color: var(--color-text-white);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  max-width: 640px;
+}
+
+.hero h2 {
+  color: var(--color-text-white);
+}
+
+/* CTA links */
+.hero a.button,
+.hero a.cta,
+.hero .hero-overlay a {
+  color: #479ff8;
+  font-size: 14px;
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-cta);
+  text-decoration: none;
+}
+
+.hero a.button:hover,
+.hero a.cta:hover,
+.hero .hero-overlay a:hover {
+  color: var(--color-blue-hover);
+}
+
+/* Solid navy variant */
+.hero.solid {
+  background: linear-gradient(135deg, var(--color-navy) 0%, #0a2d6e 100%);
+}
+
+.hero.solid .hero-overlay,
+.hero.no-media .hero-overlay {
+  text-align: center;
+}
+
+.hero.solid p,
+.hero.no-media p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Overlap variant */
+.hero.overlap {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.hero.overlap .hero-overlay {
+  background: var(--color-bg-white);
+  color: var(--color-text-primary);
+  border-radius: 24px 0 0;
+  margin: 0 var(--container-padding);
+  padding: var(--spacing-xl);
+  transform: translateY(50%);
+  position: relative;
+  z-index: 3;
+  box-shadow: 0 4px 24px rgb(0 0 0 / 10%);
+}
+
+.hero.overlap .hero-overlay h1 {
+  color: var(--color-text-primary);
+}
+
+.hero.overlap .hero-overlay p {
+  color: var(--color-text-secondary);
+}
+
+/* Play/Pause button */
+.hero .hero-play-pause {
+  position: absolute;
+  bottom: var(--spacing-m);
+  right: var(--spacing-m);
+  z-index: 3;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--color-white);
+  background: rgb(0 0 0 / 40%);
+  color: var(--color-white);
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition-default);
+}
+
+.hero .hero-play-pause:hover {
+  background: rgb(0 0 0 / 60%);
+}
+
+/* Tablet (>=600px) */
+@media (width >= 600px) {
+  .hero {
+    min-height: 480px;
+  }
+}
+
+/* Desktop (>=900px) */
 @media (width >= 900px) {
   .hero {
-    padding: 40px 32px;
+    min-height: 810px;
+    border-radius: 40px 0 0;
+  }
+
+  .hero .hero-overlay {
+    padding: var(--spacing-3xl) var(--container-padding);
+  }
+
+  .hero p {
+    font-size: var(--font-size-body-large);
+    line-height: var(--line-height-body-large);
+  }
+
+  .hero.overlap .hero-overlay {
+    margin: 0 var(--spacing-3xl);
+    padding: var(--spacing-3xl);
   }
 }

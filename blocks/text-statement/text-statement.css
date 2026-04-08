@@ -1,0 +1,34 @@
+/* Text Statement — scoped to .text-statement */
+
+.text-statement {
+  text-align: center;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.text-statement h3 {
+  font-family: var(--font-display);
+  font-size: var(--font-size-h3);
+  font-weight: var(--weight-display);
+  line-height: var(--line-height-h3);
+  letter-spacing: var(--letter-spacing-h3);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-m);
+}
+
+.text-statement h3 em {
+  color: var(--color-blue);
+  font-style: normal;
+}
+
+.text-statement p {
+  font-size: var(--font-size-body-large);
+  line-height: var(--line-height-body-large);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-s);
+}
+
+.text-statement a.button,
+.text-statement a.cta {
+  margin-top: var(--spacing-m);
+}

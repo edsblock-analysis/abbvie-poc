@@ -1,0 +1,81 @@
+/* CTA Banner — scoped to .cta-banner */
+
+.cta-banner-container > div {
+  max-width: unset;
+  padding: 0;
+}
+
+.cta-banner {
+  background-color: var(--color-bg-navy);
+  padding: var(--spacing-3xl) var(--container-padding);
+  border-radius: var(--radius-m);
+}
+
+/* Blue variant */
+.cta-banner.blue {
+  background-color: var(--color-blue);
+}
+
+.cta-banner .cta-banner-inner {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-l);
+}
+
+.cta-banner .cta-banner-text h4 {
+  color: var(--color-text-white);
+  font-family: var(--font-display);
+  font-weight: var(--weight-display);
+  margin-bottom: var(--spacing-s);
+}
+
+.cta-banner .cta-banner-text p {
+  color: var(--color-text-white);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+}
+
+.cta-banner .cta-banner-action {
+  display: flex;
+  align-items: center;
+}
+
+.cta-banner .cta-banner-action a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 40px;
+  font-family: var(--font-body);
+  font-size: var(--font-size-cta);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-cta);
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+  text-decoration: none;
+  transition: background-color var(--transition-default);
+}
+
+.cta-banner .cta-banner-action a:hover {
+  background-color: rgb(255 255 255 / 20%);
+  color: var(--color-white);
+}
+
+/* Tablet (>=600px) */
+@media (width >= 600px) {
+  .cta-banner .cta-banner-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cta-banner .cta-banner-text {
+    flex: 1;
+  }
+
+  .cta-banner .cta-banner-action {
+    flex-shrink: 0;
+  }
+}

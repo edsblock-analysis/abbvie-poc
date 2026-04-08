@@ -1,0 +1,107 @@
+/* Featured Card — scoped to .featured-card */
+
+.featured-card {
+  background: var(--color-bg-lavender);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-s);
+  overflow: hidden;
+}
+
+.featured-card .featured-card-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-card .featured-card-image {
+  flex: 0 0 auto;
+}
+
+.featured-card .featured-card-image picture {
+  display: block;
+  line-height: 0;
+}
+
+.featured-card .featured-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 4 / 3;
+}
+
+.featured-card .featured-card-content {
+  padding: var(--spacing-m);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featured-card .featured-card-content p:first-child {
+  font-size: var(--font-size-body-small);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.featured-card .featured-card-content h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-h2);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.featured-card .featured-card-content h4 {
+  margin-bottom: var(--spacing-s);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.featured-card .featured-card-content p {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text-primary);
+}
+
+.featured-card .featured-card-content a {
+  font-size: var(--font-size-cta);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-cta);
+  color: var(--color-blue);
+  text-decoration: none;
+  margin-top: var(--spacing-s);
+}
+
+.featured-card .featured-card-content a:hover {
+  color: var(--color-blue-hover);
+}
+
+/* Tablet (>=600px) */
+@media (width >= 600px) {
+  .featured-card .featured-card-inner {
+    flex-direction: row;
+  }
+
+  .featured-card .featured-card-image {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+
+  .featured-card .featured-card-image img {
+    aspect-ratio: auto;
+    height: 100%;
+  }
+
+  .featured-card .featured-card-content {
+    flex: 0 0 60%;
+    max-width: 60%;
+    padding: var(--spacing-xl);
+  }
+}
+
+/* Desktop (>=900px) */
+@media (width >= 900px) {
+  .featured-card .featured-card-content {
+    padding: var(--spacing-2xl) var(--spacing-3xl);
+  }
+}
