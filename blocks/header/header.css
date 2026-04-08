@@ -1,23 +1,21 @@
 /* stylelint-disable no-descending-specificity */
 
 /*
- * AbbVie Header — pixel-matched to live site 2026-04-08
+ * AbbVie Header — pixel-matched to live site
  * Desktop: 88px, SVG logo 110x20, 5 plain-text nav, 3 utility btns
- * Mega-menu: 3-col grid links + lavender dashboard below
+ * Mega-menu: 3-col grid links + lavender dashboard (3-col: info | featured | stat)
  * Mobile: 72px, hamburger + logo + search
  */
 
-header {
-  height: var(--nav-height);
-}
-
+/* ── Fixed wrapper ── */
 header .nav-wrapper {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
-  background: var(--color-white, #fff);
+  background: var(--color-white);
+  box-shadow: 0 1px 0 var(--color-border-divider);
 }
 
 /* ── Nav container ── */
@@ -25,9 +23,9 @@ header nav {
   display: flex;
   align-items: center;
   height: var(--nav-height);
-  max-width: var(--page-max-width, 1440px);
+  max-width: var(--page-max-width);
   margin: 0 auto;
-  padding: 0 var(--container-padding, 55px);
+  padding: 0 var(--container-padding);
 }
 
 /* ── Brand / Logo ── */
@@ -64,7 +62,7 @@ header .nav-item {
   position: relative;
 }
 
-/* Nav buttons — plain text only, no arrows */
+/* Nav buttons — plain text, no arrows */
 header .nav-item-btn {
   display: flex;
   align-items: center;
@@ -74,31 +72,31 @@ header .nav-item-btn {
   background: none;
   font-family: var(--font-body);
   font-size: 18px;
-  font-weight: 400;
-  color: var(--color-navy, #071d49);
+  font-weight: var(--weight-regular);
+  color: var(--color-navy);
   cursor: pointer;
   white-space: nowrap;
-  transition: color 0.2s ease;
+  transition: color var(--transition-fast);
 }
 
 header .nav-item-btn:hover {
-  color: var(--color-blue, #0066f5);
+  color: var(--color-blue);
 }
 
 /* Active state */
 header .nav-item[aria-expanded="true"] .nav-item-btn {
-  color: var(--color-blue, #0066f5);
-  font-weight: 700;
+  color: var(--color-blue);
+  font-weight: var(--weight-bold);
 }
 
 header .nav-item[aria-expanded="true"] .nav-item-btn::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 20px;
   right: 20px;
   height: 4px;
-  background: var(--color-blue, #0066f5);
+  background: var(--color-blue);
 }
 
 /* ── Utility buttons ── */
@@ -112,22 +110,22 @@ header .nav-utils {
 header .nav-util-btn {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--spacing-xs);
   height: var(--nav-height);
-  padding: 0 16px;
+  padding: 0 var(--spacing-s);
   border: none;
   background: none;
   font-family: var(--font-body);
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--color-navy, #071d49);
+  font-size: var(--font-size-label);
+  font-weight: var(--weight-bold);
+  color: var(--color-navy);
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 header .nav-util-btn:hover {
-  color: var(--color-blue, #0066f5);
+  color: var(--color-blue);
 }
 
 header .nav-util-btn svg {
@@ -151,7 +149,7 @@ header .nav-hamburger {
   margin-left: auto;
   border: none;
   background: none;
-  color: var(--color-navy, #071d49);
+  color: var(--color-navy);
   cursor: pointer;
 }
 
@@ -167,7 +165,7 @@ header .nav-panel {
   top: var(--nav-height);
   left: 0;
   width: 100%;
-  background: var(--color-white, #fff);
+  background: var(--color-white);
   z-index: 99;
   overflow-y: auto;
   max-height: calc(100vh - var(--nav-height));
@@ -177,73 +175,25 @@ header .nav-item[aria-expanded="true"] .nav-panel {
   display: block;
 }
 
-/* 3-column grid for nav links — matches live site */
-header .nav-panel-links {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  margin: 0 auto;
-  padding: 48px var(--container-padding, 55px) 48px;
-  max-width: var(--page-max-width, 1440px);
-}
-
-header .nav-panel-links li {
-  margin: 0;
-}
-
-/* Links: 26px, no border, no underline */
-header .nav-panel-links a {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  padding: 16px 0;
-  font-family: var(--font-body);
-  font-size: 26px;
-  font-weight: 400;
-  color: var(--color-navy, #071d49);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-header .nav-panel-links a:hover {
-  color: var(--color-blue, #0066f5);
-  text-decoration: none;
-}
-
-/* "+" prefix for items with sub-pages — matches live site */
-header .nav-panel-links li.has-children a::before {
-  content: '+';
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  margin-right: 12px;
-  font-size: 24px;
-  font-weight: 300;
-  color: var(--color-navy, #071d49);
-  flex-shrink: 0;
-}
-
-/* "CLOSE ✕" button — top right, blue text */
+/* Close button — top right, blue */
 header .nav-panel-close {
   position: absolute;
   top: 24px;
-  right: var(--container-padding, 55px);
-  display: flex;
+  right: var(--container-padding);
+  display: none;
   align-items: center;
   gap: 6px;
   border: none;
   background: none;
   font-family: var(--font-body);
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--color-blue, #0066f5);
+  font-size: var(--font-size-cta);
+  font-weight: var(--weight-bold);
+  color: var(--color-blue);
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   padding: 8px 0;
+  z-index: 2;
 }
 
 header .nav-panel-close:hover {
@@ -255,58 +205,131 @@ header .nav-panel-close svg {
   height: 14px;
 }
 
-/* Dashboard area below links — lavender bg */
+/* Mobile back button */
+header .nav-panel-back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-bottom: 1px solid var(--color-border-divider);
+  background: none;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: var(--weight-bold);
+  color: var(--color-navy);
+  cursor: pointer;
+}
+
+header .nav-panel-back svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* 3-column grid for nav links */
+header .nav-panel-links {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--container-padding) var(--spacing-xl);
+  max-width: var(--page-max-width);
+}
+
+header .nav-panel-links li {
+  margin: 0;
+}
+
+/* Links: 26px, navy */
+header .nav-panel-links a {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-s) 0;
+  font-family: var(--font-body);
+  font-size: 26px;
+  font-weight: var(--weight-regular);
+  color: var(--color-navy);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+header .nav-panel-links a:hover {
+  color: var(--color-blue);
+  text-decoration: none;
+}
+
+/* "+" prefix for items with sub-pages */
+header .nav-panel-links li.has-children a::before {
+  content: "+";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--color-navy);
+  flex-shrink: 0;
+}
+
+/* ── Dashboard area — lavender bg ── */
 header .nav-panel-dashboard {
-  background: var(--color-bg-lavender, #f1f3ff);
+  background: var(--color-bg-lavender);
   border-radius: 40px 0 0;
-  padding: 56px var(--container-padding, 55px) 56px;
+  padding: var(--spacing-2xl) var(--container-padding);
 }
 
 header .nav-panel-dashboard-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  max-width: var(--page-max-width, 1440px);
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--spacing-l);
+  max-width: var(--page-max-width);
   margin: 0 auto;
 }
 
-header .nav-panel-dashboard h4 {
+/* Dashboard col 1: info */
+header .nav-panel-dash-info h4 {
   font-family: var(--font-display);
-  font-size: 40px;
-  line-height: 44px;
-  font-weight: 800;
-  color: var(--color-navy, #071d49);
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4);
+  font-weight: var(--weight-display);
+  color: var(--color-navy);
   margin: 0 0 12px;
 }
 
-header .nav-panel-dashboard p {
-  font-size: 16px;
-  color: var(--color-navy, #071d49);
+header .nav-panel-dash-desc {
+  font-size: var(--font-size-body-small);
+  line-height: var(--line-height-body-small);
+  color: var(--color-navy);
   margin: 0 0 20px;
 }
 
-header .nav-panel-dashboard .nav-panel-go {
+/* GO TO PAGE outlined button */
+header .nav-panel-go {
   display: inline-flex;
   align-items: center;
   padding: 14px 32px;
-  border: 2px solid var(--color-blue, #0066f5);
+  border: 2px solid var(--color-blue);
   font-family: var(--font-body);
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--color-blue, #0066f5);
+  font-size: var(--font-size-cta);
+  font-weight: var(--weight-bold);
+  color: var(--color-blue);
   text-transform: uppercase;
-  letter-spacing: 0.84px;
+  letter-spacing: var(--letter-spacing-cta);
   text-decoration: none;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: background var(--transition-fast), color var(--transition-fast);
 }
 
-header .nav-panel-dashboard .nav-panel-go:hover {
-  background: var(--color-blue, #0066f5);
-  color: var(--color-white, #fff);
+header .nav-panel-go:hover {
+  background: var(--color-blue);
+  color: var(--color-white);
   text-decoration: none;
 }
 
-/* Quick links in dashboard */
+/* Quick links with arrows and dividers */
 header .nav-panel-quicklinks {
   list-style: none;
   padding: 20px 0 0;
@@ -314,7 +337,8 @@ header .nav-panel-quicklinks {
 }
 
 header .nav-panel-quicklinks li {
-  border-bottom: 1px solid var(--color-border-divider, #e0e0e0);
+  border-bottom: 1px solid var(--color-border-divider);
+  margin: 0;
 }
 
 header .nav-panel-quicklinks a {
@@ -322,19 +346,128 @@ header .nav-panel-quicklinks a {
   align-items: center;
   justify-content: space-between;
   padding: 12px 0;
-  font-size: 16px;
-  color: var(--color-navy, #071d49);
+  font-size: var(--font-size-body-small);
+  color: var(--color-navy);
   text-decoration: none;
+  transition: color var(--transition-fast);
 }
 
 header .nav-panel-quicklinks a::after {
-  content: '→';
-  color: var(--color-navy, #071d49);
+  content: "\2192";
+  color: var(--color-navy);
+  flex-shrink: 0;
+  margin-left: var(--spacing-xs);
 }
 
 header .nav-panel-quicklinks a:hover {
-  color: var(--color-blue, #0066f5);
+  color: var(--color-blue);
   text-decoration: none;
+}
+
+/* Dashboard col 2: Featured card */
+header .nav-panel-dash-featured {
+  border: 1px solid var(--color-border-divider);
+  border-radius: 16px;
+  padding: var(--spacing-l);
+  background: var(--color-white);
+}
+
+header .nav-panel-dash-featured h2 {
+  font-family: var(--font-body);
+  font-size: var(--font-size-label);
+  font-weight: var(--weight-bold);
+  line-height: var(--line-height-label);
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--spacing-s);
+}
+
+header .nav-panel-dash-featured h4 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: var(--weight-display);
+  color: var(--color-navy);
+  margin: 0 0 var(--spacing-xs);
+}
+
+header .nav-panel-dash-featured p {
+  font-size: var(--font-size-body-small);
+  line-height: var(--line-height-body-small);
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--spacing-s);
+}
+
+header .nav-panel-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: var(--font-size-cta);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-cta);
+  color: var(--color-blue);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+header .nav-panel-cta:hover {
+  color: var(--color-blue-hover);
+  text-decoration: none;
+}
+
+/* Dashboard col 3: Stat card */
+header .nav-panel-dash-stat {
+  background: var(--color-bg-navy);
+  border-radius: 16px;
+  padding: var(--spacing-l);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header .nav-panel-dash-stat h2 {
+  font-family: var(--font-body);
+  font-size: var(--font-size-label);
+  font-weight: var(--weight-bold);
+  line-height: var(--line-height-label);
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+  color: var(--color-blue-hover);
+  margin: 0 0 var(--spacing-s);
+}
+
+header .nav-panel-stat-number {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: var(--spacing-s);
+}
+
+header .nav-panel-stat-number .stat-value {
+  font-family: var(--font-display);
+  font-size: 56px;
+  line-height: 1;
+  font-weight: var(--weight-display);
+  color: var(--color-white);
+}
+
+header .nav-panel-stat-number .stat-suffix {
+  font-family: var(--font-display);
+  font-size: 40px;
+  line-height: 1;
+  font-weight: var(--weight-display);
+  color: var(--color-white);
+  margin-left: 4px;
+}
+
+header .nav-panel-stat-label {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body-small);
+  line-height: var(--line-height-body-small);
+  color: var(--color-text-white);
+  margin: 0;
 }
 
 /* EDS visibility */
@@ -343,7 +476,7 @@ header .header[data-block-status="loaded"] {
   visibility: visible;
 }
 
-/* ── Desktop ── */
+/* ── Desktop (>=900px) ── */
 @media (width >= 900px) {
   header .nav-sections {
     display: flex;
@@ -356,9 +489,17 @@ header .header[data-block-status="loaded"] {
   header .nav-hamburger {
     display: none;
   }
+
+  header .nav-panel-close {
+    display: flex;
+  }
+
+  header .nav-panel-back {
+    display: none;
+  }
 }
 
-/* ── Mobile ── */
+/* ── Mobile (<900px) ── */
 @media (width < 900px) {
   header nav {
     padding: 0 20px;
@@ -387,14 +528,14 @@ header .header[data-block-status="loaded"] {
     order: -1;
   }
 
-  /* Mobile nav */
+  /* Mobile nav panel */
   header .nav-sections {
     position: fixed;
     top: var(--nav-height);
     left: 0;
     width: 100%;
     height: calc(100vh - var(--nav-height));
-    background: var(--color-white, #fff);
+    background: var(--color-white);
     z-index: 98;
     overflow-y: auto;
     flex-direction: column;
@@ -407,7 +548,7 @@ header .header[data-block-status="loaded"] {
   }
 
   header .nav-item {
-    border-bottom: 1px solid var(--color-border-divider, #e0e0e0);
+    border-bottom: 1px solid var(--color-border-divider);
   }
 
   header .nav-item-btn {
@@ -416,6 +557,18 @@ header .header[data-block-status="loaded"] {
     padding: 18px 20px;
     font-size: 20px;
     text-align: left;
+    justify-content: space-between;
+  }
+
+  header .nav-item-btn::after {
+    content: "\203A";
+    font-size: 24px;
+    color: var(--color-navy);
+    font-weight: 300;
+  }
+
+  header .nav-item[aria-expanded="true"] .nav-item-btn::after {
+    display: none;
   }
 
   /* Mobile panel */
@@ -427,6 +580,10 @@ header .header[data-block-status="loaded"] {
     height: calc(100vh - var(--nav-height));
   }
 
+  header .nav-panel-close {
+    display: none;
+  }
+
   header .nav-panel-links {
     grid-template-columns: 1fr;
     padding: 20px;
@@ -435,25 +592,33 @@ header .header[data-block-status="loaded"] {
   header .nav-panel-links a {
     font-size: 20px;
     padding: 14px 0;
-    border-bottom: 1px solid var(--color-border-divider, #e0e0e0);
-  }
-
-  header .nav-panel-close {
-    top: 16px;
-    right: 20px;
+    border-bottom: 1px solid var(--color-border-divider);
   }
 
   header .nav-panel-dashboard {
     border-radius: 0;
-    padding: 32px 20px;
+    padding: var(--spacing-l) 20px;
   }
 
   header .nav-panel-dashboard-inner {
     grid-template-columns: 1fr;
   }
 
-  header .nav-panel-dashboard h4 {
+  header .nav-panel-dash-info h4 {
     font-size: 28px;
     line-height: 32px;
+  }
+
+  header .nav-panel-dash-featured h4 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  header .nav-panel-stat-number .stat-value {
+    font-size: 40px;
+  }
+
+  header .nav-panel-stat-number .stat-suffix {
+    font-size: 28px;
   }
 }
