@@ -15,7 +15,6 @@ header .nav-wrapper {
   width: 100%;
   z-index: 100;
   background: var(--color-white);
-  box-shadow: 0 1px 0 var(--color-border-divider);
 }
 
 /* ── Nav container ── */
@@ -55,11 +54,13 @@ header .nav-sections {
   display: none;
   flex: 1;
   align-items: center;
-  margin-left: 40px;
+  margin-left: 108px;
 }
 
 header .nav-item {
   position: relative;
+  margin-right: 48px;
+  margin-left: 0;
 }
 
 /* Nav buttons — plain text, no arrows */
@@ -67,7 +68,7 @@ header .nav-item-btn {
   display: flex;
   align-items: center;
   height: var(--nav-height);
-  padding: 0 20px;
+  padding: 0;
   border: none;
   background: none;
   font-family: var(--font-body);
@@ -86,17 +87,17 @@ header .nav-item-btn:hover {
 /* Active state */
 header .nav-item[aria-expanded="true"] .nav-item-btn {
   color: var(--color-blue);
-  font-weight: var(--weight-bold);
+  font-weight: 800;
 }
 
 header .nav-item[aria-expanded="true"] .nav-item-btn::after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 20px;
-  right: 20px;
+  left: 0;
+  right: 0;
   height: 4px;
-  background: var(--color-blue);
+  background: var(--color-navy);
 }
 
 /* ── Utility buttons ── */
@@ -110,18 +111,22 @@ header .nav-utils {
 header .nav-util-btn {
   display: flex;
   align-items: center;
-  gap: var(--spacing-xs);
+  gap: 0;
   height: var(--nav-height);
   padding: 0 var(--spacing-s);
   border: none;
   background: none;
   font-family: var(--font-body);
-  font-size: var(--font-size-label);
-  font-weight: var(--weight-bold);
+  font-size: 14px;
+  font-weight: 400;
   color: var(--color-navy);
   cursor: pointer;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.56px;
+}
+
+header .nav-util-btn span {
+  margin-left: 10px;
 }
 
 header .nav-util-btn:hover {
@@ -166,6 +171,7 @@ header .nav-panel {
   left: 0;
   width: 100%;
   background: var(--color-white);
+  border-top: 1px solid #b9b4b4;
   z-index: 99;
   overflow-y: auto;
   max-height: calc(100vh - var(--nav-height));
@@ -232,7 +238,7 @@ header .nav-panel-links {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0;
+  gap: 40px 20px;
   margin: 0 auto;
   padding: var(--spacing-xl) var(--container-padding) var(--spacing-xl);
   max-width: var(--page-max-width);
@@ -279,7 +285,7 @@ header .nav-panel-links li.has-children a::before {
 header .nav-panel-dashboard {
   background: var(--color-bg-lavender);
   border-radius: 40px 0 0;
-  padding: var(--spacing-2xl) var(--container-padding);
+  padding: 80px 55px 0 112px;
 }
 
 header .nav-panel-dashboard-inner {
@@ -311,8 +317,10 @@ header .nav-panel-dash-desc {
 header .nav-panel-go {
   display: inline-flex;
   align-items: center;
-  padding: 14px 32px;
-  border: 2px solid var(--color-blue);
+  padding: 16px 40px;
+  height: 54px;
+  box-sizing: border-box;
+  border: 1px solid var(--color-blue);
   font-family: var(--font-body);
   font-size: var(--font-size-cta);
   font-weight: var(--weight-bold);
@@ -337,8 +345,8 @@ header .nav-panel-quicklinks {
 }
 
 header .nav-panel-quicklinks li {
-  border-bottom: 1px solid var(--color-border-divider);
-  margin: 0;
+  border-bottom: 1px solid #b9b4b4;
+  margin-bottom: 12px;
 }
 
 header .nav-panel-quicklinks a {
@@ -346,7 +354,7 @@ header .nav-panel-quicklinks a {
   align-items: center;
   justify-content: space-between;
   padding: 12px 0;
-  font-size: var(--font-size-body-small);
+  font-size: 18px;
   color: var(--color-navy);
   text-decoration: none;
   transition: color var(--transition-fast);
@@ -366,18 +374,18 @@ header .nav-panel-quicklinks a:hover {
 
 /* Dashboard col 2: Featured card */
 header .nav-panel-dash-featured {
-  border: 1px solid var(--color-border-divider);
-  border-radius: 16px;
-  padding: var(--spacing-l);
-  background: var(--color-white);
+  border: 1px solid #a6b5e0;
+  border-radius: 0;
+  padding: 24px 32px;
+  background: var(--color-bg-lavender);
 }
 
 header .nav-panel-dash-featured h2 {
   font-family: var(--font-body);
-  font-size: var(--font-size-label);
-  font-weight: var(--weight-bold);
+  font-size: 14px;
+  font-weight: 700;
   line-height: var(--line-height-label);
-  letter-spacing: var(--letter-spacing-label);
+  letter-spacing: 0.4px;
   text-transform: uppercase;
   color: var(--color-text-secondary);
   margin: 0 0 var(--spacing-s);
@@ -385,9 +393,9 @@ header .nav-panel-dash-featured h2 {
 
 header .nav-panel-dash-featured h4 {
   font-family: var(--font-display);
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: var(--weight-display);
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: var(--weight-book);
   color: var(--color-navy);
   margin: 0 0 var(--spacing-xs);
 }
@@ -404,10 +412,10 @@ header .nav-panel-cta {
   align-items: center;
   gap: 6px;
   font-family: var(--font-body);
-  font-size: var(--font-size-cta);
-  font-weight: var(--weight-bold);
+  font-size: 14px;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: var(--letter-spacing-cta);
+  letter-spacing: 0.84px;
   color: var(--color-blue);
   text-decoration: none;
   transition: color var(--transition-fast);
@@ -420,8 +428,9 @@ header .nav-panel-cta:hover {
 
 /* Dashboard col 3: Stat card */
 header .nav-panel-dash-stat {
-  background: var(--color-bg-navy);
-  border-radius: 16px;
+  background: var(--color-bg-lavender);
+  border: 1px solid #a6b5e0;
+  border-radius: 0;
   padding: var(--spacing-l);
   display: flex;
   flex-direction: column;
@@ -430,13 +439,13 @@ header .nav-panel-dash-stat {
 
 header .nav-panel-dash-stat h2 {
   font-family: var(--font-body);
-  font-size: var(--font-size-label);
-  font-weight: var(--weight-bold);
+  font-size: 14px;
+  font-weight: 700;
   line-height: var(--line-height-label);
-  letter-spacing: var(--letter-spacing-label);
+  letter-spacing: 0.84px;
   text-transform: uppercase;
-  color: var(--color-blue-hover);
-  margin: 0 0 var(--spacing-s);
+  color: var(--color-navy);
+  margin: 0 0 38px;
 }
 
 header .nav-panel-stat-number {
@@ -447,26 +456,27 @@ header .nav-panel-stat-number {
 
 header .nav-panel-stat-number .stat-value {
   font-family: var(--font-display);
-  font-size: 56px;
-  line-height: 1;
-  font-weight: var(--weight-display);
-  color: var(--color-white);
+  font-size: 80px;
+  line-height: 84px;
+  font-weight: 650;
+  color: var(--color-blue);
+  letter-spacing: -2.4px;
 }
 
 header .nav-panel-stat-number .stat-suffix {
   font-family: var(--font-display);
   font-size: 40px;
   line-height: 1;
-  font-weight: var(--weight-display);
-  color: var(--color-white);
+  font-weight: 800;
+  color: var(--color-blue);
   margin-left: 4px;
 }
 
 header .nav-panel-stat-label {
   font-family: var(--font-body);
-  font-size: var(--font-size-body-small);
+  font-size: 16px;
   line-height: var(--line-height-body-small);
-  color: var(--color-text-white);
+  color: var(--color-navy);
   margin: 0;
 }
 
@@ -549,6 +559,7 @@ header .header[data-block-status="loaded"] {
 
   header .nav-item {
     border-bottom: 1px solid var(--color-border-divider);
+    margin-right: 0;
   }
 
   header .nav-item-btn {
