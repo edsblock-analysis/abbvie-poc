@@ -899,3 +899,227 @@ header .header[data-block-status="loaded"] {
     color: var(--color-blue);
   }
 }
+
+/* =============================================================
+   Utility Panels (MORE, Search)
+   ============================================================= */
+
+/* ── Base panel ── */
+header .nav-util-panel {
+  display: none;
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  width: 100%;
+  background: var(--color-white);
+  border-top: 1px solid #b9b4b4;
+  z-index: 99;
+  overflow-y: auto;
+  max-height: calc(100vh - var(--nav-height));
+}
+
+header .nav-util-panel[aria-hidden="false"] {
+  display: block;
+}
+
+header .nav-util-panel-inner {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--container-padding);
+  position: relative;
+}
+
+/* ── Panel close button ── */
+header .nav-util-panel-close {
+  position: absolute;
+  top: 24px;
+  right: var(--container-padding);
+  display: none;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  background: none;
+  font-family: var(--font-body);
+  font-size: var(--font-size-cta);
+  font-weight: var(--weight-bold);
+  color: var(--color-blue);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 8px 0;
+  z-index: 2;
+}
+
+header .nav-util-panel-close:hover {
+  opacity: 0.8;
+}
+
+header .nav-util-panel-close svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* ── Utility accordion ── */
+header .nav-util-accordion {
+  max-width: 600px;
+}
+
+header .nav-util-accordion-item {
+  border-bottom: 1px solid var(--color-border-divider);
+}
+
+header .nav-util-accordion-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 18px 0;
+  border: none;
+  background: none;
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: var(--weight-bold);
+  color: var(--color-navy);
+  cursor: pointer;
+  text-align: left;
+}
+
+header .nav-util-accordion-btn:hover {
+  color: var(--color-blue);
+}
+
+header .nav-util-accordion-icon {
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--color-navy);
+  flex-shrink: 0;
+  line-height: 1;
+  width: 24px;
+  text-align: center;
+}
+
+header .nav-util-accordion-content {
+  display: none;
+  padding: 0 0 18px;
+}
+
+header .nav-util-accordion-item[aria-expanded="true"] .nav-util-accordion-content {
+  display: block;
+}
+
+header .nav-util-accordion-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header .nav-util-accordion-content li {
+  margin-bottom: 4px;
+}
+
+header .nav-util-accordion-content a {
+  display: block;
+  padding: 8px 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: var(--weight-regular);
+  color: var(--color-navy);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+header .nav-util-accordion-content a:hover {
+  color: var(--color-blue);
+}
+
+/* ── Search panel ── */
+header .nav-search-panel-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+header .nav-search-form {
+  width: 100%;
+  max-width: 600px;
+}
+
+header .nav-search-input-wrap {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--color-navy);
+  background: var(--color-white);
+}
+
+header .nav-search-input {
+  flex: 1;
+  padding: 14px 16px;
+  border: none;
+  background: none;
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: var(--color-navy);
+  outline: none;
+}
+
+header .nav-search-input::placeholder {
+  color: var(--color-text-secondary);
+}
+
+header .nav-search-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border: none;
+  background: var(--color-navy);
+  color: var(--color-white);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background var(--transition-fast);
+}
+
+header .nav-search-submit:hover {
+  background: var(--color-blue);
+}
+
+header .nav-search-submit svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ── Active state for utility buttons ── */
+header .nav-util-btn[aria-expanded="true"] {
+  color: var(--color-blue);
+  font-weight: var(--weight-bold);
+}
+
+/* ── Desktop: show panel close buttons ── */
+@media (width >= 900px) {
+  header .nav-util-panel-close {
+    display: flex;
+  }
+}
+
+/* ── Mobile: adjust panels ── */
+@media (width < 900px) {
+  header .nav-util-panel-inner {
+    padding: var(--spacing-m) 20px;
+  }
+
+  header .nav-util-panel-close {
+    display: flex;
+    position: static;
+    margin-bottom: 16px;
+    margin-left: auto;
+  }
+
+  header .nav-util-accordion {
+    max-width: none;
+  }
+
+  header .nav-search-form {
+    max-width: none;
+  }
+}

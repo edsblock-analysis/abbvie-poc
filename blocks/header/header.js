@@ -12,13 +12,22 @@ const ICON_ARROW_RIGHT = '<svg width="20" height="20" viewBox="0 0 24 24" fill="
 
 const isDesktop = window.matchMedia('(min-width: 900px)');
 
+/**
+ * Close all nav panels and utility panels.
+ * @param {Element} nav
+ */
 function closeAllPanels(nav) {
   nav.querySelectorAll('.nav-item[aria-expanded="true"]').forEach((item) => {
     item.setAttribute('aria-expanded', 'false');
   });
-  /* Collapse all mobile accordions */
   nav.querySelectorAll('.mobile-accordion-item[aria-expanded="true"]').forEach((item) => {
     item.setAttribute('aria-expanded', 'false');
+  });
+  nav.querySelectorAll('.nav-util-panel[aria-hidden="false"]').forEach((panel) => {
+    panel.setAttribute('aria-hidden', 'true');
+  });
+  nav.querySelectorAll('.nav-util-btn[aria-expanded="true"]').forEach((btn) => {
+    btn.setAttribute('aria-expanded', 'false');
   });
   document.body.style.overflow = '';
 }
@@ -212,9 +221,9 @@ function buildMobileDashboard(data) {
   const dashboard = document.createElement('div');
   dashboard.className = 'mobile-panel-dashboard';
 
-  const h4 = document.createElement('h4');
-  h4.textContent = data.title || '';
-  dashboard.append(h4);
+  const h4mk = document.createElement('h4');
+  h4mk.textContent = data.title || '';
+  dashboard.append(h4mk);
 
   if (data.desc) {
     const p = document.createElement('p');
@@ -250,8 +259,6 @@ function buildMobileDashboard(data) {
 
 /**
  * Build mobile accordion list from sub-navigation items.
- * Each top-level sub-item becomes an accordion row.
- * Items with children get +/- expand, items without are plain links.
  */
 function buildMobileAccordion(subUl) {
   const accordion = document.createElement('div');
@@ -266,7 +273,6 @@ function buildMobileAccordion(subUl) {
     const itemHref = subLink.getAttribute('href');
 
     if (childUl) {
-      /* Accordion item with children */
       const accItem = document.createElement('div');
       accItem.className = 'mobile-accordion-item';
       accItem.setAttribute('aria-expanded', 'false');
@@ -276,7 +282,6 @@ function buildMobileAccordion(subUl) {
       accBtn.innerHTML = `<span class="mobile-accordion-label">${itemLabel}</span><span class="mobile-accordion-icon">+</span>`;
       accBtn.addEventListener('click', () => {
         const wasOpen = accItem.getAttribute('aria-expanded') === 'true';
-        /* Close all siblings */
         accordion.querySelectorAll('.mobile-accordion-item[aria-expanded="true"]').forEach((other) => {
           other.setAttribute('aria-expanded', 'false');
           const icon = other.querySelector('.mobile-accordion-icon');
@@ -289,7 +294,6 @@ function buildMobileAccordion(subUl) {
       });
       accItem.append(accBtn);
 
-      /* Expanded content: GO TO PAGE + child links */
       const accContent = document.createElement('div');
       accContent.className = 'mobile-accordion-content';
 
@@ -313,7 +317,6 @@ function buildMobileAccordion(subUl) {
       accItem.append(accContent);
       accordion.append(accItem);
     } else {
-      /* Simple link item (no children) */
       const linkItem = document.createElement('div');
       linkItem.className = 'mobile-accordion-item mobile-accordion-link-only';
       const a = document.createElement('a');
@@ -345,6 +348,209 @@ function updateMobileHeaderState(nav) {
   }
 }
 
+/* ── MORE panel data ── */
+const MORE_SECTIONS = [
+  {
+    label: 'Popular Pages',
+    links: [
+      { text: 'Pipeline', href: '/science/pipeline.html' },
+      { text: 'Products', href: '/patients/products.html' },
+      { text: 'Partner with Us', href: '/science/partner-with-us.html' },
+      { text: 'Patient Support', href: '/patients/patient-support.html' },
+      { text: 'Contact Center', href: '/contact-center.html' },
+    ],
+  },
+  {
+    label: 'News Center',
+    links: [
+      { text: 'Visit News Center', href: 'https://news.abbvie.com/' },
+    ],
+  },
+  {
+    label: 'Investors',
+    links: [
+      { text: 'Visit Investor Relations', href: 'https://investors.abbvie.com/' },
+    ],
+  },
+  {
+    label: 'External Links',
+    links: [
+      { text: 'Contract Manufacturing', href: 'https://www.abbviecontractmfg.com/' },
+      { text: 'Medical Information', href: 'https://www.abbviemedinfo.com/' },
+    ],
+  },
+  {
+    label: 'Social Links',
+    links: [
+      { text: 'Facebook', href: 'https://www.facebook.com/AbbVieGlobal' },
+      { text: 'Twitter', href: 'https://twitter.com/abbvie' },
+      { text: 'Instagram', href: 'https://www.instagram.com/abbvie' },
+      { text: 'LinkedIn', href: 'https://www.linkedin.com/company/abbvie' },
+      { text: 'YouTube', href: 'https://www.youtube.com/user/AbbVie' },
+      { text: 'TikTok', href: 'https://www.tiktok.com/@abbvie' },
+    ],
+  },
+];
+
+/**
+ * Build an accordion panel for utility buttons (MORE / GLOBAL).
+ * @param {Array} sections - Array of { label, links } objects
+ * @param {string} className - CSS class for the panel
+ * @param {number} defaultOpen - Index of section to expand by default (-1 for none)
+ * @returns {HTMLElement}
+ */
+function buildUtilAccordionPanel(sections, className, defaultOpen) {
+  const panel = document.createElement('div');
+  panel.className = `nav-util-panel ${className}`;
+  panel.setAttribute('aria-hidden', 'true');
+
+  const inner = document.createElement('div');
+  inner.className = 'nav-util-panel-inner';
+
+  /* Close button */
+  const closeBtn = document.createElement('button');
+  closeBtn.className = 'nav-util-panel-close';
+  closeBtn.innerHTML = `CLOSE ${ICON_CLOSE_SM}`;
+  closeBtn.setAttribute('aria-label', 'Close panel');
+  inner.append(closeBtn);
+
+  /* Accordion */
+  const accordion = document.createElement('div');
+  accordion.className = 'nav-util-accordion';
+
+  sections.forEach((section, idx) => {
+    const item = document.createElement('div');
+    item.className = 'nav-util-accordion-item';
+    const isOpen = idx === defaultOpen;
+    item.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+
+    const btn = document.createElement('button');
+    btn.className = 'nav-util-accordion-btn';
+    btn.innerHTML = `<span>${section.label}</span><span class="nav-util-accordion-icon">${isOpen ? '\u2212' : '+'}</span>`;
+    btn.addEventListener('click', () => {
+      const wasOpen = item.getAttribute('aria-expanded') === 'true';
+      /* Close all siblings */
+      accordion.querySelectorAll('.nav-util-accordion-item[aria-expanded="true"]').forEach((other) => {
+        other.setAttribute('aria-expanded', 'false');
+        const icon = other.querySelector('.nav-util-accordion-icon');
+        if (icon) icon.textContent = '+';
+      });
+      if (!wasOpen) {
+        item.setAttribute('aria-expanded', 'true');
+        btn.querySelector('.nav-util-accordion-icon').textContent = '\u2212';
+      }
+    });
+    item.append(btn);
+
+    const content = document.createElement('div');
+    content.className = 'nav-util-accordion-content';
+    const ul = document.createElement('ul');
+    section.links.forEach((link) => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = link.href;
+      a.textContent = link.text;
+      if (a.href.startsWith('http')) {
+        a.setAttribute('target', '_blank');
+        a.setAttribute('rel', 'noopener noreferrer');
+      }
+      li.append(a);
+      ul.append(li);
+    });
+    content.append(ul);
+    item.append(content);
+    accordion.append(item);
+  });
+
+  inner.append(accordion);
+  panel.append(inner);
+  return panel;
+}
+
+/**
+ * Build the search panel.
+ * @returns {HTMLElement}
+ */
+function buildSearchPanel() {
+  const panel = document.createElement('div');
+  panel.className = 'nav-util-panel nav-search-panel';
+  panel.setAttribute('aria-hidden', 'true');
+
+  const inner = document.createElement('div');
+  inner.className = 'nav-util-panel-inner nav-search-panel-inner';
+
+  /* Close button */
+  const closeBtn = document.createElement('button');
+  closeBtn.className = 'nav-util-panel-close';
+  closeBtn.innerHTML = `CLOSE ${ICON_CLOSE_SM}`;
+  closeBtn.setAttribute('aria-label', 'Close search');
+  inner.append(closeBtn);
+
+  /* Search form */
+  const form = document.createElement('form');
+  form.className = 'nav-search-form';
+  form.setAttribute('role', 'search');
+  form.setAttribute('action', '/search');
+  form.setAttribute('method', 'get');
+
+  const inputWrap = document.createElement('div');
+  inputWrap.className = 'nav-search-input-wrap';
+
+  const input = document.createElement('input');
+  input.type = 'text';
+  input.name = 'q';
+  input.className = 'nav-search-input';
+  input.placeholder = 'Search AbbVie.com';
+  input.setAttribute('aria-label', 'Search AbbVie.com');
+  input.autocomplete = 'off';
+
+  const submitBtn = document.createElement('button');
+  submitBtn.type = 'submit';
+  submitBtn.className = 'nav-search-submit';
+  submitBtn.innerHTML = ICON_SEARCH;
+  submitBtn.setAttribute('aria-label', 'Submit search');
+
+  inputWrap.append(input, submitBtn);
+  form.append(inputWrap);
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const query = input.value.trim();
+    if (query) {
+      window.location.href = `/search?q=${encodeURIComponent(query)}`;
+    }
+  });
+
+  inner.append(form);
+  panel.append(inner);
+  return panel;
+}
+
+/**
+ * Toggle a utility panel (MORE, GLOBAL, Search).
+ * @param {Element} nav
+ * @param {Element} panel
+ * @param {Element} btn
+ */
+function toggleUtilPanel(nav, panel, btn) {
+  const isOpen = panel.getAttribute('aria-hidden') === 'false';
+
+  /* Close everything first */
+  closeAllPanels(nav);
+  updateMobileHeaderState(nav);
+
+  if (!isOpen) {
+    panel.setAttribute('aria-hidden', 'false');
+    btn.setAttribute('aria-expanded', 'true');
+
+    /* Auto-focus search input if search panel */
+    const searchInput = panel.querySelector('.nav-search-input');
+    if (searchInput) {
+      setTimeout(() => searchInput.focus(), 100);
+    }
+  }
+}
+
 export default async function decorate(block) {
   const navMeta = getMetadata('nav');
   const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
@@ -372,10 +578,8 @@ export default async function decorate(block) {
   mobileBack.innerHTML = `${ICON_BACK}<span>BACK</span>`;
   mobileBack.setAttribute('aria-label', 'Back to menu');
   mobileBack.addEventListener('click', () => {
-    /* Close currently open sub-panel */
     nav.querySelectorAll('.nav-item[aria-expanded="true"]').forEach((item) => {
       item.setAttribute('aria-expanded', 'false');
-      /* Collapse any open accordions inside */
       item.querySelectorAll('.mobile-accordion-item[aria-expanded="true"]').forEach((acc) => {
         acc.setAttribute('aria-expanded', 'false');
         const icon = acc.querySelector('.mobile-accordion-icon');
@@ -486,7 +690,6 @@ export default async function decorate(block) {
           mobileContent.append(buildMobileAccordion(subUl));
 
           panel.append(mobileContent);
-
           item.append(panel);
         }
 
@@ -509,6 +712,10 @@ export default async function decorate(block) {
 
   mobileQuickLinks.append(qlBtn, globalBtn2);
 
+  /* ── Utility panels ── */
+  const morePanel = buildUtilAccordionPanel(MORE_SECTIONS, 'nav-more-panel', 0);
+  const searchPanel = buildSearchPanel();
+
   /* ── Utility bar (desktop) ── */
   const navUtils = document.createElement('div');
   navUtils.className = 'nav-utils';
@@ -517,18 +724,45 @@ export default async function decorate(block) {
   moreBtn.className = 'nav-util-btn';
   moreBtn.innerHTML = `${ICON_MORE}<span>MORE</span>`;
   moreBtn.setAttribute('aria-label', 'More links');
+  moreBtn.setAttribute('aria-expanded', 'false');
+  moreBtn.addEventListener('click', () => {
+    toggleUtilPanel(nav, morePanel, moreBtn);
+  });
 
   const globalBtn = document.createElement('button');
   globalBtn.className = 'nav-util-btn';
   globalBtn.innerHTML = `${ICON_GLOBE}<span>GLOBAL</span>`;
   globalBtn.setAttribute('aria-label', 'Global site selector');
+  globalBtn.setAttribute('aria-expanded', 'false');
+  globalBtn.addEventListener('click', () => {
+    window.location.href = '/contact-center/locations.html';
+  });
 
   const searchBtn = document.createElement('button');
   searchBtn.className = 'nav-util-btn nav-search-btn';
   searchBtn.innerHTML = ICON_SEARCH;
   searchBtn.setAttribute('aria-label', 'Search AbbVie.com');
+  searchBtn.setAttribute('aria-expanded', 'false');
+  searchBtn.addEventListener('click', () => {
+    toggleUtilPanel(nav, searchPanel, searchBtn);
+  });
 
   navUtils.append(moreBtn, globalBtn, searchBtn);
+
+  /* ── Mobile Quick Links panel toggle ── */
+  qlBtn.addEventListener('click', () => {
+    toggleUtilPanel(nav, morePanel, qlBtn);
+    /* Ensure nav overlay stays open for mobile */
+    if (!isDesktop.matches) {
+      nav.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+  });
+
+  /* ── Mobile GLOBAL button ── */
+  globalBtn2.addEventListener('click', () => {
+    window.location.href = '/contact-center/locations.html';
+  });
 
   /* ── Mobile close button (X, separate from hamburger) ── */
   const mobileClose = document.createElement('button');
@@ -560,9 +794,26 @@ export default async function decorate(block) {
     updateMobileHeaderState(nav);
   });
 
-  /* ── Assemble — mobile utils go INSIDE navSections so they scroll together ── */
+  /* ── Close button delegates for utility panels ── */
+  [morePanel, searchPanel].forEach((panel) => {
+    const closeBtn = panel.querySelector('.nav-util-panel-close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => {
+        closeAllPanels(nav);
+        updateMobileHeaderState(nav);
+      });
+    }
+  });
+
+  /* ── Assemble ── */
   navSections.append(mobileQuickLinks);
   nav.append(mobileBack, navBrand, navSections, navUtils, mobileClose, hamburger);
+
+  /* Append utility panels to wrapper (outside nav flow) */
+  const wrapper = document.createElement('div');
+  wrapper.className = 'nav-wrapper';
+  wrapper.append(nav, morePanel, searchPanel);
+  block.append(wrapper);
 
   /* Escape key */
   document.addEventListener('keydown', (e) => {
@@ -574,16 +825,11 @@ export default async function decorate(block) {
     }
   });
 
-  /* Resize resets mobile state */
+  /* Resize resets state */
   isDesktop.addEventListener('change', () => {
     closeAllPanels(nav);
     nav.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
     updateMobileHeaderState(nav);
   });
-
-  const wrapper = document.createElement('div');
-  wrapper.className = 'nav-wrapper';
-  wrapper.append(nav);
-  block.append(wrapper);
 }
